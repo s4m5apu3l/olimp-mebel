@@ -1,8 +1,54 @@
 :root {
-	--container-width: 1200px;
-	--container-padding: 15px;
+	--color-accent: #f8b711;
+	--color-accent-secondary: #d39e16;
+	--color-accent-tertiary: #b08513;
 
-	--font-main: sans-serif;
+	--color-bg: #fff;
+	--color-bg-secondary: #f9fafb;
+	--color-bg-tertiary: #eceef1;
+	--color-bg-disabled: #5e5e5e1e;
+
+	--color-fr: #232323;
+	--color-fr-secondary: #5e5e5e;
+	--color-fr-tertiary: #4c4c4c;
+	--color-fr-disabled: rgba(94, 94, 94, 0.1);
+
+	--color-border: #5e5e5e62;
+	--color-border-secondary: #5e5e5e4b;
+	--color-border-tertiary: #5e5e5e34;
+
+	--color-success: #019f3c;
+	--color-success-secondary: #34b263;
+	--color-success-tertiary: #80cf9e;
+
+	--color-warning: #f29100;
+	--color-warning-secondary: #f5a733;
+	--color-warning-tertiary: #f9c880;
+
+	--color-error: #d91528;
+	--color-error-secondary: #e14453;
+	--color-error-tertiary: #ec8a93;
+
+	--radius-4: 4px;
+	--radius-8: 8px;
+	--radius-12: 12px;
+	--radius-16: 16px;
+
+	--space-4: 4px;
+	--space-8: 8px;
+	--space-12: 12px;
+	--space-16: 16px;
+	--space-24: 24px;
+	--space-32: 32px;
+	--space-40: 40px;
+	--space-48: 48px;
+	--space-64: 64px;
+	--space-72: 72px;
+
+	--container-width: 1920px;
+	--container-padding: 72px;
+
+	--font-main: 'Manrope', sans-serif;
 	--font-accent: 'Manrope', sans-serif;
 	--font-titles: var(--font-accent);
 
@@ -11,13 +57,7 @@
 	--accent: #ac182c;
 	--link-color: #2578c8;
 
-
-    --laptop-size: 1199px;
+	--laptop-size: 1199px;
 	--tablet-size: 959px;
 	--mobile-size: 599px;
-}
-
-.dark {
-    --page-bg: #252526;
-    --text-color: #fff;
 }

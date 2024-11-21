@@ -1,0 +1,82 @@
+/* Primary colors */
+.fr-primary {
+	color: var(--color-fr);
+}
+.fr-secondary {
+	color: var(--color-fr-secondary);
+}
+.fr-tertiary {
+	color: var(--color-fr-tertiary);
+}
+.fr-disabled {
+	color: var(--color-fr-disabled);
+}
+
+/* Accent colors */
+.accent-primary {
+	color: var(--color-accent);
+}
+.accent-secondary {
+	color: var(--color-accent-secondary);
+}
+.accent-tertiary {
+	color: var(--color-accent-tertiary);
+}
+
+/* Success colors */
+.success-primary {
+	color: var(--color-success);
+}
+.success-secondary {
+	color: var(--color-success-secondary);
+}
+.success-tertiary {
+	color: var(--color-success-tertiary);
+}
+
+/* Warning colors */
+.warning-primary {
+	color: var(--color-warning);
+}
+.warning-secondary {
+	color: var(--color-warning-secondary);
+}
+.warning-tertiary {
+	color: var(--color-warning-tertiary);
+}
+
+/* Error colors */
+.error-primary {
+	color: var(--color-error);
+}
+.error-secondary {
+	color: var(--color-error-secondary);
+}
+.error-tertiary {
+	color: var(--color-error-tertiary);
+}
+
+/* Border colors */
+.border-primary {
+	border-color: var(--color-border);
+}
+.border-secondary {
+	border-color: var(--color-border-secondary);
+}
+.border-tertiary {
+	border-color: var(--color-border-tertiary);
+}
+
+/* bg colors */
+.bg-primary {
+	color: var(--color-bg);
+}
+.bg-secondary {
+	color: var(--color-bg-secondary);
+}
+.bg-tertiary {
+	color: var(--color-bg-tertiary);
+}
+.bg-disabled {
+	color: var(--color-bg-disabled);
+}

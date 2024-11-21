@@ -1,15 +1,12 @@
-/* Демо контент */
-.content-demo {
-	margin-bottom: 5rem;
-	padding: 1rem;
-	background-color: #dadada;
+.l-wrapper {
+	margin: 0 auto;
+	padding: 0 var(--container-padding);
+	max-width: var(--container-width);
+	width: 100%;
 }
-
-/* Контейнеры */
 .container {
 	margin: 0 auto;
 	padding: 0 var(--container-padding);
-
 	max-width: var(--container-width);
 	width: 100%;
 }
@@ -39,9 +36,7 @@
 }
 
 .container-right {
-	padding-left: calc(
-		(100% - var(--container-width)) / 2 + var(--container-padding)
-	);
+	padding-left: calc((100% - var(--container-width)) / 2 + var(--container-padding));
 
 	@include tablet {
 		padding-left: var(--container-padding);
@@ -49,9 +44,7 @@
 }
 
 .container-left {
-	padding-right: calc(
-		(100% - var(--container-width)) / 2 + var(--container-padding)
-	);
+	padding-right: calc((100% - var(--container-width)) / 2 + var(--container-padding));
 
 	@include tablet {
 		padding-right: var(--container-padding);
@@ -59,12 +52,8 @@
 }
 
 .container-half-left {
-	padding-right: calc(
-		(100% - var(--container-width)) / 2 + (var(--container-width) / 2)
-	);
-	padding-left: calc(
-		(100% - var(--container-width)) / 2 + var(--container-padding)
-	);
+	padding-right: calc((100% - var(--container-width)) / 2 + (var(--container-width) / 2));
+	padding-left: calc((100% - var(--container-width)) / 2 + var(--container-padding));
 
 	@include tablet {
 		padding-left: var(--container-padding);
@@ -76,12 +65,8 @@
 }
 
 .container-half-right {
-	padding-left: calc(
-		(100% - var(--container-width)) / 2 + (var(--container-width) / 2)
-	);
-	padding-right: calc(
-		(100% - var(--container-width)) / 2 + var(--container-padding)
-	);
+	padding-left: calc((100% - var(--container-width)) / 2 + (var(--container-width) / 2));
+	padding-right: calc((100% - var(--container-width)) / 2 + var(--container-padding));
 
 	@include tablet {
 		padding-right: var(--container-padding);

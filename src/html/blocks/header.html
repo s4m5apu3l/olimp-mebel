@@ -1,17 +1,61 @@
-<header class="header">
-    <div class="container">
-        <div class="header__row">
-            <div class="logo">ВебКадеми</div>
-            <nav class="header__nav nav">
-                <ul class="nav__list">
-                    <li><a href="index.html" class="active">Главная</a></li>
-		            <li><a href="docs.html">Документация</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-nav-btn">
-                <div class="nav-icon"></div>
-            </button>
-        </div>
-    </div>
+<header class="l-header">
+	<div class="l-header__top">
+		<div class="l-wrapper">
+			<div class="l-header__top-content">
+				<div class="l-city-change">
+					<button class="l-city-change__btn">
+						<svg class="icon icon--nav-pin">
+							<use href="./img/svgsprite/sprite.symbol.svg#nav-pin"></use>
+						</svg>
+						<div class="l-city-change__city fr-secondary">
+							<span>Якутск</span>
+							<svg class="icon icon--arrow">
+								<use href="./img/svgsprite/sprite.symbol.svg#arrow"></use>
+							</svg>
+						</div>
+					</button>
+				</div>
+
+				<nav class="l-header__top-nav">
+					<ul class="fr-secondary">
+						<li>
+							<a href="#">Новости</a>
+						</li>
+						<li>
+							<a href="#">Доставка</a>
+						</li>
+						<li>
+							<a href="#">Возврат и обмен</a>
+						</li>
+						<li>
+							<a href="#">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<div class="l-header__row">
+		<div class="l-wrapper">
+			<div class="l-header__row-left">
+				<a href="/" class="l-header__logo">
+					<svg class="icon--logo">
+						<use href="./img/svgsprite/sprite.symbol.svg#logo"></use>
+					</svg>
+				</a>
+
+				<div class="l-header__catalog">
+					<button class="l-header__catalog-btn">Каталог</button>
+				</div>
+
+				<div class="l-header__search">
+					<div class="c-input ">
+						<input type="text" name="search" placeholder="Найти на Олимпе" class="l-header__search-input" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </header>
 <!-- @@include('mobile-nav.html') -->
