@@ -9,6 +9,13 @@ body {
 	text-wrap: balance;
 	min-width: 340px;
 }
+// это стики хуйня надо ли?
+html,
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
 
 img {
 	display: block;
@@ -16,13 +23,6 @@ img {
 
 a {
 	color: inherit;
-}
-
-html,
-body {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
 }
 
 .footer {
@@ -39,7 +39,7 @@ body {
 		display: none;
 		opacity: 0;
 		position: absolute;
-		top: 200%;
+		top: 180%;
 		left: 0;
 		z-index: 10;
 

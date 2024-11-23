@@ -9,7 +9,14 @@ Fancybox.bind('[data-fancybox]', {
 // Мобильная навигация
 // import mobileNav from './modules/mobile-nav';
 // mobileNav();
-
-// dropdowns
 import initDropdowns from './modules/dropdowns';
-initDropdowns();
+import CatalogTabs from './modules/catalog-tabs.js';
+
+new CatalogTabs({
+	tabButtonsSelector: '.js-catalog-link',
+	tabContentsSelector: '.js-header-sublist'
+});
+window.addEventListener('DOMContentLoaded', () => {
+	// dropdowns
+	initDropdowns();
+});

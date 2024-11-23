@@ -60,13 +60,67 @@
 						</svg>
 					</a>
 
-					<div class="l-header__catalog">
-						<button class="l-header__catalog-btn c-button">
+					<div class="l-header__catalog js-dropdown">
+						<button class="l-header__catalog-btn c-button js-dropdown-btn js-catalog-btn">
 							<svg class="icon icon--catalog">
 								<use href="./img/svgsprite/sprite.symbol.svg#catalog"></use>
 							</svg>
 							<span class="text-18 font-medium">Каталог</span>
 						</button>
+
+						<div class="js-dropdown-content ">
+							<div class="l-header__catalog-dropdown">
+								<ul class="l-header__catalog-list l-header__catalog-list--main">
+									<li>
+										<!-- по умолчанию ставим активный класс active на первый элемент -->
+										<a href="#" class="l-header__catalog-link js-catalog-link active">Кухонная мебель</a>
+									</li>
+									<li>
+										<a href="#" class="l-header__catalog-link js-catalog-link">Кухонная</a>
+									</li>
+									<li>
+										<a href="#" class="l-header__catalog-link js-catalog-link">Кухонная мебель  ухонная мебель ухонная мебель</a>
+									</li>
+									<li>
+										<a href="#" class="l-header__catalog-link js-catalog-link">Кухонная мебель</a>
+									</li>
+								</ul>
+
+								<div class="l-header__catalog-sublist">
+									<!-- по умолчанию ставим активный класс active на первый элемент -->
+									<ul class="l-header__catalog-list js-header-sublist active">
+										<li>
+											<a href="#" class="l-header__catalog-link ">Кухонная мебель</a>
+										</li>
+										<li>
+											<a href="#" class="l-header__catalog-link ">Кухонная мебель</a>
+										</li>
+									</ul>
+									<ul class="l-header__catalog-list js-header-sublist">
+										<li>
+											<a href="#" class="l-header__catalog-link">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, ullam libero. Similique esse facere ipsa expedita, dolor dolores,
+												voluptates exercitationem totam quisquam eveniet recusandae aspernatur ipsum explicabo fugiat incidunt
+											</a>
+										</li>
+										<li>
+											<a href="#" class="l-header__catalog-link ">Кухонная мебель</a>
+										</li>
+										<li>
+											<a href="#" class="l-header__catalog-link ">Кухонная мебель</a>
+										</li>
+										<li>
+											<a href="#" class="l-header__catalog-link ">Кухонная мебель</a>
+										</li>
+									</ul>
+									<ul class="l-header__catalog-list js-header-sublist">
+										<li>
+											<a href="#" class="l-header__catalog-link ">Кухонная мебель</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</div>
 
 					<div class="l-header__search">
@@ -83,7 +137,7 @@
 					</div>
 				</div>
 
-				<div class="l-header__row-right">
+				<nav class="l-header__row-right">
 					<ul class="l-header__user-list">
 						<li>
 							<a href="#" class="l-header__user-link">
@@ -110,7 +164,7 @@
 							</a>
 						</li>
 					</ul>
-				</div>
+				</nav>
 			</div>
 		</div>
 	</div>
