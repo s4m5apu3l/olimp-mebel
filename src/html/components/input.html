@@ -1,51 +1,58 @@
 <!-- тут нигде не вызываешь, а просто копируешь компонент -->
 <div class="input-group">
 	<label for="input1" class="red-dot">Label</label>
-	<div class="input-container">
-		<input type="text" id="input1" placeholder="Placeholder" />
-		<button class="action-btn">+</button>
+	<div class="input-group__container">
+		<input type="text" id="input1" placeholder="Найти на Олимпе" />
+		<i class="input-icon">
+			<svg class="icon icon--search">
+				<use href="./img/svgsprite/sprite.symbol.svg#search"></use>
+			</svg>
+		</i>
 	</div>
-	<span class="hint"></span>
+	<span class="hint">hint</span>
 </div>
 
-<style>
-	.input-container {
+<!-- стили указаны тоже просто так какие использует итд -->
+<style lang="scss">
+	.input-group {
 		display: flex;
-		align-items: center;
-		border: 1px solid #ccc;
-		border-radius: 5px;
-		padding: 5px;
-		transition: border-color 0.3s;
+		flex-direction: column;
+		gap: 8px;
+		min-width: 300px;
+
+		&__container {
+			position: relative;
+			input {
+				border: 1px solid var(--color-border-secondary);
+				border-radius: var(--radius-8);
+				padding: 16px;
+				width: 100%;
+				transition: all 0.4s ease;
+				&::placeholder {
+					color: #5e5e5e;
+				}
+				&:focus,
+				&:focus-within {
+					border-color: var(--color-accent);
+				}
+			}
+			.input-icon {
+				position: absolute;
+				right: 16px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
 	}
 
-	.input-container input {
-		border: none;
-		outline: none;
-		flex-grow: 1;
-		padding: 5px;
-		font-size: 1em;
-	}
-
-	.input-container button {
-		background-color: transparent;
-		border: none;
-		font-size: 1.5em;
-		cursor: pointer;
-	}
-
-	/* Placeholder стили */
-	input::placeholder {
-		color: #ccc;
-		font-style: italic;
-	}
-
-	/* Состояния */
-	.form-group:hover .input-container {
-		border-color: #999;
-	}
-
-	.form-group:focus-within .input-container {
-		border-color: #ffa500;
+	.red-dot {
+		position: relative;
+		&::after {
+			content: '*';
+			color: #d91528;
+			position: absolute;
+			left: -10px;
+		}
 	}
 
 	.form-group.success .input-container {
