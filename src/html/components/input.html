@@ -1,0 +1,82 @@
+<!-- тут нигде не вызываешь, а просто копируешь компонент -->
+<div class="input-group">
+	<label for="input1" class="red-dot">Label</label>
+	<div class="input-container">
+		<input type="text" id="input1" placeholder="Placeholder" />
+		<button class="action-btn">+</button>
+	</div>
+	<span class="hint"></span>
+</div>
+
+<style>
+	.input-container {
+		display: flex;
+		align-items: center;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		padding: 5px;
+		transition: border-color 0.3s;
+	}
+
+	.input-container input {
+		border: none;
+		outline: none;
+		flex-grow: 1;
+		padding: 5px;
+		font-size: 1em;
+	}
+
+	.input-container button {
+		background-color: transparent;
+		border: none;
+		font-size: 1.5em;
+		cursor: pointer;
+	}
+
+	/* Placeholder стили */
+	input::placeholder {
+		color: #ccc;
+		font-style: italic;
+	}
+
+	/* Состояния */
+	.form-group:hover .input-container {
+		border-color: #999;
+	}
+
+	.form-group:focus-within .input-container {
+		border-color: #ffa500;
+	}
+
+	.form-group.success .input-container {
+		border-color: green;
+	}
+
+	.form-group.success .hint {
+		color: green;
+	}
+
+	.form-group.error .input-container {
+		border-color: red;
+	}
+
+	.form-group.error .hint {
+		color: red;
+		font-style: italic;
+	}
+
+	/* Заблокированное состояние */
+	.form-group.disabled .input-container {
+		background-color: #f5f5f5;
+		pointer-events: none;
+	}
+
+	.form-group.disabled .input-container input {
+		color: #aaa;
+	}
+
+	/* Размер кнопки */
+	.input-container button {
+		margin-left: 10px;
+	}
+</style>
