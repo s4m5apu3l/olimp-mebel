@@ -10,8 +10,6 @@ export default class CatalogTabs {
 			return;
 		}
 		this.initTabs();
-		// Устанавливаем начальный активный таб
-		// this.switchTab(0);
 	}
 
 	// Инициализация табов
@@ -42,11 +40,9 @@ export default class CatalogTabs {
 		if (this.currentIndex === index) return;
 
 		this.tabButtons.forEach(btn => btn.classList.remove('active'));
-		// this.tabContents.forEach(content => (content.style.display = 'none'));
 		this.tabContents.forEach(content => content.classList.remove('active'));
 
 		this.tabButtons[index].classList.add('active');
-		// this.tabContents[index].style.display = 'block';
 		this.tabContents[index].classList.add('active');
 
 		this.currentIndex = index;

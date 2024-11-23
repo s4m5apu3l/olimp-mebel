@@ -17,6 +17,9 @@ function initDropdowns() {
 			if (toggle.classList.contains('js-catalog-btn')) {
 				document.body.classList.toggle('no-scroll');
 				document.body.classList.toggle('catalog-active');
+			} else {
+				document.body.classList.remove('no-scroll');
+				document.body.classList.remove('catalog-active');
 			}
 		} else {
 			// Если клик вне дропдауна, закрыть все

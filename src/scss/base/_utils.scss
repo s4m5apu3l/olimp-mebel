@@ -38,3 +38,28 @@
 .flex-center {
 	justify-content: center;
 }
+
+.js-dropdown {
+	position: relative;
+	&-content {
+		display: none;
+		opacity: 0;
+		position: absolute;
+		top: 180%;
+		left: 0;
+		z-index: 10;
+
+		transition: opacity 0.4s ease, display 0.4s ease allow-discrete;
+	}
+	&.active {
+		.js-dropdown-content {
+			display: block;
+			opacity: 1;
+		}
+	}
+}
+@starting-style {
+	.js-dropdown.active .js-dropdown-content {
+		opacity: 0;
+	}
+}

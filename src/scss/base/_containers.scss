@@ -3,6 +3,15 @@
 	padding: 0 var(--container-padding);
 	max-width: var(--container-width);
 	width: 100%;
+	@include mediaSize(1200px) {
+		padding: 0 24px;
+	}
+	@include mediaSize(840px) {
+		padding: 0 18px;
+	}
+	@include mediaSize(768px) {
+		padding: 0 16px;
+	}
 }
 .container {
 	margin: 0 auto;
