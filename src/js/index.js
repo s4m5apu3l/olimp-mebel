@@ -7,5 +7,9 @@ Fancybox.bind('[data-fancybox]', {
 });
 
 // Мобильная навигация
-import mobileNav from './modules/mobile-nav.js';
-mobileNav();
+// import mobileNav from './modules/mobile-nav';
+// mobileNav();
+
+// dropdowns
+import initDropdowns from './modules/dropdowns';
+initDropdowns();

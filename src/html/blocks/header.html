@@ -2,18 +2,32 @@
 	<div class="l-header__top">
 		<div class="l-wrapper">
 			<div class="l-header__top-content">
-				<div class="l-city-change">
-					<button class="l-city-change__btn">
+				<div class="l-city-change js-dropdown">
+					<div class="l-city-change__btn js-dropdown-btn">
 						<svg class="icon icon--nav-pin">
 							<use href="./img/svgsprite/sprite.symbol.svg#nav-pin"></use>
 						</svg>
-						<div class="l-city-change__city fr-secondary">
+						<button class="l-city-change__city fr-secondary">
 							<span>Якутск</span>
 							<svg class="icon icon--arrow">
 								<use href="./img/svgsprite/sprite.symbol.svg#arrow"></use>
 							</svg>
-						</div>
-					</button>
+						</button>
+					</div>
+
+					<ul class="l-city-change__list js-dropdown-content">
+						<li>
+							<a href="#" class="text-14 active">
+								Якутск
+							</a>
+						</li>
+						<li>
+							<a href="#" class="text-14 ">Новосибирск</a>
+						</li>
+						<li>
+							<a href="#" class="text-14 ">п. Нижний Бестях</a>
+						</li>
+					</ul>
 				</div>
 
 				<nav class="l-header__top-nav">

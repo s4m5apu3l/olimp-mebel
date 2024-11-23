@@ -1,4 +1,5 @@
 .l-header {
+	background-color: white;
 	&__top {
 		padding: 16px 0;
 		background-color: var(--color-bg-tertiary);
@@ -13,7 +14,7 @@
 				align-items: center;
 				gap: var(--space-48);
 				a {
-					transition: all .4s ease;
+					transition: all 0.4s ease;
 					&:hover {
 						color: var(--color-fr);
 					}
@@ -43,7 +44,6 @@
 	}
 	&__user {
 		&-list {
-			
 			display: flex;
 			align-items: center;
 			gap: 32px;
@@ -67,5 +67,39 @@
 		display: flex;
 		align-items: center;
 		gap: 4px;
+	}
+	&__list {
+		padding: 8px;
+		box-shadow: 0px 2px 2px 0px #5e5e5e33;
+		background-color: white;
+		border-radius: 12px;
+		li {
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
+		}
+		a {
+			padding: 8px;
+			position: relative;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			white-space: nowrap;
+			border-radius: 6px;
+			&:hover {
+				background-color: var(--color-bg-tertiary);
+			}
+			&.active {
+				&::before {
+					content: '';
+					display: block;
+					width: 24px;
+					height: 24px;
+					background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.0607 9.06066L11.0607 16.0607C10.7678 16.3536 10.2929 16.3536 10 16.0607L6 12.0607L7.06066 11L10.5303 14.4697L17 8L18.0607 9.06066Z' fill='%23F8B711'/%3E%3C/svg%3E%0A");
+					background-size: auto;
+					background-repeat: no-repeat;
+				}
+			}
+		}
 	}
 }
