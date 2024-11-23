@@ -12,11 +12,48 @@
 				display: flex;
 				align-items: center;
 				gap: var(--space-48);
+				a {
+					transition: all .4s ease;
+					&:hover {
+						color: var(--color-fr);
+					}
+				}
 			}
 		}
 	}
 	&__row {
 		padding: 24px 0;
+		&-container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 32px;
+		}
+		&-left {
+			display: grid;
+			grid-template-columns: 150px 135px 1fr;
+			align-items: center;
+			gap: 64px;
+			width: 100%;
+		}
+	}
+	&__search {
+		width: 100%;
+		max-width: 913px;
+	}
+	&__user {
+		&-list {
+			
+			display: flex;
+			align-items: center;
+			gap: 32px;
+		}
+		&-link {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 8px;
+		}
 	}
 }
 

@@ -30,13 +30,13 @@
 		transform: rotate(-90deg);
 	}
 }
-.icon--nav-pin {
+.icon--nav-pin,
+.icon--search {
 	fill: var(--color-fr-secondary);
 }
-
 .icon--heart,
 .icon--basket,
 .icon--user,
-.icon--search {
+.icon--catalog {
 	fill: var(--color-fr);
 }
