@@ -24,3 +24,85 @@
 // 	font-size: 16px;
 
 // }
+.l-footer{
+	&__container{
+		padding: 0 72px;
+		// width: 100%;
+	}
+	&__header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 48px;
+	}
+	&__info{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-top: 64px;
+		&-contacts{
+			&-text{
+				display: flex;
+				flex-direction: column;
+				margin-top: 16px;
+				gap: 5px;
+			}
+			&-text2{
+				display: flex;
+				flex-direction: column;
+				margin-top: 12px;
+				gap: 5px;
+			}
+		}
+		&-buyer{
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			&-list{
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+			}
+		}
+		&-store{
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			&-list{
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+			}
+		}
+		&-delivery{
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			&-list{
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+			}
+		}
+	}
+	&__links{
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		gap: 16px;
+		margin-top: 32px;
+	}
+	&__copyright{
+		margin-top: 32px;
+		border-top: 1px solid #5E5E5E33;
+		&-text{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin-top: 32px;
+			#l-footer-underline{
+				text-decoration: underline;
+			}
+		}
+	}
+}
