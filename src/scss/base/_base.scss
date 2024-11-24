@@ -8,7 +8,31 @@ body {
 	text-wrap: balance;
 	min-width: 340px;
 	background-color: #f9fafb;
+	&::before {
+		content: '';
+		position: fixed;
+		inset: 0;
+		width: 100vw;
+		height: 100dvh;
+		background: #5e5e5e80;
+		z-index: 100;
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity 0.4s ease;
+	}
+	&.catalog-active {
+		&::before {
+			opacity: 1;
+		}
+	}
+	&.backdrop-active {
+		&::before {
+			opacity: 1;
+			z-index: 500;
+		}
+	}
 }
+
 // это стики хуйня надо ли? upd: nado ebit
 html,
 body {

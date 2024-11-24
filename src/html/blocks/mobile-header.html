@@ -1,0 +1,52 @@
+<section class="l-header__mobile">
+	<div class="l-wrapper">
+		<div class="l-header__mobile-content">
+			<div class="l-header__mobile-drilldown">
+				<button class="c-button menu-toggle">
+					<svg class="icon icon--catalog">
+						<use href="./img/svgsprite/sprite.symbol.svg#catalog"></use>
+					</svg>
+				</button>
+
+				<!-- Drilldown меню -->
+				<div class="drilldown-menu" id="drilldown-menu">
+					<div class="menu-header">
+						<button class="back-button" aria-label="Назад">← Назад</button>
+						<span class="menu-title">Каталог</span>
+						<button class="close-button" aria-label="Закрыть меню">✕</button>
+					</div>
+					<ul class="menu-list">
+						<li class="menu-item">
+							<button class="menu-link" data-target="#submenu-1">Кухонная мебель</button>
+							<ul class="submenu" id="submenu-1">
+								<li><button class="menu-link">Кухни</button></li>
+								<li><button class="menu-link">Столы</button></li>
+								<li><button class="menu-link">Стулья</button></li>
+							</ul>
+						</li>
+						<li class="menu-item">
+							<button class="menu-link" data-target="#submenu-2">Гостинные</button>
+							<ul class="submenu" id="submenu-2">
+								<li><button class="menu-link">Диваны</button></li>
+								<li><button class="menu-link">Столики</button></li>
+							</ul>
+						</li>
+						<li class="menu-item">
+							<button class="menu-link">Прихожие</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="input-group">
+				<div class="input-group__container">
+					<input type="text" placeholder="Найти на Олимпе" />
+					<i class="input-icon">
+						<svg class="icon icon--search">
+							<use href="./img/svgsprite/sprite.symbol.svg#search"></use>
+						</svg>
+					</i>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

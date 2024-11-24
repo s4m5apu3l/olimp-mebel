@@ -10,13 +10,15 @@ Fancybox.bind('[data-fancybox]', {
 // import mobileNav from './modules/mobile-nav';
 // mobileNav();
 import initDropdowns from './modules/dropdowns';
-import CatalogTabs from './modules/catalog-tabs.js';
+import CatalogTabs from './modules/catalog-tabs';
+import DrilldownMenu from './modules/drilldown-menu';
 
-new CatalogTabs({
-	tabButtonsSelector: '.js-catalog-link',
-	tabContentsSelector: '.js-header-sublist'
-});
 window.addEventListener('DOMContentLoaded', () => {
 	// dropdowns
 	initDropdowns();
+	new CatalogTabs({
+		tabButtonsSelector: '.js-catalog-link',
+		tabContentsSelector: '.js-header-sublist'
+	});
+	new DrilldownMenu('#drilldown-menu', '.menu-toggle');
 });

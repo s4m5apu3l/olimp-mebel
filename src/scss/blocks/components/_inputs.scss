@@ -23,7 +23,12 @@
 			&:focus-within {
 				border-color: var(--color-accent);
 			}
-		}
+			@include mediaSize(820px) {
+				font-size: 14px;
+				line-height: 20px;
+				padding: 15px 16px;
+			}
+ 		}
 		.input-icon {
 			position: absolute;
 			right: 16px;
