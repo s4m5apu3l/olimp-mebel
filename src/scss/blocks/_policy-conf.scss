@@ -1,9 +1,22 @@
 .l-policy {
 	padding: 0 338px;
+    @include mediaSize(1440px){
+        padding: 0 225px;
+    }
+    @include mediaSize(1100px){
+        padding: 0 150px;
+    }
+    @include mediaSize(800px){
+        padding: 0 100px;
+    }
+    @include mediaSize(600px){
+        padding: 0;
+    }
     &__title{
         margin-top: 24px;
     }
     &__text{
+        width: 100%;
         margin-top: 48px;
         line-height: 28px;
     }
