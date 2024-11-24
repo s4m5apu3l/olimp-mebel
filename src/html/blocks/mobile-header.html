@@ -8,31 +8,96 @@
 					</svg>
 				</button>
 
-				<!-- Drilldown меню -->
-				<div class="drilldown-menu" id="drilldown-menu">
-					<div class="menu-header">
-						<button class="back-button" aria-label="Назад">← Назад</button>
-						<span class="menu-title">Каталог</span>
-						<button class="close-button" aria-label="Закрыть меню">✕</button>
+				<div class="l-drilldown" id="drilldown-menu">
+					<div class="l-drilldown__header">
+						<button class="js-drilldown-back back-btn d-flex items-center" aria-label="Назад">
+							<svg class="icon icon--arrow left">
+								<use href="./img/svgsprite/sprite.symbol.svg#arrow"></use>
+							</svg>
+							<span class="font-medium">
+								Назад
+							</span>
+						</button>
+
+						<span class="font-semibold text-24">Каталог</span>
+
+						<button class="js-drilldown-close c-button gray small" aria-label="Закрыть меню">
+							<svg class="icon icon--close">
+								<use href="./img/svgsprite/sprite.symbol.svg#close"></use>
+							</svg>
+						</button>
 					</div>
-					<ul class="menu-list">
-						<li class="menu-item">
-							<button class="menu-link" data-target="#submenu-1">Кухонная мебель</button>
-							<ul class="submenu" id="submenu-1">
-								<li><button class="menu-link">Кухни</button></li>
-								<li><button class="menu-link">Столы</button></li>
-								<li><button class="menu-link">Стулья</button></li>
+					<ul class="l-drilldown__list js-drilldown-list">
+						<li class="l-drilldown__list-item js-drilldown-item">
+							<a href="javascript:void(0)" class="menu-link" data-target="#submenu-1">
+								<span>Кухонная мебель Кухонная мебель Кухонная мебель Кухонная мебель</span>
+								<svg class="icon icon--arrow right">
+									<use href="./img/svgsprite/sprite.symbol.svg#arrow" />
+								</svg>
+							</a>
+
+							<ul class="l-drilldown__submenu js-drilldown-submenu" id="submenu-1">
+								<li>
+									<a href="#" class="menu-link">
+										<span>Кухонная мебель Кухонная мебель Кухонная мебель Кухонная мебель</span>
+										<svg class="icon icon--arrow right">
+											<use href="./img/svgsprite/sprite.symbol.svg#arrow" />
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="menu-link">
+										<span>Кухонная мебель</span>
+										<svg class="icon icon--arrow right">
+											<use href="./img/svgsprite/sprite.symbol.svg#arrow" />
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="menu-link">
+										<span>Кухонная мебель</span>
+										<svg class="icon icon--arrow right">
+											<use href="./img/svgsprite/sprite.symbol.svg#arrow" />
+										</svg>
+									</a>
+								</li>
 							</ul>
 						</li>
-						<li class="menu-item">
-							<button class="menu-link" data-target="#submenu-2">Гостинные</button>
-							<ul class="submenu" id="submenu-2">
-								<li><button class="menu-link">Диваны</button></li>
-								<li><button class="menu-link">Столики</button></li>
+
+						<li class="l-drilldown__list-item js-drilldown-item">
+							<a href="javascript:void(0)" class="menu-link" data-target="#submenu-2">
+								<span>Кухонная мебель</span>
+								<svg class="icon icon--arrow right">
+									<use href="./img/svgsprite/sprite.symbol.svg#arrow" />
+								</svg>
+							</a>
+
+							<ul class="l-drilldown__submenu js-drilldown-submenu" id="submenu-2">
+								<li>
+									<a href="#" class="menu-link">
+										<span>Кухонная мебель</span>
+										<svg class="icon icon--arrow right">
+											<use href="./img/svgsprite/sprite.symbol.svg#arrow" />
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="menu-link">
+										<span>Кухонная мебель</span>
+										<svg class="icon icon--arrow right">
+											<use href="./img/svgsprite/sprite.symbol.svg#arrow" />
+										</svg>
+									</a>
+								</li>
 							</ul>
 						</li>
-						<li class="menu-item">
-							<button class="menu-link">Прихожие</button>
+						<li class="l-drilldown__list-item js-drilldown-item">
+							<a href="#" class="menu-link ">
+								<span>Меню без подменю</span>
+								<svg class="icon icon--arrow right">
+									<use href="./img/svgsprite/sprite.symbol.svg#arrow" />
+								</svg>
+							</a>
 						</li>
 					</ul>
 				</div>
