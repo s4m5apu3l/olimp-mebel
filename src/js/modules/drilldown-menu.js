@@ -4,7 +4,6 @@ export default class DrilldownMenu {
 		this.toggleButton = document.querySelector(toggleSelector);
 		this.backButton = this.menu.querySelector('.js-drilldown-back');
 		this.closeButton = this.menu.querySelector('.js-drilldown-close');
-		//   this.menuTitle = this.menu.querySelector('.menu-title');
 		this.activeMenu = null;
 		this.init();
 	}
