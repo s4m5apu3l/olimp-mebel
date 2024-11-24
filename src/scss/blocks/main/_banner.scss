@@ -6,6 +6,9 @@
 		.swiper-slide {
 			overflow: hidden;
 			border-radius: var(--radius-12);
+			@include mediaSize(840px) {
+				border-radius: 8px;
+			}
 		}
 	}
 	&__img {
