@@ -5,8 +5,10 @@
 	padding: 14px 16px;
 	border-radius: var(--radius-12);
 	background-color: var(--color-accent);
+	font-size: clamp(0.75rem, 0.2813rem + 1.5vw, 1.125rem);
+	text-align: center;
 	&.gray {
-		background-color: #E3E3E3;
+		background-color: #e3e3e3;
 	}
 	&.small {
 		padding: 8px;

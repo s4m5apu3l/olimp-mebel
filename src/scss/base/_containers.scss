@@ -13,3 +13,9 @@
 		padding: 0 16px;
 	}
 }
+.l-section {
+	padding: 24px 0;
+	@include mediaSize(768px) {
+		padding: 16px 0;
+	}
+}
