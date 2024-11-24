@@ -1,0 +1,22 @@
+.breadcrumbs {
+	display: flex;
+	align-items: center;
+	&__list {
+		display: flex;
+		gap: 8px;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	&__link {
+		text-decoration: none;
+		transition: color 0.2s;
+		&:hover {
+			color: #232323;
+		}
+	}
+	&__current {
+		color: #232323;
+		font-weight: bold;
+	}
+}
