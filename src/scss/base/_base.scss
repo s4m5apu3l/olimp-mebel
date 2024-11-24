@@ -9,6 +9,7 @@ body {
 	text-wrap: balance;
 	min-width: 340px;
 	background-color: #f9fafb;
+	overflow-x: hidden;
 	&::before {
 		content: '';
 		position: fixed;

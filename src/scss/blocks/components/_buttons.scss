@@ -17,4 +17,7 @@
 			padding: 6px;
 		}
 	}
+	@include mediaSize(768px) {
+		padding: 10px 16px;
+	}
 }
