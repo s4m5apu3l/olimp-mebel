@@ -19,15 +19,12 @@
 		justify-content: space-between;
 		margin-top: 64px;
 		&-contacts {
-			max-width: 291px;
+			max-width: 300px;
 			&__content {
 				display: flex;
 				flex-direction: column;
 				gap: 12px;
 				margin-top: 16px;
-				.l-text {
-					line-height: 28px;
-				}
 			}
 		}
 		&-buyer {
