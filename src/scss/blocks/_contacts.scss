@@ -1,0 +1,53 @@
+.l-contacts {
+	&__main {
+		&-content {
+			display: grid;
+			grid-template-columns: 425px 1fr;
+			gap: 24px;
+			margin-top: 32px;
+			@include mediaSize(1000px) {
+				grid-template-columns: 1fr;
+				margin-top: 16px;
+				gap: 16px;
+			}
+		}
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		&-item {
+			background-color: white;
+			border-radius: 12px;
+			padding: 24px;
+			min-height: 168px;
+			@include mediaSize(1000px) {
+				min-height: 140px;
+			}
+			.c-button.gray {
+				background-color: #ECEEF1;
+				padding: 9px;
+				.icon {
+					min-width: 18px;
+					width: 18px;
+					height: 18px;
+				}
+			}
+			.bottom {
+				margin-top: 16px;
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+			}
+		}
+	}
+	&__map {
+		width: 100%;
+		border-radius: 12px;
+		overflow: hidden;
+		max-height: 528px;
+		@include mediaSize(1000px) {
+			max-height: 350px;
+		}
+	}
+}

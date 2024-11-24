@@ -1,6 +1,7 @@
 .l-header {
 	background-color: white;
 	z-index: 200;
+	border-bottom: 1px solid #5e5e5e33;
 	&__top {
 		padding: 16px 0;
 		background-color: var(--color-bg-tertiary);

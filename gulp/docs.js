@@ -32,57 +32,48 @@ const rename = require('gulp-rename');
 
 // SVG
 const svgsprite = require('gulp-svg-sprite');
+// prettier
+const prettier = require('@bdchauvette/gulp-prettier');
 
-gulp.task('clean:docs', function (done) {
+gulp.task('clean:docs', function(done) {
 	if (fs.existsSync('./docs/')) {
-		return gulp
-			.src('./docs/', { read: false })
-			.pipe(clean({ force: true }));
+		return gulp.src('./docs/', { read: false }).pipe(clean({ force: true }));
 	}
 	done();
 });
 
 const fileIncludeSetting = {
 	prefix: '@@',
-	basepath: '@file',
+	basepath: '@file'
 };
 
-const plumberNotify = (title) => {
+const plumberNotify = title => {
 	return {
 		errorHandler: notify.onError({
 			title: title,
 			message: 'Error <%= error.message %>',
-			sound: false,
-		}),
+			sound: false
+		})
 	};
 };
 
-gulp.task('html:docs', function () {
+gulp.task('html:docs', function() {
 	return (
 		gulp
 			// .src(['./src/html/**/*.html', '!./src/html/blocks/*.html'])
-			.src([
-				'./src/html/**/*.html',
-				'!./**/blocks/**/*.*',
-				'!./src/html/docs/**/*.*'
-			])
+			.src(['./src/html/**/*.html', '!./**/blocks/**/*.*', '!./src/html/docs/**/*.*'])
 			.pipe(changed('./docs/'))
 			.pipe(plumber(plumberNotify('HTML')))
 			.pipe(fileInclude(fileIncludeSetting))
-			.pipe(
-				replace(
-					/(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
-					'$1./$4$5$7$1'
-				)
-			)
+			.pipe(replace(/(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi, '$1./$4$5$7$1'))
 			.pipe(
 				typograf({
 					locale: ['ru', 'en-US'],
 					htmlEntity: { type: 'digit' },
 					safeTags: [
 						['<\\?php', '\\?>'],
-						['<no-typography>', '</no-typography>'],
-					],
+						['<no-typography>', '</no-typography>']
+					]
 				})
 			)
 			.pipe(
@@ -90,16 +81,25 @@ gulp.task('html:docs', function () {
 					extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp'],
 					retina: {
 						1: '',
-						2: '@2x',
-					},
+						2: '@2x'
+					}
 				})
 			)
-			.pipe(htmlclean())
+			.pipe(
+				prettier({
+					tabWidth: 4,
+					useTabs: true,
+					printWidth: 182,
+					trailingComma: 'es5',
+					bracketSpacing: false
+				})
+			)
 			.pipe(gulp.dest('./docs/'))
 	);
 });
+// .pipe(htmlclean())
 
-gulp.task('sass:docs', function () {
+gulp.task('sass:docs', function() {
 	return (
 		gulp
 			.src('./src/scss/*.scss')
@@ -115,61 +115,47 @@ gulp.task('sass:docs', function () {
 			// 		mode: 'webp',
 			// 	})
 			// )
-			.pipe(
-				replace(
-					/(['"]?)(\.\.\/)+(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
-					'$1$2$3$4$6$1'
-				)
-			)
+			.pipe(replace(/(['"]?)(\.\.\/)+(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi, '$1$2$3$4$6$1'))
 			.pipe(csso())
 			.pipe(sourceMaps.write())
 			.pipe(gulp.dest('./docs/css/'))
 	);
 });
 
-gulp.task('images:docs', function () {
-	return (
-		gulp
-			.src(['./src/img/**/*', '!./src/img/svgicons/**/*'])
-			.pipe(changed('./docs/img/'))
-			.pipe(
-				imagemin([
-					imageminWebp({
-						quality: 85,
-					}),
-				])
-			)
-			.pipe(rename({ extname: '.webp' }))
-			.pipe(gulp.dest('./docs/img/'))
-			.pipe(gulp.src('./src/img/**/*'))
-			.pipe(changed('./docs/img/'))
-			.pipe(
-				imagemin(
-					[
-						imagemin.gifsicle({ interlaced: true }),
-						imagemin.mozjpeg({ quality: 85, progressive: true }),
-						imagemin.optipng({ optimizationLevel: 5 }),
-					],
-					{ verbose: true }
-				)
-			)
-			.pipe(gulp.dest('./docs/img/'))
-	);
+gulp.task('images:docs', function() {
+	return gulp
+		.src(['./src/img/**/*', '!./src/img/svgicons/**/*'])
+		.pipe(changed('./docs/img/'))
+		.pipe(
+			imagemin([
+				imageminWebp({
+					quality: 85
+				})
+			])
+		)
+		.pipe(rename({ extname: '.webp' }))
+		.pipe(gulp.dest('./docs/img/'))
+		.pipe(gulp.src('./src/img/**/*'))
+		.pipe(changed('./docs/img/'))
+		.pipe(
+			imagemin([imagemin.gifsicle({ interlaced: true }), imagemin.mozjpeg({ quality: 85, progressive: true }), imagemin.optipng({ optimizationLevel: 5 })], { verbose: true })
+		)
+		.pipe(gulp.dest('./docs/img/'));
 });
 
 const svgStack = {
 	mode: {
 		stack: {
-			example: true,
-		},
-	},
+			example: true
+		}
+	}
 };
 
 const svgSymbol = {
 	mode: {
 		symbol: {
-			sprite: '../sprite.symbol.svg',
-		},
+			sprite: '../sprite.symbol.svg'
+		}
 	},
 	shape: {
 		transform: [
@@ -179,17 +165,17 @@ const svgSymbol = {
 						{
 							name: 'removeAttrs',
 							params: {
-								attrs: '(fill|stroke)',
-							},
-						},
-					],
-				},
-			},
-		],
-	},
+								attrs: '(fill|stroke)'
+							}
+						}
+					]
+				}
+			}
+		]
+	}
 };
 
-gulp.task('svgStack:docs', function () {
+gulp.task('svgStack:docs', function() {
 	return gulp
 		.src('./src/img/svgicons/**/*.svg')
 		.pipe(plumber(plumberNotify('SVG:dev')))
@@ -197,7 +183,7 @@ gulp.task('svgStack:docs', function () {
 		.pipe(gulp.dest('./docs/img/svgsprite/'));
 });
 
-gulp.task('svgSymbol:docs', function () {
+gulp.task('svgSymbol:docs', function() {
 	return gulp
 		.src('./src/img/svgicons/**/*.svg')
 		.pipe(plumber(plumberNotify('SVG:dev')))
@@ -205,14 +191,14 @@ gulp.task('svgSymbol:docs', function () {
 		.pipe(gulp.dest('./docs/img/svgsprite/'));
 });
 
-gulp.task('files:docs', function () {
+gulp.task('files:docs', function() {
 	return gulp
 		.src('./src/files/**/*')
 		.pipe(changed('./docs/files/'))
 		.pipe(gulp.dest('./docs/files/'));
 });
 
-gulp.task('js:docs', function () {
+gulp.task('js:docs', function() {
 	return gulp
 		.src('./src/js/*.js')
 		.pipe(changed('./docs/js/'))
@@ -224,9 +210,9 @@ gulp.task('js:docs', function () {
 
 const serverOptions = {
 	livereload: true,
-	open: true,
+	open: true
 };
 
-gulp.task('server:docs', function () {
+gulp.task('server:docs', function() {
 	return gulp.src('./docs/').pipe(server(serverOptions));
 });
