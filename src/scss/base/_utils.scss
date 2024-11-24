@@ -34,7 +34,12 @@
 .d-flex {
 	display: flex;
 }
-
+.items-center {
+	align-items: center;
+}
+.gap-8 {
+	gap: 8px;
+}
 .flex-center {
 	justify-content: center;
 }

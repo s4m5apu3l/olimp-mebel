@@ -227,8 +227,7 @@
 	}
 }
 
-/* Основные стили */
-.drilldown-menu {
+.l-drilldown {
 	position: fixed;
 	inset: 0;
 	background-color: white;
@@ -237,65 +236,69 @@
 	z-index: 2000;
 	display: flex;
 	flex-direction: column;
-}
-
-.drilldown-menu.active {
-	transform: translateY(0); /* Показать меню */
-}
-
-.menu-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 16px;
-	border-bottom: 1px solid #ccc;
-	background: #f9f9f9;
-}
-
-.menu-title {
-	font-size: 18px;
-	font-weight: bold;
-}
-
-.menu-list {
-	list-style: none;
-	margin: 0;
-	padding: 16px;
-}
-
-.menu-item {
-	margin-bottom: 10px;
-}
-
-.menu-link {
-	display: block;
-	width: 100%;
-	padding: 12px;
-	text-align: left;
-	background: none;
-	border: none;
-	font-size: 16px;
-	cursor: pointer;
-	text-transform: capitalize;
-}
-
-.submenu {
-	display: none;
-	padding-left: 16px;
-}
-
-.submenu.active {
-	display: block;
-}
-
-.back-button {
-	display: none;
-	font-size: 16px;
-	cursor: pointer;
-	background: none;
-	border: none;
-}
-
-.menu-header.level-2 .back-button {
-	display: block; /* Показать кнопку назад для второго уровня */
+	&.active {
+		transform: translateY(0);
+	}
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 16px;
+		.back-btn {
+			opacity: 0;
+			visibility: hidden;
+		}
+		&.level-2 {
+			.back-btn {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	&__list {
+		padding: 16px;
+		position: relative;
+		&-item {
+			padding: 12px 0;
+			border-bottom: 1px solid #5e5e5e33;
+			&:first-child {
+				padding-top: 0;
+			}
+			&:last-child {
+				border-bottom: 0;
+			}
+			.menu-link {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 8px 0;
+				width: 100%;
+			}
+		}
+	}
+	&__submenu {
+		// display: none;
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		transform: translateX(100%);
+		background-color: white;
+		transition: all 0.2s linear;
+		padding: 16px;
+		z-index: 10;
+		&.active {
+			// display: block;
+			opacity: 1;
+			visibility: visible;
+			transform: translateX(0);
+		}
+	}
+	.icon--arrow {
+		width: 24px;
+		height: 24px;
+		min-width: 24px;
+		fill: var(--color-fr);
+	}
 }

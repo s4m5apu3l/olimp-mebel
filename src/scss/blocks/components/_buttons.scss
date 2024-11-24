@@ -5,4 +5,14 @@
 	padding: 14px 16px;
 	border-radius: var(--radius-12);
 	background-color: var(--color-accent);
+	&.gray {
+		background-color: #E3E3E3;
+	}
+	&.small {
+		padding: 8px;
+		border-radius: var(--radius-8);
+		@include mediaSize(820px) {
+			padding: 6px;
+		}
+	}
 }

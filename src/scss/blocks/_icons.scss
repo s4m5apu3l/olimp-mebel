@@ -20,14 +20,15 @@
 	fill: var(--color-fr-secondary);
 	width: 16px;
 	height: 16px;
+	min-width: 16px;
 	&.left {
-		transform: rotate(180deg);
-	}
-	&.right {
 		transform: rotate(90deg);
 	}
-	&.down {
+	&.right {
 		transform: rotate(-90deg);
+	}
+	&.top {
+		transform: rotate(360deg);
 	}
 }
 .icon--nav-pin,
@@ -42,6 +43,7 @@
 .icon--vk,
 .icon--whatsapp,
 .icon--telegram,
-.icon--youtube {
+.icon--youtube,
+.icon--close {
 	fill: var(--color-fr);
 }
