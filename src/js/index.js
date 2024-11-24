@@ -23,15 +23,14 @@ new Swiper('.js-banner-main', {
 		nextEl: '.js-banner-main__next',
 		prevEl: '.js-banner-main__prev'
 	},
-	// autoplay: {
-	// 	delay: 4000,
-	// 	disableOnInteraction: false
-	// },
+	autoplay: {
+		delay: 4000,
+		disableOnInteraction: false
+	},
 	centeredSlides: true,
 
 	modules: [Navigation, Autoplay]
 });
-
 
 import initDropdowns from './modules/dropdowns';
 import CatalogTabs from './modules/catalog-tabs';
