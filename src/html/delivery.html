@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Стартовый шаблон | ВебКадеми</title>
+		<link rel="stylesheet" href="./css/main.css" />
+
+		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		@@include('blocks/header.html')
+		<main class="l-main">
+			<section class="l-section">
+				<div class="l-wrapper">
+					<div class="l-wrapper-page">
+						<nav class="breadcrumbs">
+							<ul class="breadcrumbs__list fr-secondary text-14 font-medium">
+								<li class="breadcrumbs__item">
+									<a href="/" class="breadcrumbs__link">Главная</a>
+								</li>
+								<li class="breadcrumbs__separator">·</li>
+								<li class="breadcrumbs__item">
+									<span class="breadcrumbs__current">Доставка</span>
+								</li>
+							</ul>
+						</nav>
+						<div class="l-infobox">
+							<h3 class="fr-primary font-semibold text-40-24">Условия доставки</h3>
+							<div class="l-infobox__text">
+								<span class="text-24-18 font-semibold">Информация для доставки</span>
+								<br />
+								<br />
+								<ul class="text-18-16">
+									<li>1. ФИО покупателя;</li>
+									<li>2. Контактные данные получателя;</li>
+									<li>3. Адрес доставки.</li>
+								</ul>
+								<br />
+								<span class="text-24-18 font-semibold">Условие доставки</span>
+								<br />
+								<br />
+								<ul class="text-18-16" style="line-height: 28px;">
+									<li>• Доставка осуществляется по указанному адресу;</li>
+									<li>• Определенного времени доставки нет, доставщик своевременно уведомляет клиента о приезде;</li>
+									<li>• Доставка осуществляется до подъезда;</li>
+									<li>• Также дополнительно можно заказать услугу подъема мебели до квартиры. Оплата производится по фиксированному прайсу;</li>
+									<li>
+										• Мебель доставляется в коробках в разобранном виде и сдается Покупателю по Акту приема-передачи с указанием количества доставленных мест;
+									</li>
+									<li>
+										• Покупатель обязан принять товар и проверить стекла (зеркала) на целостность, в присутствии сотрудников, сверив его наличие по документу,
+										который прилагается к акту приема-передачи заказа, и расписаться о получении;
+									</li>
+									<li>• Покупатель обязан обеспечить беспрепятственный проезд (въезд) транспорта к месту выдачи товара;</li>
+									<li>
+										• В случае, если до сборки (в момент сборки) выявляется скол, брак, отсутствие деталей товара, то Покупатель может обменять товар или
+										осуществить возврат (с подробной информацией можете ознакомиться в категории «Возврат и обмен»).
+									</li>
+								</ul>
+								<br />
+								<span class="text-24-18 font-semibold">Стоимость доставки</span>
+								<img src="./../img/delivery-table.png" class="l-infobox__img" alt="delivery-table" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('blocks/footer.html')
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>
