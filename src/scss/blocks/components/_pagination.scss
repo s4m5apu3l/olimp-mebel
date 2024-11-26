@@ -1,8 +1,9 @@
 .l-pagination {
-	margin-top: 32px;
+    max-width: 756px;
+	margin: 32px auto 0px auto;
 	&__list {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		gap: 12px;
 	}
@@ -15,10 +16,11 @@
 		border: none;
 		border-radius: var(--radius-12);
 		transition: background-color 0.3s, color 0.3s;
-		&:hover {
-			background-color: var(--color-accent);//add something
-		}
-		&-disabled {
+        @include mediaSize(530px){
+            width: 40px;
+            height: 40px;
+        }
+        &-disabled {
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -28,6 +30,50 @@
 		&.active {
 			background-color: var(--color-accent);
 		}
+        &.dots{
+            display: none;
+            @include mediaSize(800px){
+                display: inline;
+            }
+        }
+		&:hover {
+			background-color: var(--color-accent);//add something
+		}
+        &:nth-child(4){
+            @include mediaSize(400px){
+                display: none;
+            }
+        }
+        &:nth-child(5){
+            @include mediaSize(500px){
+                display: none;
+            }
+        }
+        &:nth-child(6){
+            @include mediaSize(600px){
+                display: none;
+            }
+        }
+        &:nth-child(7){
+            @include mediaSize(800px){
+                display: none;
+            }
+        }
+        &:nth-child(8){
+            @include mediaSize(800px){
+                display: none;
+            }
+        }
+        &:nth-child(9){
+            @include mediaSize(800px){
+                display: none;
+            }
+        }
+        &:nth-child(10){
+            @include mediaSize(800px){
+                display: none;
+            }
+        }
 	}
     &-link{
         display: flex;
