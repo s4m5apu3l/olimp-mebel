@@ -14,9 +14,28 @@
 	<body>
 		@@include('blocks/header.html')
 		<main class="l-main">
-			@@include('main/banner.html')
-			@@include('main/categories.html')
-			@@include('main/contacts.html')
+			<div class="l-wrapper">
+				<ul style="display: flex; flex-direction: column; gap: 10px">
+					<li>
+						<a href="/index.html">index</a>
+					</li>
+					<li>
+						<a href="/delivery.html">delivery</a>
+					</li>
+					<li>
+						<a href="/policy-conf.html">policy-conf</a>
+					</li>
+					<li>
+						<a href="/terms-of-use.html">terms-of-use</a>
+					</li>
+					<li>
+						<a href="/about-company.html">about-company</a>
+					</li>
+					<li>
+						<a href="/404.html">404</a>
+					</li>
+				</ul>
+			</div>
 		</main>
 		@@include('blocks/footer.html')
 		<script src="./js/index.bundle.js"></script>
