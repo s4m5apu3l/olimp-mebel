@@ -15,8 +15,12 @@ function initDropdowns() {
 			// Переключить состояние текущего дропдауна
 			dropdown.classList.toggle('active');
 			if (toggle.classList.contains('js-catalog-btn')) {
+				document.documentElement.classList.toggle('no-scroll');
+				document.body.classList.toggle('no-scroll');
 				document.body.classList.toggle('catalog-active');
 			} else {
+				document.body.classList.remove('no-scroll');
+				document.documentElement.classList.remove('no-scroll');
 				document.body.classList.remove('catalog-active');
 			}
 		} else {
@@ -24,6 +28,8 @@ function initDropdowns() {
 			document.querySelectorAll('.js-dropdown').forEach(dd => {
 				dd.classList.remove('active');
 			});
+			document.body.classList.remove('no-scroll');
+			document.documentElement.classList.remove('no-scroll');
 			document.body.classList.remove('catalog-active');
 		}
 	});
