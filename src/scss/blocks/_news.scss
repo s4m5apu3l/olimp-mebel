@@ -19,9 +19,13 @@
 		border-radius: var(--radius-12);
 		border: 1px solid var(--color-border-tertiary);
 		overflow: hidden;
-		&__img {s
+		&__img {
 			img {
+				transition: all 0.4s ease;
 				width: 100%;
+				&:hover {
+					transform: scale(1.05);
+				}
 			}
 		}
 		&__content {
