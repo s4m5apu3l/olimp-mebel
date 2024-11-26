@@ -26,6 +26,12 @@
 	&.top {
 		transform: rotate(360deg);
 	}
+	&.pagination {
+		fill: var(--color-fr-secondary);
+		width: 24px;
+		height: 24px;
+		min-width: 24px;
+	}
 }
 .icon--nav-pin,
 .icon--search,
