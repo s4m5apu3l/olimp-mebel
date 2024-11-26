@@ -9,7 +9,7 @@
 	&__container {
 		border-radius: 12px;
 		background-color: white;
-		padding: 52px 72px 48px 72px;
+		padding: 48px 72px 48px 72px;
 		@include mediaSize(1050px) {
 			padding: 16px;
 		}
