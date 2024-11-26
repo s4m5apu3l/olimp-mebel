@@ -1,8 +1,9 @@
 .l-footer {
 	max-width: 1808px;
 	width: 100%;
-	margin: 24px auto 16px auto;
+	margin: auto auto 16px auto;
 	padding: 0 16px;
+	padding-top: 24px;
 	@include mediaSize(768px) {
 		margin-top: 16px;
 	}
