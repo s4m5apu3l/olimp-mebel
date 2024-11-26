@@ -5,24 +5,24 @@
 		margin-top: 32px;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		gap: 24px;
-        @include mediaSize(1100px){
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-        @include mediaSize(900px){
-            grid-template-columns: 1fr 1fr;
-        }
-        @include mediaSize(520px){
-            grid-template-columns: 1fr;
-        }
+		@include mediaSize(1100px) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		@include mediaSize(900px) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@include mediaSize(520px) {
+			grid-template-columns: 1fr;
+		}
 	}
 	&__card {
 		border-radius: var(--radius-12);
 		border: 1px solid var(--color-border-tertiary);
 		overflow: hidden;
-		&__img {
-            img{
-                width: 100%;
-            }
+		&__img {s
+			img {
+				width: 100%;
+			}
 		}
 		&__content {
 			display: flex;

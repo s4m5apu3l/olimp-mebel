@@ -1,5 +1,5 @@
 .l-pagination {
-    max-width: 756px;
+	max-width: 756px;
 	margin: 32px auto 0px auto;
 	&__list {
 		display: flex;
@@ -16,11 +16,11 @@
 		border: none;
 		border-radius: var(--radius-12);
 		transition: background-color 0.3s, color 0.3s;
-        @include mediaSize(530px){
-            width: 40px;
-            height: 40px;
-        }
-        &-disabled {
+		@include mediaSize(530px) {
+			width: 40px;
+			height: 40px;
+		}
+		&-disabled {
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -30,57 +30,57 @@
 		&.active {
 			background-color: var(--color-accent);
 		}
-        &.dots{
-            display: none;
-            @include mediaSize(800px){
-                display: inline;
-            }
-        }
-		&:hover {
-			background-color: var(--color-accent);//add something
+		&.dots {
+			display: none;
+			@include mediaSize(800px) {
+				display: inline;
+			}
 		}
-        &:nth-child(4){
-            @include mediaSize(400px){
-                display: none;
-            }
-        }
-        &:nth-child(5){
-            @include mediaSize(500px){
-                display: none;
-            }
-        }
-        &:nth-child(6){
-            @include mediaSize(600px){
-                display: none;
-            }
-        }
-        &:nth-child(7){
-            @include mediaSize(800px){
-                display: none;
-            }
-        }
-        &:nth-child(8){
-            @include mediaSize(800px){
-                display: none;
-            }
-        }
-        &:nth-child(9){
-            @include mediaSize(800px){
-                display: none;
-            }
-        }
-        &:nth-child(10){
-            @include mediaSize(800px){
-                display: none;
-            }
-        }
+		&:hover {
+			background-color: var(--color-accent); //add something
+		}
+		&:nth-child(4) {
+			@include mediaSize(400px) {
+				display: none;
+			}
+		}
+		&:nth-child(5) {
+			@include mediaSize(500px) {
+				display: none;
+			}
+		}
+		&:nth-child(6) {
+			@include mediaSize(600px) {
+				display: none;
+			}
+		}
+		&:nth-child(7) {
+			@include mediaSize(800px) {
+				display: none;
+			}
+		}
+		&:nth-child(8) {
+			@include mediaSize(800px) {
+				display: none;
+			}
+		}
+		&:nth-child(9) {
+			@include mediaSize(800px) {
+				display: none;
+			}
+		}
+		&:nth-child(10) {
+			@include mediaSize(800px) {
+				display: none;
+			}
+		}
 	}
-    &-link{
-        display: flex;
+	&-link {
+		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: 100%;
 		height: 100%;
 		border-radius: var(--radius-12);
-    }
+	}
 }
