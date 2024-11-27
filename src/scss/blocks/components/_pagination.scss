@@ -1,9 +1,8 @@
 .l-pagination {
-	max-width: 756px;
-	margin: 32px auto 0px auto;
+	margin-top: 32px;
 	&__list {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		gap: 12px;
 	}
@@ -21,70 +20,18 @@
 			height: 40px;
 		}
 		&.disabled {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 52px;
-			height: 52px;
+			pointer-events: none;
 			svg {
-				fill: var(--color-fr-primary);
-			}
-			&:hover {
-				background-color: #fff;
+				fill: #5e5e5e80 !important;
 			}
 		}
 		&.active {
 			background-color: var(--color-accent);
 		}
-		&:last-child {
-			&:hover {
-				svg {
-					fill: var(--color-fr-primary);
-				}
-			}
-		}
-		&.dots {
-			display: none;
-			@include mediaSize(800px) {
-				display: inline;
-			}
-		}
 		&:hover {
 			background-color: var(--color-accent); //add something
-		}
-		&:nth-child(4) {
-			@include mediaSize(400px) {
-				display: none;
-			}
-		}
-		&:nth-child(5) {
-			@include mediaSize(500px) {
-				display: none;
-			}
-		}
-		&:nth-child(6) {
-			@include mediaSize(600px) {
-				display: none;
-			}
-		}
-		&:nth-child(7) {
-			@include mediaSize(800px) {
-				display: none;
-			}
-		}
-		&:nth-child(8) {
-			@include mediaSize(800px) {
-				display: none;
-			}
-		}
-		&:nth-child(9) {
-			@include mediaSize(800px) {
-				display: none;
-			}
-		}
-		&:nth-child(10) {
-			@include mediaSize(800px) {
-				display: none;
+			svg {
+				fill: var(--color-fr-primary);
 			}
 		}
 	}
