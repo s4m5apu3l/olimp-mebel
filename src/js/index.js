@@ -12,7 +12,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 Fancybox.bind('[data-fancybox]', {
-	// Your custom options
+	dragToClose: false
 });
 
 new Swiper('.js-banner-main', {
@@ -45,3 +45,16 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 	new DrilldownMenu('#drilldown-menu', '.menu-toggle');
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+	const consentCheckbox = document.getElementById("consent");
+	const submitButton = document.querySelector(".modal-submit-btn");
+  
+	function toggleSubmitButton() {
+	  submitButton.disabled = !consentCheckbox.checked; // Включаем кнопку только если чекбокс нажат
+	}
+  
+	consentCheckbox.addEventListener("change", toggleSubmitButton);
+  
+	toggleSubmitButton();
+  });
