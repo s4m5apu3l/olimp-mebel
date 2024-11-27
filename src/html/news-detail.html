@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>title</title>
+		<link rel="stylesheet" href="./css/main.css" />
+
+		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		@@include('blocks/header.html')
+		<main class="l-main">
+			<section class="l-section">
+				<div class="l-wrapper">
+					<div class="l-wrapper-page">
+						<nav class="breadcrumbs">
+							<ul class="breadcrumbs__list fr-secondary text-14 font-medium">
+								<li class="breadcrumbs__item">
+									<a href="/" class="breadcrumbs__link">Главная</a>
+								</li>
+								<li class="breadcrumbs__separator">·</li>
+								<li class="breadcrumbs__item">
+									<span class="breadcrumbs__current">Политика конфиденциальности</span>
+								</li>
+							</ul>
+						</nav>
+						<section class="l-infobox">
+							<h3 class="fr-primary font-semibold text-40-24">В ОлИмП-Мебель низкие цены каждый день</h3>
+							<div class="l-news__card__content-footer" style="margin-top: 24px;">
+								<span class="fr-secondary text-14">28 октября 2024 года</span>
+								<div class="l-news__card__content-footer-views">
+									<svg class="icon icon--views">
+										<use href="./img/svgsprite/sprite.symbol.svg#views"></use>
+									</svg>
+									<span class="fr-secondary text-14">29</span>
+								</div>
+							</div>
+							<div class="l-news-detail__img">
+								<img src="./../img/news-detail.png" alt="news-detail-img" />
+							</div>
+							<div class="l-infobox__text">
+								<p>
+									В нашем магазине вы найдете всё: от недорогой мебели до эксклюзивных премиальных сегментов. Благодаря большому выбору, вы сможете обустроить
+									весь дом всего лишь из одного магазина!
+								</p>
+								<p>Наши адреса:</p>
+								<ul>
+									<li>г. Якутск, ул. Чернышевского, д.93</li>
+									<li>+7(914) 274-76-60</li>
+									<li>+7(914) 274-76-66</li>
+									<li>Пн-Сб 10.00 - 19.00</li>
+									<li>Вс 10.00 - 18.00</li>
+								</ul>
+								<ul>
+									<li>г. Якутск ТВЦ "Строительный"</li>
+									<li>3 этаж 301 павильон</li>
+									<li>+7 (914) 256-66-30</li>
+									<li>Пн-Сб 9.00 - 18.00</li>
+									<li>Вс 10.00 - 18.00</li>
+								</ul>
+							</div>
+						</section>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('blocks/footer.html')
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>

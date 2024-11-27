@@ -10,6 +10,16 @@
 		p {
 			font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
 			margin: 24px 0;
+			&:last-child{
+				margin-bottom: 0px;
+			}
+		}
+		ul {
+			font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
+			margin: 24px 0;
+			&:last-child{
+				margin-bottom: 0px;
+			}
 		}
 		h3 {
 			margin: 24px 0;
