@@ -1,0 +1,30 @@
+.l-return {
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	&__list {
+		display: flex;
+		gap: 4px;
+        &:hover {
+            a{
+                color: #232323;
+            }
+            svg{
+                transition: color 0.2s;
+                fill: var(--color-fr-primary);
+            }
+		}
+	}
+	&__link {
+        display: flex;
+		justify-content: center;
+        align-items: center;
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+	&__item {
+		display: flex;
+		justify-content: center;
+        align-items: center;
+	}
+}
