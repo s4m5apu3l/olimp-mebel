@@ -39,11 +39,17 @@
 		min-width: 24px;
 	}
 }
+
 .icon--nav-pin,
 .icon--search,
 .icon--views {
 	fill: var(--color-fr-secondary);
 }
+
+.icon--success {
+	fill: var(--color-success);
+}
+
 .icon--heart,
 .icon--basket,
 .icon--user,

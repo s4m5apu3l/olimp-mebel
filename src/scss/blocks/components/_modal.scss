@@ -29,15 +29,15 @@
 			border: none;
 			border-radius: var(--radius-12);
 			transition: background-color 0.3s ease;
-            &:hover{
-                background-color: #e6b800;
-            }
-            &:disabled{
-                background-color: #5e5e5e80;
-                color: #fff;
-                cursor: not-allowed;
-                border: none;
-            }
+			&:hover {
+				background-color: #e6b800;
+			}
+			&:disabled {
+				background-color: #5e5e5e80;
+				color: #fff;
+				cursor: not-allowed;
+				border: none;
+			}
 		}
 	}
 }
@@ -47,8 +47,8 @@
 }
 
 .f-button.is-close-btn {
-    --f-button-width: 36px !important;
-    --f-button-height: 36px !important;
+	--f-button-width: 36px !important;
+	--f-button-height: 36px !important;
 	top: 23px !important;
 	right: 23px !important;
 	--f-button-color: var(--color-fr) !important;
@@ -56,13 +56,16 @@
 	--f-button-border-radius: var(--radius-8) !important;
 	--f-button-svg-width: 15px !important;
 	--f-button-svg-height: 15px !important;
-    --f-button-hover-color: var(--color-fr) !important;
-    --f-button-svg-stroke-width: 3 !important;
+	--f-button-hover-color: var(--color-fr) !important;
+	--f-button-svg-stroke-width: 3 !important;
 }
 
-// .f-button {
-// 	svg {
-//         fill: #232323 !important;
-// 		stroke: #232323 !important;
-// 	}
-// }
+.l-success-call {
+	display: flex;
+	justify-self: end;
+	padding: 16px 0;
+	border: 2px solid var(--color-success-secondary);
+	border-radius: 6px;
+	width: 426px;
+}
+
