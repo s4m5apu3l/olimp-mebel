@@ -17,22 +17,15 @@
 		display: flex;
 		flex-direction: column;
 		height: 100%;
-		transition: all 0.4s ease;
-		&:hover {
-			img {
-				transform: scale(1.05);
-			}
-		}
 		&__img {
-			overflow: hidden;
-			width: 100%;
-			height: 100%;
-			aspect-ratio: 1.52/1;
+			@include mediaSize(540px) {
+				height: 100%;
+			}
 			img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
-				transition: all 0.4s ease;
+				aspect-ratio: 1.52/1;
 			}
 		}
 		&__content {
@@ -78,5 +71,10 @@
 .l-news-detail {
 	&__img {
 		padding: 24px 0;
+		img {
+			width: 100%;
+			height: 100%;
+			border-radius: 12px;
+		}
 	}
 }
