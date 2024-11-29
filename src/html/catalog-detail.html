@@ -14,10 +14,67 @@
 	<body>
 		@@include('blocks/header.html')
 		<main class="l-main">
-			<!-- @@include('main/all-catalog.html') -->
+			<section class="l-section">
+				<div class="l-wrapper">
+					<nav class="breadcrumbs">
+						<ul class="breadcrumbs__list fr-secondary text-14 font-medium">
+							<li class="breadcrumbs__item">
+								<a href="/" class="breadcrumbs__link">Главная</a>
+							</li>
+							<li class="breadcrumbs__separator">·</li>
+							<li class="breadcrumbs__item">
+								<a href="/" class="breadcrumbs__link">Каталог</a>
+							</li>
+							<li class="breadcrumbs__separator">·</li>
+							<li class="breadcrumbs__item">
+								<span class="breadcrumbs__current">Кухни</span>
+							</li>
+						</ul>
+					</nav>
+
+					<section class="l-section">
+						<h1 class="fr-primary font-semibold text-40-24">Кухни</h1>
+					</section>
+					<section class="l-section">
+						<div class="l-catalog-page">
+							<aside class="l-catalog-page__aside"></aside>
+							<div class="l-catalog-page__content">
+								<div class="l-select js-dropdown">
+									<button class="l-select__btn js-dropdown-btn">
+										<span>По популярности</span>
+										<svg class="icon icon--base-color">
+											<use href="./img/svgsprite/sprite.symbol.svg#sort"></use>
+										</svg>
+									</button>
+
+									<ul class="l-select__list js-dropdown-content">
+										<li>
+											<a href="javascript:void(0)" class="text-14 active">
+												По популярности
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" class="text-14 ">Сначала дешевле</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" class="text-14 ">Сначала дороже</a>
+										</li>
+									</ul>
+								</div>
+
+								<div class="l-catalog-page__grid">
+									<a href="#" class="l-catalog-page__grid-item">
+										<article class="l-card"></article>
+									</a>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</section>
 		</main>
 		@@include('blocks/footer.html')
-		
+
 		<script src="./js/index.bundle.js"></script>
 	</body>
 </html>
