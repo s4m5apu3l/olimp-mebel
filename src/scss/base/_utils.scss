@@ -97,3 +97,23 @@
 		background-color: #e14453;
 	}
 }
+.l-grid-section {
+	&__base {
+		display: grid;
+		gap: 24px;
+		grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+		@include mediaSize(540px) {
+			grid-template-columns: 1fr 1fr;
+			gap: 16px 8px;
+		}
+	}
+}
+.l-interested {
+	margin-top: 24px;
+}
+.mt-24-16 {
+	margin-top: 24px;
+	@include mediaSize(540px) {
+		margin-top: 16px;
+	}
+}
