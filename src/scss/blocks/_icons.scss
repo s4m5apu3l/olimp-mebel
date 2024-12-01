@@ -26,11 +26,27 @@
 	&.top {
 		transform: rotate(360deg);
 	}
+	&.pagination {
+		fill: var(--color-accent);
+		width: 24px;
+		height: 24px;
+		min-width: 24px;
+	}
+	&.return {
+		fill: var(--color-accent);
+		width: 24px;
+		height: 24px;
+		min-width: 24px;
+	}
 }
 .icon--nav-pin,
 .icon--search,
 .icon--views {
 	fill: var(--color-fr-secondary);
+}
+
+.icon--base-color {
+	fill: var(--color-fr);
 }
 .icon--heart,
 .icon--basket,
@@ -44,4 +60,10 @@
 .icon--close,
 .icon--call {
 	fill: var(--color-fr);
+}
+.icon--rating {
+	fill: var(--color-accent);
+}
+.icon--heart.active {
+	fill: #d91528;
 }
