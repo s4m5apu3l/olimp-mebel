@@ -40,6 +40,9 @@
 .gap-8 {
 	gap: 8px;
 }
+.gap-4 {
+	gap: 4px;
+}
 .flex-center {
 	justify-content: center;
 }
@@ -55,6 +58,18 @@
 		z-index: 10;
 
 		transition: opacity 0.4s ease, display 0.4s ease allow-discrete;
+		max-height: 212px;
+		overflow-y: auto;
+		// overflow-x: hidden;
+		scrollbar-width: thin !important; /* "auto", "thin", или "none" */
+		scrollbar-color: #c1c1c1 white !important; /* Цвет бегунка и трека */
+		&::-webkit-scrollbar {
+			width: 4px !important;
+			background-color: white !important;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: #c1c1c1 !important;
+		}
 	}
 	&.active {
 		.js-dropdown-content {
@@ -66,5 +81,19 @@
 @starting-style {
 	.js-dropdown.active .js-dropdown-content {
 		opacity: 0;
+	}
+}
+
+.l-badge {
+	padding: 4px 8px;
+	border-radius: 4px;
+	font-size: 14px;
+	font-weight: 500;
+	color: white;
+	&--green {
+		background-color: #34b263;
+	}
+	&--red {
+		background-color: #e14453;
 	}
 }

@@ -1,14 +1,23 @@
 .c-button {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	gap: 8px;
 	padding: 14px 16px;
 	border-radius: var(--radius-12);
 	background-color: var(--color-accent);
 	font-size: clamp(0.75rem, 0.2813rem + 1.5vw, 1.125rem);
 	text-align: center;
+	transition: all 0.4s ease;
+	text-align: center;
+	&:hover {
+		background-color: #d39e16;
+	}
 	&.gray {
 		background-color: #e3e3e3;
+		&:hover {
+			background-color: #cbcbcb;
+		}
 	}
 	&.small {
 		padding: 8px;
@@ -17,7 +26,10 @@
 			padding: 6px;
 		}
 	}
-	@include mediaSize(768px) {
-		padding: 10px 16px;
+	// @include mediaSize(768px) {
+	// 	padding: 10px 16px;
+	// }
+	@include mediaSize(540px) {
+		border-radius: 8px;
 	}
 }

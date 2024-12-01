@@ -96,6 +96,9 @@
 .text-24-18 {
 	font-size: clamp(1.125rem, 0.6563rem + 1.5vw, 1.5rem);
 }
+.text-24-20 {
+	font-size: clamp(1.25rem, 0.9375rem + 1vw, 1.5rem);
+}
 .text-22 {
 	font-size: 20px;
 }
@@ -107,6 +110,9 @@
 }
 .text-16-14 {
 	font-size: clamp(0.875rem, 0.7188rem + 0.5vw, 1rem);
+}
+.text-16-12 {
+	font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
 }
 .text-14 {
 	font-size: 14px;
