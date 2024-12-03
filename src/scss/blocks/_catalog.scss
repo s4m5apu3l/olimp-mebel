@@ -25,12 +25,6 @@
 				display: none;
 			}
 		}
-		&__title {
-			padding: 24px 0;
-			@include mediaSize(1270px) {
-				padding-bottom: 0;
-			}
-		}
 		&__sort {
 			&-btn {
 				display: none !important;

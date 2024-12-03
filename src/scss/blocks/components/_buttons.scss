@@ -26,10 +26,18 @@
 			padding: 6px;
 		}
 	}
-	// @include mediaSize(768px) {
-	// 	padding: 10px 16px;
-	// }
+	&.disabled {
+		pointer-events: none;
+		background-color: #5e5e5e33;
+		color: #5e5e5e80;
+	}
 	@include mediaSize(540px) {
 		border-radius: 8px;
+	}
+}
+.l-like {
+	&.active {
+		background-color: #f8b711;
+		fill: #232323 !important;
 	}
 }
