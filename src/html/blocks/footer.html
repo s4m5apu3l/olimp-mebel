@@ -1,3 +1,35 @@
+<div class="l-success-call active">
+	<div class="l-success-call__icon">
+		<svg class="icon icon--success">
+			<use href="./img/svgsprite/sprite.symbol.svg#success"></use>
+		</svg>
+	</div>
+	<div class="l-success-call__content">
+		<span class="font-medium text-14">Запрос отправлен</span>
+		<span class="fr-secondary text-14">Ваш запрос на звонок был успешно отправлен. Скоро мы с вами свяжемся</span>
+	</div>
+	<div class="l-success-call__btn">
+		<button class="l-success-call__btn-close fr-secondary">&times;</button>
+	</div>
+</div>
+<div id="call-modal" style="display: none;">
+	<h2 class="font-semibold text-20 fr-primary">Запросить звонок</h2>
+	<!-- <button data-fancybox-close class="modal-close-btn" aria-label="Close">&times;</button> -->
+	<form action="#" method="POST" id="call-form">
+		<label for="name" class="text-12">Имя</label>
+		<input type="text" id="name" name="name" required />
+
+		<label for="phone" class="text-12">Телефон</label>
+		<input type="tel" id="phone" name="phone" required />
+
+		<div class="checkbox-container">
+			<input type="checkbox" id="consent" name="consent" required />
+			<label for="consent" class="font-medium text-14 fr-primary">Даю согласие на обработку персональных данных</label>
+		</div>
+
+		<button type="submit" class="modal-submit-btn fr-primary text-16-14 font-medium">Запросить звонок</button>
+	</form>
+</div>
 <footer class="l-footer">
 	<div class="l-footer__container">
 		<div class="l-footer__header">
@@ -9,24 +41,6 @@
 			<a href="#" class="c-button" data-fancybox data-src="#call-modal">
 				<span class="font-medium">Запросить звонок</span>
 			</a>
-			<div id="call-modal" style="display: none;">
-				<h2 class="font-semibold text-20 fr-primary">Запросить звонок</h2>
-				<!-- <button data-fancybox-close class="modal-close-btn" aria-label="Close">&times;</button> -->
-				<form action="#" method="POST" id="call-form">
-					<label for="name" class="text-12">Имя</label>
-					<input type="text" id="name" name="name" required />
-			
-					<label for="phone" class="text-12">Телефон</label>
-					<input type="tel" id="phone" name="phone" required />
-			
-					<div class="checkbox-container">
-						<input type="checkbox" id="consent" name="consent" required />
-						<label for="consent" class="font-medium text-14 fr-primary">Даю согласие на обработку персональных данных</label>
-					</div>
-			
-					<button type="submit" class="modal-submit-btn fr-primary text-16-14 font-medium">Запросить звонок</button>
-				</form>
-			</div>
 		</div>
 		<div class="l-footer__border">
 			<div class="l-footer__info text-18-16">

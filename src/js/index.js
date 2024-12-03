@@ -46,15 +46,25 @@ window.addEventListener('DOMContentLoaded', () => {
 	new DrilldownMenu('#drilldown-menu', '.menu-toggle');
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-	const consentCheckbox = document.getElementById("consent");
-	const submitButton = document.querySelector(".modal-submit-btn");
-  
+document.addEventListener('DOMContentLoaded', () => {
+	const consentCheckbox = document.getElementById('consent');
+	const submitButton = document.querySelector('.modal-submit-btn');
+
 	function toggleSubmitButton() {
-	  submitButton.disabled = !consentCheckbox.checked; // Включаем кнопку только если чекбокс нажат
+		submitButton.disabled = !consentCheckbox.checked; // Включаем кнопку только если чекбокс нажат
 	}
-  
-	consentCheckbox.addEventListener("change", toggleSubmitButton);
-  
+
+	consentCheckbox.addEventListener('change', toggleSubmitButton);
+
 	toggleSubmitButton();
-  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	const successCall = document.querySelector('.l-success-call');
+	const successCloseBtn = document.querySelector('.l-success-call__btn-close');
+
+	successCloseBtn.addEventListener('click', () => {
+		successCall.classList.remove('active');
+	});
+
+});

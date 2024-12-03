@@ -60,12 +60,43 @@
 	--f-button-svg-stroke-width: 3 !important;
 }
 
-.l-success-call {
-	display: flex;
-	justify-self: end;
-	padding: 16px 0;
+.l-success-call{
+	display: none;
+	position: fixed;
+	width: 426px;
+	top: 180px;
+	right: 72px;
+	z-index: 100;
+	background-color: var(--color-bg-secondary);
 	border: 2px solid var(--color-success-secondary);
 	border-radius: 6px;
-	width: 426px;
+	overflow: hidden;
+	&__icon {
+		padding: 16px 12px;
+		background-color: var(--color-success-tertiary);
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		padding: 16px;
+	}
+	&__btn{
+		padding: 16px 16px 0 0;
+		&-close {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 24px;
+			height: 24px;
+			background-color: #E3E3E3;
+			border-radius: var(--radius-4);
+			font-size: 30px;
+			cursor: pointer;
+			transition: color 0.3s ease;
+		}
+	}
 }
 
+.l-success-call.active{
+	display: flex;
+}
