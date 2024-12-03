@@ -60,11 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-	const successCall = document.querySelector('.l-success-call');
-	const successCloseBtn = document.querySelector('.l-success-call__btn-close');
-
-	successCloseBtn.addEventListener('click', () => {
-		successCall.classList.remove('active');
+	document.addEventListener('click', (event) => {
+	  if (event.target.classList.contains('l-success-call__btn-close')) {
+		const activeModal = event.target.closest('.l-success-call.active');
+		
+		if (activeModal) {
+		  activeModal.classList.remove('active');
+		  console.log('Закрыто:', activeModal);
+		}
+	  }
 	});
-
-});
+  });
