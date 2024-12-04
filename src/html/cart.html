@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>title</title>
+		<link rel="stylesheet" href="./css/main.css" />
+
+		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		@@include('blocks/header.html')
+		<main class="l-main">
+			<section class="l-section">
+				<div class="l-wrapper">
+					<nav class="breadcrumbs">
+						<ul class="breadcrumbs__list fr-secondary text-14 font-medium">
+							<li class="breadcrumbs__item">
+								<a href="/" class="breadcrumbs__link">Главная</a>
+							</li>
+							<li class="breadcrumbs__separator">·</li>
+							<li class="breadcrumbs__item">
+								<span class="breadcrumbs__current">Корзина</span>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="l-section__title">
+						<h1>Корзина</h1>
+					</div>
+
+					<section class="l-cart">
+						<div class="l-cart-list">
+							<div class="l-cart-list__header">
+								<div class="d-flex items-center gap-8">
+									<input id="all" type="checkbox" />
+									<label for="all">Выбрать все</label>
+								</div>
+								<button class="error-primary font-medium text-14">
+									Удалить выбранные
+								</button>
+							</div>
+
+							<ul class="l-cart-list__body">
+								<li>
+									<article class="l-cart-list__item">
+										<div class="l-cart-list__item-product">
+											<input id="all" type="checkbox" />
+											<div class="l-block">
+												<a href="#" style="display: contents;">
+													<img src="https://placehold.co/700x400" alt="" class="l-block__img" />
+												</a>
+												<div class="l-block__content">
+													<a href="#" class="text-20-14 font-semibold line-clamp-2">
+														Модульная кухня “Сиэль” Модульная кухня “Сиэль” Модульная кухня “Сиэль” Модульная кухня “Сиэль” Модульная кухня “Сиэль”
+														Модульная кухня “Сиэль”
+													</a>
+													<!-- в мобилке уйдет этот блок в другое место (врот ебем дизов) -->
+													<div class="l-block__actions d-flex items-center gap-8">
+														<button class="c-button gray small">
+															<svg class="icon icon--trash">
+																<use href="./img/svgsprite/sprite.symbol.svg#trash"></use>
+															</svg>
+														</button>
+														<button class="c-button gray small l-like active">
+															<svg class="icon icon--heart">
+																<use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+															</svg>
+														</button>
+													</div>
+													<div class="l-block__price">
+														<span class="l-price">31 200 ₽</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="l-cart-list__item-price">
+											<span class="l-price">31 200 ₽</span>
+
+											<!-- бу атын сиртэн кэллэ в мобилке будет доступа -->
+											<div class="l-block__actions d-flex items-center gap-8">
+												<button class="c-button gray small">
+													<svg class="icon icon--trash">
+														<use href="./img/svgsprite/sprite.symbol.svg#trash"></use>
+													</svg>
+												</button>
+												<button class="c-button gray small l-like active">
+													<svg class="icon icon--heart">
+														<use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="l-quantity">
+												<button class="c-button small">
+													<svg class="icon icon--minus icon--base-color">
+														<use href="./img/svgsprite/sprite.symbol.svg#minus"></use>
+													</svg>
+												</button>
+												<div class="input-group">
+													<div class="input-group__container">
+														<input type="number" value="1" />
+													</div>
+												</div>
+												<button class="c-button  small">
+													<svg class="icon icon--plus icon--base-color">
+														<use href="./img/svgsprite/sprite.symbol.svg#plus"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li>
+									<article class="l-cart-list__item">
+										<div class="l-cart-list__item-product">
+											<input id="all" type="checkbox" />
+											<div class="l-block">
+												<a href="#" style="display: contents;">
+													<img src="https://placehold.co/700x400" alt="" class="l-block__img" />
+												</a>
+												<div class="l-block__content">
+													<a href="#" class="text-20-14 font-semibold line-clamp-2">Модульная кухня “Сиэль” Модульная кухня “Сиэль”</a>
+													<!-- в мобилке уйдет этот блок в другое место (врот ебем дизов) -->
+													<div class="l-block__actions d-flex items-center gap-8">
+														<button class="c-button gray small">
+															<svg class="icon icon--trash">
+																<use href="./img/svgsprite/sprite.symbol.svg#trash"></use>
+															</svg>
+														</button>
+														<!-- убираем класс active -->
+														<button class="c-button gray small l-like ">
+															<svg class="icon icon--heart">
+																<use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+															</svg>
+														</button>
+													</div>
+													<div class="l-block__price">
+														<span class="l-price">31 200 ₽</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="l-cart-list__item-price">
+											<span class="l-price">31 200 ₽</span>
+
+											<!-- бу атын сиртэн кэллэ в мобилке будет доступа -->
+											<div class="l-block__actions d-flex items-center gap-8">
+												<button class="c-button gray small">
+													<svg class="icon icon--trash">
+														<use href="./img/svgsprite/sprite.symbol.svg#trash"></use>
+													</svg>
+												</button>
+												<button class="c-button gray small l-like active">
+													<svg class="icon icon--heart">
+														<use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="l-quantity">
+												<button class="c-button small disabled">
+													<svg class="icon icon--minus icon--base-color">
+														<use href="./img/svgsprite/sprite.symbol.svg#minus"></use>
+													</svg>
+												</button>
+												<div class="input-group">
+													<div class="input-group__container">
+														<input type="number" value="0" />
+													</div>
+												</div>
+												<button class="c-button small">
+													<svg class="icon icon--plus icon--base-color">
+														<use href="./img/svgsprite/sprite.symbol.svg#plus"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+							</ul>
+
+							<div class="mt-24-16">
+								<span class="text-24-20 font-semibold">Недоступные к заказу</span>
+							</div>
+
+							<ul class="l-cart-list__body">
+								<li>
+									<article class="l-cart-list__item">
+										<div class="l-cart-list__item-product">
+											<input id="all" type="checkbox" />
+											<div class="l-block">
+												<a href="#" style="display: contents;">
+													<img src="https://placehold.co/700x400" alt="" class="l-block__img" />
+												</a>
+												<div class="l-block__content">
+													<a href="#" class="text-20-14 font-semibold line-clamp-2">Модульная кухня “Сиэль” Модульная кухня “Сиэль”</a>
+													<!-- в мобилке уйдет этот блок в другое место (врот ебем дизов) -->
+													<div class="l-block__actions d-flex items-center gap-8">
+														<button class="c-button gray small">
+															<svg class="icon icon--trash">
+																<use href="./img/svgsprite/sprite.symbol.svg#trash"></use>
+															</svg>
+														</button>
+														<!-- убираем класс active -->
+														<button class="c-button gray small l-like ">
+															<svg class="icon icon--heart">
+																<use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+															</svg>
+														</button>
+													</div>
+													<div class="l-block__price">
+														<span class="l-price">31 200 ₽</span>
+														<div class="l-cart-list__item-badge">
+															<span class="l-badge l-badge--red">Нет в наличии</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- это убираешь и добавляешь span снизу будет -->
+										<!-- <div class="l-cart-list__item-price">
+											<span class="l-price">31 200 ₽</span>
+											<div class="l-quantity">
+												<button class="c-button small disabled">
+													<svg class="icon icon--minus icon--base-color">
+														<use href="./img/svgsprite/sprite.symbol.svg#minus"></use>
+													</svg>
+												</button>
+												<div class="input-group">
+													<div class="input-group__container">
+														<input type="number" value="0" />
+													</div>
+												</div>
+												<button class="c-button small">
+													<svg class="icon icon--plus icon--base-color">
+														<use href="./img/svgsprite/sprite.symbol.svg#plus"></use>
+													</svg>
+												</button>
+											</div>
+										</div> -->
+										<!-- а вот и span надо оберунть в div -->
+										<div class="l-cart-list__item-badge">
+											<span class="l-badge l-badge--red">Нет в наличии</span>
+										</div>
+									</article>
+								</li>
+							</ul>
+						</div>
+						<aside class="l-cart-aside">
+							<button class="c-button w-full font-medium">Оформить заказ</button>
+							<!-- это если кнопка серая то класс disabled -->
+							<!-- <button class="c-button disabled w-full font-medium">Оформить заказ</button> -->
+							<!-- тут условие v-if убираешь div и показываешь текст -->
+							<div>
+								<hr />
+								<span class="text-20 font-semibold">Сумма заказа</span>
+								<div class="d-flex flex-col gap-12 mt-24-16">
+									<div class="w-full d-flex items-center justify-between">
+										<span class="fr-secondary font-medium text-18-16">Товары</span>
+										<span class="font-medium text-18-16">31 200 ₽</span>
+									</div>
+									<div class="w-full d-flex items-center justify-between">
+										<span class="fr-secondary font-medium text-18-16">Доставка</span>
+										<span class="font-medium text-18-16">31 200 ₽</span>
+									</div>
+								</div>
+								<hr />
+								<div class="w-full d-flex items-center justify-between">
+									<span class="text-20 font-semibold">Итого</span>
+									<span class="font-medium text-18-16">31 200 ₽</span>
+								</div>
+							</div>
+							<!-- v-else а вот и текст снизу -->
+							<!-- <span class="text-14" style="color: #5E5E5E;">Выберите товары, чтобы оформить заказ</span> -->
+						</aside>
+
+						<div class="l-cart-fixed">
+							<button class="c-button font-medium w-full">Оформить заказ</button>
+						</div>
+					</section>
+				</div>
+			</section>
+		</main>
+		@@include('blocks/footer.html')
+
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>

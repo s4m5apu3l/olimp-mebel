@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>title</title>
+		<link rel="stylesheet" href="./css/main.css" />
+
+		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		@@include('blocks/header.html')
+		<main class="l-main">
+			<section class="l-section">
+				<div class="l-wrapper">
+					<nav class="breadcrumbs">
+						<ul class="breadcrumbs__list fr-secondary text-14 font-medium">
+							<li class="breadcrumbs__item">
+								<a href="/" class="breadcrumbs__link">Главная</a>
+							</li>
+							<li class="breadcrumbs__separator">·</li>
+							<li class="breadcrumbs__item">
+								<a href="/" class="breadcrumbs__link">Каталог</a>
+							</li>
+							<li class="breadcrumbs__separator">·</li>
+							<li class="breadcrumbs__item">
+								<span class="breadcrumbs__current">Избранные товары</span>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="l-section__title">
+						<h1  >Избранные товары</h1>
+					</div>
+
+					<section class="l-section">
+						<div class="l-grid-section__base">
+							<a href="#" class="l-catalog-page__grid-item">
+								<article class="l-product__card">
+									<div class="l-product__card-header">
+										<img src="https://placehold.co/900x400" alt="" class="l-product__card-img" loading="lazy" />
+										<span class="l-product__card-badge l-badge l-badge--green">
+											В наличии
+										</span>
+									</div>
+
+									<div class="l-product__card-content">
+										<div class="l-product__card-title">
+											<span class="l-price">31 200 ₽</span>
+											<span class="l-title">
+												Модульная
+											</span>
+										</div>
+										<div class="l-product__card-score">
+											<div class="d-flex items-center gap-4">
+												<svg class="icon icon--rating">
+													<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+												</svg>
+												<span class="text-16-12 font-medium">5.0</span>
+											</div>
+
+											<span class="text-16-12 font-medium fr-secondary">16 отзывов</span>
+										</div>
+										<div class="l-product__card-footer">
+											<button class="l-product__card-btn c-button">Добавить в корзину</button>
+											<button class="l-product__card-btn__like c-button gray ">
+												<svg class="icon icon--heart active">
+													<use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</article>
+							</a>
+							<a href="#" class="l-catalog-page__grid-item">
+								<article class="l-product__card">
+									<div class="l-product__card-header">
+										<img src="https://placehold.co/900x400" alt="" class="l-product__card-img" loading="lazy" />
+										<span class="l-product__card-badge l-badge l-badge--green">
+											В наличии
+										</span>
+									</div>
+
+									<div class="l-product__card-content">
+										<div class="l-product__card-title">
+											<span class="l-price">31 200 ₽</span>
+											<span class="l-title">
+												Модульная 
+											</span>
+										</div>
+										<div class="l-product__card-score">
+											<div class="d-flex items-center gap-4">
+												<svg class="icon icon--rating">
+													<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+												</svg>
+												<span class="text-16-12 font-medium">5.0</span>
+											</div>
+
+											<span class="text-16-12 font-medium fr-secondary">16 отзывов</span>
+										</div>
+										<div class="l-product__card-footer">
+											<button class="l-product__card-btn c-button">Добавить в корзину</button>
+											<button class="l-product__card-btn__like c-button gray ">
+												<svg class="icon icon--heart active">
+													<use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</article>
+							</a>
+						</div>
+					</section>
+				</div>
+			</section>
+		</main>
+		@@include('blocks/footer.html')
+
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>

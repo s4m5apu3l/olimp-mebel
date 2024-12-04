@@ -40,7 +40,7 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		gap: 24px;
-		margin-top: 32px;
+		margin-top: 24px;
 		@include mediaSize(1300px) {
 			gap: 8px;
 			grid-template-columns: 1fr 1fr 1fr;
