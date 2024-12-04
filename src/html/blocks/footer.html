@@ -2,29 +2,33 @@
 	<div class="base-modal">
 		<header class="d-flex items-center justify-between">
 			<h2 class="font-semibold text-20 fr-primary">Запросить звонок</h2>
-			<button data-fancybox-close class="modal-close-btn" aria-label="Close">&times;</button>
+			<button data-fancybox-close class="c-button gray small">
+				<svg class="icon icon--close">
+					<use href="./img/svgsprite/sprite.symbol.svg#close"></use>
+				</svg>
+			</button>
 		</header>
 		<form class="call-form">
 			<div class="input-group">
 				<label for="input1">Имя</label>
 				<div class="input-group__container">
-					<input type="text" id="input1" />
+					<input type="text" id="input1" required />
 				</div>
 			</div>
 
-			<div class="input-group">
+			<div class="input-group mt-8">
 				<label for="input2">Телефон</label>
 				<div class="input-group__container">
-					<input type="text" id="input2" />
+					<input type="text" id="input2" required />
 				</div>
 			</div>
 
-			<div class="checkbox-container">
+			<div class="d-flex items-center gap-8 mt-24">
 				<input type="checkbox" id="consent" name="consent" required />
-				<label for="consent" class="font-medium text-14 fr-primary">Даю согласие на обработку персональных данных</label>
+				<label for="consent" class="font-medium text-14 fr-primary">Даю согласие на обработку <br> персональных данных</label>
 			</div>
 
-			<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium">Запросить звонок</button>
+			<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium mt-12">Запросить звонок</button>
 		</form>
 	</div>
 </dialog>

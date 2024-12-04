@@ -13,13 +13,13 @@
 
 	<body>
 		@@include('blocks/header.html')
-		<main class="l-main">
+		<main class="l-main" style="position: relative;">
 			<section class="l-wrapper">
 				тут наши тосты
 
 				<div class="l-toast success active">
 					<div class="l-toast__icon">
-						<span class="icon icon--success"></span>
+						<span class="icon icon--bg icon--success"></span>
 					</div>
 					<div class="l-toast__content ">
 						<span class="font-medium text-14">Запрос отправлен</span>
@@ -30,11 +30,10 @@
 					</div>
 				</div>
 
-				<div class="l-toast info active">
+				<!-- не забудь убрать инлайн стили style -->
+				<div class="l-toast info active " style="left: 0px;">
 					<div class="l-toast__icon">
-						<svg class="icon icon--info">
-							<use href="./img/svgsprite/sprite.symbol.svg#info"></use>
-						</svg>
+						<span class="icon icon--bg icon--info"></span>
 					</div>
 					<div class="l-toast__content">
 						<span class="font-medium text-14">Запрос отправлен</span>
@@ -45,11 +44,10 @@
 					</div>
 				</div>
 
-				<div class="l-toast warning active">
+				<!-- не забудь убрать инлайн стили style -->
+				<div class="l-toast warning active" style="left: 20px; top: 50%;">
 					<div class="l-toast__icon">
-						<svg class="icon icon--warning">
-							<use href="./img/svgsprite/sprite.symbol.svg#warning"></use>
-						</svg>
+						<span class="icon icon--bg icon--warning"></span>
 					</div>
 					<div class="l-toast__content">
 						<span class="font-medium text-14">Запрос отправлен</span>
@@ -60,11 +58,9 @@
 					</div>
 				</div>
 
-				<div class="l-toast error active">
+				<div class="l-toast error active" style="right: 20px; top: 60%;">
 					<div class="l-toast__icon">
-						<svg class="icon icon--error">
-							<use href="./img/svgsprite/sprite.symbol.svg#error"></use>
-						</svg>
+						<span class="icon icon--bg icon--error"></span>
 					</div>
 					<div class="l-toast__content">
 						<span class="font-medium text-14">Запрос отправлен</span>

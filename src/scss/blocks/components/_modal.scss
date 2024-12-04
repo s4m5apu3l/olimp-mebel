@@ -4,67 +4,18 @@
 	border-radius: unset !important;
 	background-color: transparent !important;
 }
+.fancybox__backdrop {
+	background: #5e5e5e80 !important; //ошибка ли?
+}
 .base-modal {
 	max-width: 426px;
-	width: 100%;
+	width: 100dvw;
 	padding: 24px;
 	border-radius: var(--radius-16);
 	background-color: white;
 	.call-form {
 		margin-top: 32px;
-		input[type='tel'],
-		input[type='text'] {
-			width: 100%;
-			height: 52px;
-			padding: 8px;
-			margin: 8px 0;
-			border: 1px solid var(--color-border-secondary);
-			border-radius: var(--radius-8);
-			font-size: 12px;
-		}
-		.checkbox-container {
-			display: flex;
-			align-items: center;
-			gap: 8px;
-			margin-top: 24px;
-		}
-		.modal-submit-btn {
-			margin-top: 16px;
-			padding: 14px 0px;
-			width: 100%;
-			background-color: var(--color-accent);
-			border: none;
-			border-radius: var(--radius-12);
-			transition: background-color 0.3s ease;
-			&:hover {
-				background-color: #e6b800;
-			}
-			&:disabled {
-				background-color: #5e5e5e80;
-				color: #fff;
-				cursor: not-allowed;
-				border: none;
-			}
-		}
 	}
-}
-
-.fancybox__backdrop {
-	background: #5e5e5e80 !important; //ошибка ли?
-}
-
-.f-button.is-close-btn {
-	--f-button-width: 36px !important;
-	--f-button-height: 36px !important;
-	top: 23px !important;
-	right: 23px !important;
-	--f-button-color: var(--color-fr) !important;
-	--f-button-bg: #e3e3e3 !important;
-	--f-button-border-radius: var(--radius-8) !important;
-	--f-button-svg-width: 15px !important;
-	--f-button-svg-height: 15px !important;
-	--f-button-hover-color: var(--color-fr) !important;
-	--f-button-svg-stroke-width: 3 !important;
 }
 
 .l-toast {
@@ -78,21 +29,34 @@
 	background-color: var(--color-bg-secondary);
 	border-radius: 6px;
 	overflow: hidden;
-	@include mediaSize(1200px) {
-		right: 25px;
+	&.active {
+		display: flex;
 	}
-	@include mediaSize(820px) {
-		top: 70px;
-		right: auto;
-		left: 50%;
-		transform: translate(-50%, -50%);
+	&.success {
+		border: 2px solid var(--color-success-secondary);
+		.l-toast__icon {
+			background-color: var(--color-success-tertiary);
+		}
 	}
-	@include mediaSize(460px) {
-		max-width: 343px;
+	&.info {
+		border: 2px solid #47adff;
+		.l-toast__icon {
+			background-color: #8ccbff;
+		}
 	}
-	@include mediaSize(375px) {
-		max-width: 300px;
+	&.warning {
+		border: 2px solid var(--color-warning-secondary);
+		.l-toast__icon {
+			background-color: var(--color-warning-tertiary);
+		}
 	}
+	&.error {
+		border: 2px solid var(--color-error-secondary);
+		.l-toast__icon {
+			background-color: var(--color-error-tertiary);
+		}
+	}
+
 	&__icon {
 		padding: 16px 12px;
 		background-color: var(--color-success-tertiary);
@@ -116,36 +80,19 @@
 			transition: color 0.3s ease;
 		}
 	}
-}
-
-.success {
-	border: 2px solid var(--color-success-secondary);
-	.l-toast__icon {
-		background-color: var(--color-success-tertiary);
+	@include mediaSize(1200px) {
+		right: 25px;
 	}
-}
-
-.info {
-	border: 2px solid #47adff;
-	.l-toast__icon {
-		background-color: #8ccbff;
+	@include mediaSize(820px) {
+		top: 70px;
+		right: auto;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
-}
-
-.warning {
-	border: 2px solid var(--color-warning-secondary);
-	.l-toast__icon {
-		background-color: var(--color-warning-tertiary);
+	@include mediaSize(460px) {
+		max-width: 343px;
 	}
-}
-
-.error {
-	border: 2px solid var(--color-error-secondary);
-	.l-toast__icon {
-		background-color: var(--color-error-tertiary);
+	@include mediaSize(375px) {
+		max-width: 300px;
 	}
-}
-
-.l-toast.active {
-	display: flex;
 }
