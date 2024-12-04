@@ -47,7 +47,10 @@
 }
 
 .icon--success {
-	fill: var(--color-success);
+	background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.8' d='M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z' fill='%23019F3C'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.561 9.1768L11.061 15.5704C10.7479 15.8784 10.245 15.8763 9.93436 15.5657L6.93436 12.5657L8.06573 11.4343L10.5047 13.8733L16.439 8.03613L17.561 9.1768Z' fill='white'/%3E%3C/svg%3E%0A");
+	background-position: center;
+	background-size: contain;
+	display: block;
 }
 
 .icon--info {

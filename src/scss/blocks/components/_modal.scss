@@ -1,9 +1,16 @@
 /* Стили модального окна */
-#call-modal {
+.fancybox__content {
+	padding: 0 !important;
+	border-radius: unset !important;
+	background-color: transparent !important;
+}
+.base-modal {
 	max-width: 426px;
+	width: 100%;
 	padding: 24px;
 	border-radius: var(--radius-16);
-	#call-form {
+	background-color: white;
+	.call-form {
 		margin-top: 32px;
 		input[type='tel'],
 		input[type='text'] {
@@ -60,30 +67,31 @@
 	--f-button-svg-stroke-width: 3 !important;
 }
 
-.l-success-call {
+.l-toast {
 	display: none;
 	position: fixed;
-	width: 426px;
-	top: 185px;
+	width: 100%;
+	max-width: 426px;
+	top: 20px;
 	right: 72px;
 	z-index: 1000;
 	background-color: var(--color-bg-secondary);
 	border-radius: 6px;
 	overflow: hidden;
-	@include mediaSize(1200px){
+	@include mediaSize(1200px) {
 		right: 25px;
 	}
-	@include mediaSize(820px){
+	@include mediaSize(820px) {
 		top: 70px;
 		right: auto;
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
-	@include mediaSize(460px){
-		width: 343px;
+	@include mediaSize(460px) {
+		max-width: 343px;
 	}
-	@include mediaSize(375px){
-		width: 300px;
+	@include mediaSize(375px) {
+		max-width: 300px;
 	}
 	&__icon {
 		padding: 16px 12px;
@@ -105,7 +113,6 @@
 			background-color: #e3e3e3;
 			border-radius: var(--radius-4);
 			font-size: 30px;
-			cursor: pointer;
 			transition: color 0.3s ease;
 		}
 	}
@@ -113,32 +120,32 @@
 
 .success {
 	border: 2px solid var(--color-success-secondary);
-	.l-success-call__icon {
+	.l-toast__icon {
 		background-color: var(--color-success-tertiary);
 	}
 }
 
 .info {
 	border: 2px solid #47adff;
-	.l-success-call__icon {
+	.l-toast__icon {
 		background-color: #8ccbff;
 	}
 }
 
 .warning {
 	border: 2px solid var(--color-warning-secondary);
-	.l-success-call__icon {
+	.l-toast__icon {
 		background-color: var(--color-warning-tertiary);
 	}
 }
 
 .error {
 	border: 2px solid var(--color-error-secondary);
-	.l-success-call__icon {
+	.l-toast__icon {
 		background-color: var(--color-error-tertiary);
 	}
 }
 
-.l-success-call.active{
+.l-toast.active {
 	display: flex;
 }

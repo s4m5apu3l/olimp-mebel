@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>title</title>
+		<link rel="stylesheet" href="./css/main.css" />
+
+		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		@@include('blocks/header.html')
+		<main class="l-main">
+			<section class="l-wrapper">
+				тут наши тосты
+
+				<div class="l-toast success active">
+					<div class="l-toast__icon">
+						<span class="icon icon--success"></span>
+					</div>
+					<div class="l-toast__content ">
+						<span class="font-medium text-14">Запрос отправлен</span>
+						<span class="fr-secondary text-14">Ваш запрос на звонок был успешно отправлен. Скоро мы с вами свяжемся</span>
+					</div>
+					<div class="l-toast__btn">
+						<button class="l-toast__btn-close fr-secondary">&times;</button>
+					</div>
+				</div>
+
+				<div class="l-toast info active">
+					<div class="l-toast__icon">
+						<svg class="icon icon--info">
+							<use href="./img/svgsprite/sprite.symbol.svg#info"></use>
+						</svg>
+					</div>
+					<div class="l-toast__content">
+						<span class="font-medium text-14">Запрос отправлен</span>
+						<span class="fr-secondary text-14">Ваш запрос на звонок был успешно отправлен. Скоро мы с вами свяжемся</span>
+					</div>
+					<div class="l-toast__btn">
+						<button class="l-toast__btn-close fr-secondary">&times;</button>
+					</div>
+				</div>
+
+				<div class="l-toast warning active">
+					<div class="l-toast__icon">
+						<svg class="icon icon--warning">
+							<use href="./img/svgsprite/sprite.symbol.svg#warning"></use>
+						</svg>
+					</div>
+					<div class="l-toast__content">
+						<span class="font-medium text-14">Запрос отправлен</span>
+						<span class="fr-secondary text-14">Ваш запрос на звонок был успешно отправлен. Скоро мы с вами свяжемся</span>
+					</div>
+					<div class="l-toast__btn">
+						<button class="l-toast__btn-close fr-secondary">&times;</button>
+					</div>
+				</div>
+
+				<div class="l-toast error active">
+					<div class="l-toast__icon">
+						<svg class="icon icon--error">
+							<use href="./img/svgsprite/sprite.symbol.svg#error"></use>
+						</svg>
+					</div>
+					<div class="l-toast__content">
+						<span class="font-medium text-14">Запрос отправлен</span>
+						<span class="fr-secondary text-14">Ваш запрос на звонок был успешно отправлен. Скоро мы с вами свяжемся</span>
+					</div>
+					<div class="l-toast__btn">
+						<button class="l-toast__btn-close fr-secondary">&times;</button>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('blocks/footer.html')
+
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>
