@@ -31,6 +31,21 @@ new Swiper('.js-banner-main', {
 	modules: [Navigation, Autoplay]
 });
 
+new Swiper('.js-pay-methods', {
+	slidesPerView: 'auto',
+	spaceBetween: 8,
+	navigation: {
+		nextEl: '.js-pay-method__next',
+		prevEl: '.js-pay-method__prev'
+	},
+	modules: [Navigation],
+	breakpoints: {
+		840: {
+			spaceBetween: 16
+		}
+	}
+});
+
 import initDropdowns from './modules/dropdowns';
 import CatalogTabs from './modules/catalog-tabs';
 import DrilldownMenu from './modules/drilldown-menu';

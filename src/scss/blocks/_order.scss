@@ -1,0 +1,62 @@
+.l-pay-method {
+	&__swiper {
+		position: relative;
+		overflow: visible !important;
+		.swiper-slide {
+			width: auto !important;
+		}
+		.swiper-button-disabled {
+			display: none;
+		}
+		.js-pay-method__prev {
+			left: 0;
+		}
+		.js-pay-method__next {
+			right: 0;
+		}
+	}
+	&__card {
+		&.active {
+			.l-pay-method__card-body {
+				border-color: var(--color-accent);
+			}
+		}
+		input {
+			&:checked {
+				~ .l-pay-method__card-body {
+					border-color: var(--color-accent);
+				}
+			}
+		}
+		&-body {
+			border: 2px solid #5e5e5e33;
+			border-radius: 12px;
+			padding: 4px;
+			height: 130px;
+			width: 200px;
+			display: block;
+
+			.child {
+				background-color: #f9fafb;
+				border-radius: 8px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				gap: 8px;
+				height: 100%;
+				width: 100%;
+			}
+			span {
+				font-weight: 500;
+				font-size: clamp(0.875rem, 0.6339rem + 0.7143vw, 1.125rem);
+			}
+		}
+	}
+}
+
+.l-order {
+	.l-section__item {
+		overflow: hidden;
+	}
+}

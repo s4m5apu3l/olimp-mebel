@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>title</title>
+		<link rel="stylesheet" href="./css/main.css" />
+
+		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		@@include('blocks/header.html')
+		<main class="l-main">
+			<section class="l-section">
+				<div class="l-wrapper">
+					<nav class="breadcrumbs">
+						<ul class="breadcrumbs__list fr-secondary text-14 font-medium">
+							<li class="breadcrumbs__item">
+								<a href="/" class="breadcrumbs__link">Главная</a>
+							</li>
+							<li class="breadcrumbs__separator">·</li>
+							<li class="breadcrumbs__item">
+								<span class="breadcrumbs__current">Оформление заказа</span>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="l-section__title">
+						<h1>Оформление заказа</h1>
+					</div>
+
+					<section class="l-order mt-24">
+						<div class="l-order__content">
+							<div class="l-section__item">
+								<span class="text-24-20 font-semibold">Способ оплаты</span>
+
+								<div class="l-pay-method mt-24">
+									<div class="l-pay-method__swiper swiper js-pay-methods">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<!-- если добавить класс active, то карточка будет тоже активна а щас проверяет на checked	 -->
+												<!-- l-pay-method__card active -->
+												<article class="l-pay-method__card">
+													<input type="radio" name="pay" id="pay-1" hidden />
+													<label for="pay-1" class="l-pay-method__card-body">
+														<span class="child">
+															<svg class="icon icon--payment icon--base-color">
+																<use href="./img/svgsprite/sprite.symbol.svg#payment"></use>
+															</svg>
+															<span>Картой онлайн</span>
+														</span>
+													</label>
+												</article>
+											</div>
+
+											<div class="swiper-slide">
+												<article class="l-pay-method__card">
+													<input type="radio" name="pay" id="pay-2" hidden />
+													<label for="pay-2" class="l-pay-method__card-body">
+														<span class="child">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M2.40002 5.22388L5.30642 10.4189V13.5877L2.40342 18.7725L2.40002 5.22388Z" fill="#5B57A2" />
+																<path d="M13.5586 8.52865L16.282 6.85945L21.8556 6.85425L13.5586 11.937V8.52865Z" fill="#D90751" />
+																<path d="M13.5431 5.19339L13.5585 12.0714L10.6453 10.2814V0L13.5433 5.19339H13.5431Z" fill="#FAB718" />
+																<path d="M21.8555 6.85419L16.2817 6.85939L13.5431 5.19339L10.6453 0L21.8553 6.85419H21.8555Z" fill="#ED6F26" />
+																<path d="M13.5585 18.8012V15.4642L10.6453 13.7083L10.6469 23.9998L13.5585 18.8012Z" fill="#63B22F" />
+																<path d="M16.276 17.1473L5.30622 10.4189L2.40002 5.22388L21.8446 17.1405L16.2758 17.1473H16.276Z" fill="#1487C9" />
+																<path d="M10.6476 24.0001L13.5588 18.8015L16.2754 17.1475L21.844 17.1407L10.6476 24.0001Z" fill="#017F36" />
+																<path d="M2.40234 18.7724L10.6689 13.7084L7.88974 12.0032L5.30534 13.5876L2.40234 18.7724Z" fill="#984995" />
+															</svg>
+
+															<span>СБП</span>
+														</span>
+													</label>
+												</article>
+											</div>
+
+											<div class="swiper-slide">
+												<article class="l-pay-method__card">
+													<input type="radio" name="pay" id="pay-3" hidden />
+													<label for="pay-3" class="l-pay-method__card-body">
+														<span class="child">
+															<span class="icon icon--sberpay icon--bg"></span>
+															<span>SberPay</span>
+														</span>
+													</label>
+												</article>
+											</div>
+
+											<div class="swiper-slide">
+												<article class="l-pay-method__card">
+													<input type="radio" name="pay" id="pay-4" hidden />
+													<label for="pay-4" class="l-pay-method__card-body">
+														<span class="child">
+															<svg class="icon icon--dolyami icon--base-color">
+																<use href="./img/svgsprite/sprite.symbol.svg#dolyami"></use>
+															</svg>
+															<span>Долями</span>
+														</span>
+													</label>
+												</article>
+											</div>
+
+											<div class="swiper-slide">
+												<article class="l-pay-method__card">
+													<input type="radio" name="pay" id="pay-5" hidden />
+													<label for="pay-5" class="l-pay-method__card-body">
+														<span class="child">
+															<svg class="icon icon--wallet icon--base-color">
+																<use href="./img/svgsprite/sprite.symbol.svg#wallet"></use>
+															</svg>
+															<span>При получении</span>
+														</span>
+													</label>
+												</article>
+											</div>
+
+											<div class="swiper-slide">
+												<article class="l-pay-method__card">
+													<input type="radio" name="pay" id="pay-6" hidden />
+													<label for="pay-6" class="l-pay-method__card-body">
+														<span class="child">
+															<svg class="icon icon--invoice icon--base-color">
+																<use href="./img/svgsprite/sprite.symbol.svg#invoice"></use>
+															</svg>
+															<span> Для юр. лиц</span>
+														</span>
+													</label>
+												</article>
+											</div>
+
+											<div class="swiper-slide">
+												<article class="l-pay-method__card">
+													<input type="radio" name="pay" id="pay-7" hidden />
+													<label for="pay-7" class="l-pay-method__card-body">
+														<span class="child">
+															<svg class="icon icon--ruble icon--base-color">
+																<use href="./img/svgsprite/sprite.symbol.svg#ruble"></use>
+															</svg>
+															<span> Рассрочка и кредит</span>
+														</span>
+													</label>
+												</article>
+											</div>
+										</div>
+
+										<button class="l-banner-main__btn js-pay-method__prev c-button small">
+											<svg class="icon icon--arrow left">
+												<use href="./img/svgsprite/sprite.symbol.svg#arrow"></use>
+											</svg>
+										</button>
+										<button class="l-banner-main__btn js-pay-method__next c-button small">
+											<svg class="icon icon--arrow right">
+												<use href="./img/svgsprite/sprite.symbol.svg#arrow"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<aside class="l-order__aside">
+							<button class="c-button w-full font-medium">Оформить заказ</button>
+							<!-- это если кнопка серая то класс disabled -->
+							<!-- <button class="c-button disabled w-full font-medium">Оформить заказ</button> -->
+							<!-- тут условие v-if убираешь div и показываешь текст -->
+							<div>
+								<hr />
+								<span class="text-20 font-semibold">Сумма заказа</span>
+								<div class="d-flex flex-col gap-12 mt-24-16">
+									<div class="w-full d-flex items-center justify-between">
+										<span class="fr-secondary font-medium text-18-16">Товары</span>
+										<span class="font-medium text-18-16">31 200 ₽</span>
+									</div>
+									<div class="w-full d-flex items-center justify-between">
+										<span class="fr-secondary font-medium text-18-16">Доставка</span>
+										<span class="font-medium text-18-16">31 200 ₽</span>
+									</div>
+								</div>
+								<hr />
+								<div class="w-full d-flex items-center justify-between">
+									<span class="text-20 font-semibold">Итого</span>
+									<span class="font-medium text-18-16">31 200 ₽</span>
+								</div>
+							</div>
+							<!-- v-else а вот и текст снизу -->
+							<!-- <span class="text-14" style="color: #5E5E5E;">Выберите товары, чтобы оформить заказ</span> -->
+						</aside>
+
+						<div class="l-cart-fixed">
+							<button class="c-button font-medium w-full">Оформить заказ</button>
+						</div>
+					</section>
+				</div>
+			</section>
+		</main>
+		@@include('blocks/footer.html')
+
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>
