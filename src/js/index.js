@@ -41,7 +41,21 @@ new Swiper('.js-pay-methods', {
 	modules: [Navigation],
 	breakpoints: {
 		840: {
-			spaceBetween: 16
+			spaceBetween: 16,
+			slidesPerView: 'auto',
+		}
+	}
+});
+
+new Swiper('.js-order-cart-swiper', {
+	slidesPerView: 1.9,
+	spaceBetween: 8,
+	direction: 'horizontal',
+	breakpoints: {
+		840: {
+			direction: 'vertical',
+			spaceBetween: 16,
+			slidesPerView: 'auto'
 		}
 	}
 });

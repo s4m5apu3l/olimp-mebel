@@ -35,7 +35,11 @@
 			height: 130px;
 			width: 200px;
 			display: block;
-
+			text-align: center;
+			@include mediaSize(768px) {
+				width: 142px;
+				height: 95px;
+			}
 			.child {
 				background-color: #f9fafb;
 				border-radius: 8px;
@@ -60,7 +64,7 @@
 	gap: 24px;
 
 	@include mediaSize(1240px) {
-		// grid-template-columns: 1fr;
+		flex-direction: column;
 	}
 	.l-section__item {
 		overflow: hidden;
@@ -70,15 +74,47 @@
 		flex-direction: column;
 		gap: 24px;
 		width: calc(100% - 450px);
+		@include mediaSize(1240px) {
+			width: 100%;
+			gap: 12px;
+		}
+		@include mediaSize(768px) {
+			.l-tab {
+				&__header {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 16px;
+				}
+				&__btns {
+					width: 100%;
+					&-item {
+						width: 100%;
+					}
+				}
+			}
+		}
 	}
 	&__aside {
-		background-color: white;
-		border-radius: 12px;
-		padding: 24px;
-		height: fit-content;
 		position: sticky;
 		top: 20px;
 		width: 100%;
+		height: fit-content;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+
+		@include mediaSize(1240px) {
+			position: static;
+		}
+		&-item {
+			background-color: white;
+			border-radius: 12px;
+			padding: 24px;
+			height: fit-content;
+			@include mediaSize(768px) {
+				padding: 16px;
+			}
+		}
 		hr {
 			margin: 24px 0;
 			width: 100%;
@@ -91,12 +127,9 @@
 			}
 		}
 		@include mediaSize(1240px) {
-			.c-button {
+			[data-hide='true'] {
 				display: none;
 			}
-		}
-		@include mediaSize(768px) {
-			padding: 16px;
 		}
 	}
 	&__address {
@@ -112,11 +145,25 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			@include mediaSize(600px) {
+				flex-direction: column;
+				gap: 12px;
+				align-items: unset;
+				.c-button {
+					width: fit-content;
+					margin-left: auto;
+				}
+			}
 		}
 	}
 }
 
 .l-tab {
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 	&__btns {
 		display: flex;
 		align-items: center;

@@ -35,5 +35,8 @@
 		background-color: white;
 		border-radius: 12px;
 		padding: 24px;
+		@include mediaSize(768px) {
+			padding: 16px;
+		}
 	}
 }
