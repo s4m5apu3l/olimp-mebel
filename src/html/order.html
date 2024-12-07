@@ -5,6 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>title</title>
+
+		<script src="https://cdn.jsdelivr.net/npm/maska@3/dist/cdn/maska.js"></script>
 		<link rel="stylesheet" href="./css/main.css" />
 
 		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
@@ -44,7 +46,7 @@
 												<!-- если добавить класс active, то карточка будет тоже активна а щас проверяет на checked	 -->
 												<!-- l-pay-method__card active -->
 												<article class="l-pay-method__card">
-													<input type="radio" name="pay" id="pay-1" hidden />
+													<input type="radio" name="pay" id="pay-1" value="pay-1" hidden />
 													<label for="pay-1" class="l-pay-method__card-body">
 														<span class="child">
 															<svg class="icon icon--payment icon--base-color">
@@ -58,7 +60,7 @@
 
 											<div class="swiper-slide">
 												<article class="l-pay-method__card">
-													<input type="radio" name="pay" id="pay-2" hidden />
+													<input type="radio" name="pay" id="pay-2" value="pay-2" hidden />
 													<label for="pay-2" class="l-pay-method__card-body">
 														<span class="child">
 															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -162,12 +164,95 @@
 							</div>
 
 							<div class="l-section__item">
-								<div class="w-full d-flex items-center justify-between">
+								<div class="l-tab w-full d-flex items-center justify-between">
 									<span class="text-24-20 font-semibold">Способ доставки</span>
 
-									<div>
-										tyt tab perekluchatesl
+									<div class="l-tab__btns">
+										<button class="l-tab__btns-item js-tab-btn active" data-tab="tab-1">
+											Самовывоз
+										</button>
+										<button class="l-tab__btns-item js-tab-btn" data-tab="tab-2">
+											Доставка
+										</button>
 									</div>
+								</div>
+
+								<div class="l-tab__content mt-24">
+									<section class="l-tab__content-item js-tab-content active" data-tab="tab-1">
+										<ul class="l-order__address">
+											<li class="l-order__address-item">
+												<div class="d-flex gap-8">
+													<svg class="icon icon--nav-pin">
+														<use href="./img/svgsprite/sprite.symbol.svg#nav-pin"></use>
+													</svg>
+													<div class="l-order__address-text ">
+														<span class="font-semibold text-20-14">ул. Чернышевского, д.93</span>
+														<span class="text-18-16">г. Якутск, ул. Чернышевского, д. 93</span>
+													</div>
+												</div>
+												<button class="text-14 accent-primary c-button small transparent">
+													Изменить
+												</button>
+											</li>
+											<li class="l-order__address-item">
+												<div class="d-flex gap-8">
+													<svg class="icon icon--user">
+														<use href="./img/svgsprite/sprite.symbol.svg#user"></use>
+													</svg>
+													<!-- если не указан -->
+													<div class="l-order__address-text ">
+														<span class="font-semibold text-20-14">Укажите данные покупателя</span>
+													</div>
+													<!-- если указан -->
+													<!-- <div class="l-order__address-text ">
+														<span class="font-semibold text-20-14">Иванов Иван</span>
+														<span class="text-18-16" data-mask="+# (###) ###-##-##">79999999999</span>
+													</div> -->
+												</div>
+												<button class="text-14 accent-primary c-button small transparent">
+													Изменить
+												</button>
+											</li>
+										</ul>
+									</section>
+
+									<section class="l-tab__content-item js-tab-content" data-tab="tab-2">
+										<ul class="l-order__address">
+											<li class="l-order__address-item">
+												<div class="d-flex gap-8">
+													<svg class="icon icon--nav-pin">
+														<use href="./img/svgsprite/sprite.symbol.svg#nav-pin"></use>
+													</svg>
+													<div class="l-order__address-text ">
+														<span class="font-semibold text-20-14">Курьером</span>
+														<span class="text-18-16">г. Якутск, пр. Ленина, 1, 5 этаж, 510 офис</span>
+													</div>
+												</div>
+												<button class="text-14 accent-primary c-button small transparent">
+													Изменить
+												</button>
+											</li>
+											<li class="l-order__address-item">
+												<div class="d-flex gap-8">
+													<svg class="icon icon--user">
+														<use href="./img/svgsprite/sprite.symbol.svg#user"></use>
+													</svg>
+													<!-- если не указан -->
+													<div class="l-order__address-text ">
+														<span class="font-semibold text-20-14">Укажите данные покупателя</span>
+													</div>
+													<!-- если указан -->
+													<!-- <div class="l-order__address-text ">
+													<span class="font-semibold text-20-14">Иванов Иван</span>
+													<span class="text-18-16" data-mask="+# (###) ###-##-##">79999999999</span>
+												</div> -->
+												</div>
+												<button class="text-14 accent-primary c-button small transparent">
+													Изменить
+												</button>
+											</li>
+										</ul>
+									</section>
 								</div>
 							</div>
 

@@ -49,25 +49,26 @@ new Swiper('.js-pay-methods', {
 import initDropdowns from './modules/dropdowns';
 import CatalogTabs from './modules/catalog-tabs';
 import DrilldownMenu from './modules/drilldown-menu';
+import initTabs from './modules/tabs';
+import initMaska from './modules/maska';
 
 document.addEventListener('DOMContentLoaded', () => {
 	initDropdowns();
+
 	new CatalogTabs({
 		tabButtonsSelector: '.js-catalog-link',
 		tabContentsSelector: '.js-header-sublist'
 	});
+
 	new DrilldownMenu('#drilldown-menu', '.menu-toggle');
 
-	// __________MODAL START_______________
-	const consentCheckbox = document.getElementById('consent');
-	const submitButton = document.querySelector('.modal-submit-btn');
+	initTabs({
+		tabButtonsSelector: '.js-tab-btn',
+		tabContentsSelector: '.js-tab-content'
+	});
 
-	function toggleSubmitButton() {
-		submitButton.disabled = !consentCheckbox.checked; // Включаем кнопку только если чекбокс нажат
-	}
+	initMaska('[data-mask]');
+	const { MaskInput } = Maska;
 
-	consentCheckbox.addEventListener('change', toggleSubmitButton);
-
-	toggleSubmitButton();
-	// ___________MODAL END_______________
+	new MaskInput('[data-maska]');
 });
