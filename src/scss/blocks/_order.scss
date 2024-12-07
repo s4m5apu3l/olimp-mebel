@@ -146,3 +146,30 @@
 		}
 	}
 }
+.l-radio {
+	&-input {
+		display: none !important;
+		&:checked {
+			~ .l-radio-label {
+				border-color: #f8b711;
+				.l-radio-label__check {
+					border-color: #f8b711;
+				}
+			}
+		}
+	}
+	&-label {
+		min-height: 142px;
+		padding: 12px;
+		display: flex;
+		align-items: flex-start;
+		border: 2px solid #5e5e5e33;
+		border-radius: 12px;
+		&__check {
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+			border: 2px solid #5e5e5e33;
+		}
+	}
+}

@@ -190,7 +190,7 @@
 														<span class="text-18-16">г. Якутск, ул. Чернышевского, д. 93</span>
 													</div>
 												</div>
-												<button class="text-14 accent-primary c-button small transparent">
+												<button data-fancybox data-src="#address-pickup-modal" class="text-14 accent-primary c-button small transparent">
 													Изменить
 												</button>
 											</li>
@@ -209,7 +209,7 @@
 														<span class="text-18-16" data-mask="+# (###) ###-##-##">79999999999</span>
 													</div> -->
 												</div>
-												<button class="text-14 accent-primary c-button small transparent">
+												<button data-fancybox data-src="#user-data-modal" class="text-14 accent-primary c-button small transparent">
 													Изменить
 												</button>
 											</li>
@@ -228,7 +228,7 @@
 														<span class="text-18-16">г. Якутск, пр. Ленина, 1, 5 этаж, 510 офис</span>
 													</div>
 												</div>
-												<button class="text-14 accent-primary c-button small transparent">
+												<button data-fancybox data-src="#address-delivery-modal class="text-14 accent-primary c-button small transparent">
 													Изменить
 												</button>
 											</li>
@@ -247,7 +247,7 @@
 													<span class="text-18-16" data-mask="+# (###) ###-##-##">79999999999</span>
 												</div> -->
 												</div>
-												<button class="text-14 accent-primary c-button small transparent">
+												<button data-fancybox data-src="#user-data-modal" class="text-14 accent-primary c-button small transparent">
 													Изменить
 												</button>
 											</li>
@@ -300,6 +300,124 @@
 						<div class="l-cart-fixed">
 							<button class="c-button font-medium w-full">Оформить заказ</button>
 						</div>
+
+						<!-- ________________MODALKI START_____________ -->
+						<dialog id="user-data-modal" style="display: none;">
+							<div class="base-modal">
+								<header class="d-flex items-center justify-between">
+									<h2 class="font-semibold text-20 fr-primary">Данные покупателя</h2>
+									<button data-fancybox-close class="c-button gray small">
+										<svg class="icon icon--close">
+											<use href="./img/svgsprite/sprite.symbol.svg#close"></use>
+										</svg>
+									</button>
+								</header>
+								<form>
+									<section class="call-form">
+										<div class="input-group">
+											<label for="input1" class="red-dot">Имя</label>
+											<div class="input-group__container">
+												<input type="text" id="input1" required />
+											</div>
+										</div>
+										<div class="input-group">
+											<label for="inputXUY" class="red-dot">Фамилия</label>
+											<div class="input-group__container">
+												<input type="text" id="inputXUY" required />
+											</div>
+										</div>
+
+										<div class="input-group mt-8">
+											<label for="input2" class="red-dot">Телефон</label>
+											<div class="input-group__container">
+												<input type="text" id="input2" required data-maska="+7 (###) ###-##-##" />
+											</div>
+										</div>
+
+										<div class="mt-24">
+											<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium">Сохранить</button>
+										</div>
+									</section>
+								</form>
+							</div>
+						</dialog>
+
+						<dialog id="address-pickup-modal" style="display: none;">
+							<div class="base-modal">
+								<header class="d-flex items-center justify-between">
+									<h2 class="font-semibold text-20 fr-primary">Адрес самовывоза</h2>
+									<button data-fancybox-close class="c-button gray small">
+										<svg class="icon icon--close">
+											<use href="./img/svgsprite/sprite.symbol.svg#close"></use>
+										</svg>
+									</button>
+								</header>
+								<form>
+									<section class="call-form">
+										<ul class="l-radio-list d-flex flex-col gap-14">
+											<li class="l-radio-item">
+												<input type="radio" id="address-1" name="xuy" class="l-radio-input" checked hidden />
+												<label for="address-1" class="l-radio-label">
+													<div class="d-flex flex-col gap-8">
+														<span class="font-semibold text-20-14">ул. Чернышевского</span>
+														<span class="text-18-16">г. Якутск, пр. Ленина, 1, 5 этаж, 510 офис</span>
+													</div>
+													<span class="l-radio-label__check"></span>
+												</label>
+											</li>
+											<li class="l-radio-item">
+												<input type="radio" id="address-2" name="xuy" class="l-radio-input" hidden />
+												<label for="address-2" class="l-radio-label">
+													<div class="d-flex flex-col gap-8">
+														<span class="font-semibold text-20-14">ТВЦ “Строительный”</span>
+														<span class="text-18-16">г. Якутск, пр. Ленина, 1, 5 этаж, 510 офис</span>
+													</div>
+													<span class="l-radio-label__check"></span>
+												</label>
+											</li>
+										</ul>
+										<div class="mt-24">
+											<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium">Сохранить</button>
+										</div>
+									</section>
+								</form>
+							</div>
+						</dialog>
+
+						<dialog id="address-delivery-modal" style="display: none;">
+							<div class="base-modal">
+								<header class="d-flex items-center justify-between">
+									<h2 class="font-semibold text-20 fr-primary">Адрес доставки</h2>
+									<button data-fancybox-close class="c-button gray small">
+										<svg class="icon icon--close">
+											<use href="./img/svgsprite/sprite.symbol.svg#close"></use>
+										</svg>
+									</button>
+								</header>
+								<form>
+									<section class="call-form">
+										<div class="input-group">
+											<label for="inputXUY" class="red-dot">Город</label>
+											<div class="input-group__container">
+												<input type="text" id="inputXUY" required />
+											</div>
+										</div>
+
+										<div class="input-group">
+											<label for="inputXUY" class="red-dot">Адрес</label>
+											<div class="input-group__container">
+												<input type="text" id="inputXUY" required />
+											</div>
+										</div>
+
+										<div class="mt-24">
+											<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium">Сохранить</button>
+										</div>
+									</section>
+								</form>
+							</div>
+						</dialog>
+						<!-- ______________MODALKI END_____________ -->
 					</section>
 				</div>
 			</section>
