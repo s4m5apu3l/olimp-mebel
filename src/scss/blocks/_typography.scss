@@ -90,8 +90,8 @@
 .text-32 {
 	font-size: 32px;
 }
-.text-28 {
-	font-size: 28px;
+.text-28-24 {
+	font-size: clamp(1.5rem, 1.2955rem + 0.6061vw, 1.75rem);
 }
 .text-24-18 {
 	font-size: clamp(1.125rem, 0.6563rem + 1.5vw, 1.5rem);

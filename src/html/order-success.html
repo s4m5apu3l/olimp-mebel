@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>title</title>
+
+		<script src="https://cdn.jsdelivr.net/npm/maska@3/dist/cdn/maska.js"></script>
+		<link rel="stylesheet" href="./css/main.css" />
+
+		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		@@include('blocks/header.html')
+		<main class="l-main">
+			<section class="l-section">
+				<div class="l-wrapper">
+					<div class="l-empty order-status">
+						<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_160_9507)">
+								<path d="M0 8C0 3.58172 3.58172 0 8 0H64C68.4183 0 72 3.58172 72 8V64C72 68.4183 68.4183 72 64 72H8C3.58172 72 0 68.4183 0 64V8Z" fill="#019F3C" />
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M48.1213 30.1213L34.1213 44.1213C33.5355 44.7071 32.5858 44.7071 32 44.1213L24 36.1213L26.1213 34L33.0607 40.9393L46 28L48.1213 30.1213Z"
+									fill="white"
+								/>
+							</g>
+							<path
+								d="M3 16C3 8.8203 8.8203 3 16 3H56C63.1797 3 69 8.8203 69 16V56C69 63.1797 63.1797 69 56 69H16C8.8203 69 3 63.1797 3 56V16Z"
+								stroke="#80CF9E"
+								stroke-width="6"
+							/>
+							<defs>
+								<clipPath id="clip0_160_9507">
+									<path
+										d="M0 16C0 7.16344 7.16344 0 16 0H56C64.8366 0 72 7.16344 72 16V56C72 64.8366 64.8366 72 56 72H16C7.16344 72 0 64.8366 0 56V16Z"
+										fill="white"
+									/>
+								</clipPath>
+							</defs>
+						</svg>
+						<div class="mt-16">
+							<span class="text-28-24 font-semibold">
+								<strong>Заказ №957256</strong>
+								<br />
+								успешно оформлен!
+							</span>
+						</div>
+						<div class="mt-24">
+							<a href="#" class="c-button font-medium">Посмотреть заказ</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('blocks/footer.html')
+
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>

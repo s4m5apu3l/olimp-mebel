@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>title</title>
+
+		<script src="https://cdn.jsdelivr.net/npm/maska@3/dist/cdn/maska.js"></script>
+		<link rel="stylesheet" href="./css/main.css" />
+
+		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		@@include('blocks/header.html')
+		<main class="l-main">
+			<section class="l-section">
+				<div class="l-wrapper">
+					<div class="l-empty order-status">
+						<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 8C0 3.58172 3.58172 0 8 0H64C68.4183 0 72 3.58172 72 8V64C72 68.4183 68.4183 72 64 72H8C3.58172 72 0 68.4183 0 64V8Z" fill="#D91528" />
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M34.183 36.3043L26 44.4873L28.1213 46.6087L36.3043 38.4256L44.4873 46.6087L46.6086 44.4873L38.4256 36.3043L46.6086 28.1213L44.4873 26L36.3043 34.183L28.1213 26L26 28.1213L34.183 36.3043Z"
+								fill="white"
+							/>
+						</svg>
+
+						<div class="mt-16">
+							<span class="text-28-24 font-semibold">
+								<strong>Заказ №957256</strong>
+								<br />
+								не был оформлен!
+							</span>
+						</div>
+						<div class="mt-24">
+							<a href="#" class="c-button font-medium">Вернуться в корзину</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('blocks/footer.html')
+
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>
