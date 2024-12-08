@@ -235,6 +235,11 @@
 			grid-template-columns: 1fr;
 			gap: 24px;
 		}
+		&-aside {
+			.l-buttons {
+				margin-top: 16px;
+			}
+		}
 	}
 }
 .l-price {
