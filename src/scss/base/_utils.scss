@@ -66,7 +66,6 @@
 		transition: opacity 0.4s ease, display 0.4s ease allow-discrete;
 		max-height: 212px;
 		overflow-y: auto;
-		// overflow-x: hidden;
 		scrollbar-width: thin !important; /* "auto", "thin", или "none" */
 		scrollbar-color: #c1c1c1 white !important; /* Цвет бегунка и трека */
 		&::-webkit-scrollbar {
@@ -81,6 +80,9 @@
 		.js-dropdown-content {
 			display: block;
 			opacity: 1;
+		}
+		.arrow {
+			transform: rotate(180deg);
 		}
 	}
 }
@@ -118,12 +120,19 @@
 .l-interested {
 	margin-top: 24px;
 }
+.mt-32 {
+	margin-top: 32px;
+}
 .mt-24-16 {
 	margin-top: 24px;
 	@include mediaSize(540px) {
 		margin-top: 16px;
 	}
 }
+.mt-24 {
+	margin-top: 24px;
+}
+
 .mt-8 {
 	margin-top: 8px;
 }
@@ -132,9 +141,6 @@
 }
 .mt-16 {
 	margin-top: 16px;
-}
-.mt-24 {
-	margin-top: 24px;
 }
 
 .line-clamp-1 {
@@ -148,4 +154,32 @@
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
+}
+
+.l-radio-color {
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+
+	}
+	&__item {
+		input {
+			&:checked + label {
+				border-color: #f8b711;
+			}
+		}
+		label {
+			border-radius: 12px;
+			border: 2px solid #5e5e5e66;
+			padding: 4px;
+			display: block;
+		}
+		&-color {
+			display: block;
+			width: 48px;
+			height: 48px;
+			border-radius: 8px;
+		}
+	}
 }

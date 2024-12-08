@@ -3,7 +3,7 @@ import { Fancybox } from '@fancyapps/ui';
 import '@fancyapps/ui/dist/fancybox/fancybox.css';
 
 import Swiper from 'swiper';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay, Thumbs } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -42,7 +42,7 @@ new Swiper('.js-pay-methods', {
 	breakpoints: {
 		840: {
 			spaceBetween: 16,
-			slidesPerView: 'auto',
+			slidesPerView: 'auto'
 		}
 	}
 });
@@ -58,6 +58,27 @@ new Swiper('.js-order-cart-swiper', {
 			slidesPerView: 'auto'
 		}
 	}
+});
+
+var swiperProductGalleryThumb = new Swiper('.js-product-gallery-swiper-thumb', {
+	spaceBetween: 8,
+	slidesPerView: 5.4,
+	freeMode: true,
+	watchSlidesProgress: true,
+	direction: 'vertical',
+	navigation: {
+		nextEl: '.js-product-gallery-swiper__next',
+		prevEl: '.js-product-gallery-swiper__prev'
+	},
+	modules: [Navigation]
+});
+new Swiper('.js-product-gallery-swiper', {
+	spaceBetween: 10,
+	slidesPerView: 1,
+	thumbs: {
+		swiper: swiperProductGalleryThumb
+	},
+	modules: [Thumbs]
 });
 
 import initDropdowns from './modules/dropdowns';
