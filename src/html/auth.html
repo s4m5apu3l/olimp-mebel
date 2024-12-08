@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>title</title>
+
+		<script src="https://cdn.jsdelivr.net/npm/maska@3/dist/cdn/maska.js"></script>
+		<link rel="stylesheet" href="./css/main.css" />
+
+		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		@@include('blocks/header.html')
+		<main class="l-main">
+			<dialog id="auth" style="display: none;">
+				<div class="l-auth d-flex">
+					<div class="l-auth__img">
+						<img src="https://placehold.co/438x540" alt="auth-image" />
+					</div>
+					<div class="l-auth__content">
+						<header class="l-auth__header d-flex justify-between">
+							<h2 class="font-semibold text-20 fr-primary">Вход</h2>
+							<button data-fancybox-close class="c-button gray small">
+								<svg class="icon icon--close">
+									<use href="./img/svgsprite/sprite.symbol.svg#close"></use>
+								</svg>
+							</button>
+						</header>
+						<form class="l-auth__form mt-24">
+							<div class="input-group">
+								<label for="auth-mail">Почта</label>
+								<div class="input-group__container">
+									<input type="text" id="auth-mail" required />
+								</div>
+							</div>
+
+							<div class="input-group mt-8">
+								<label for="auth-password">Пароль</label>
+								<div class="input-group__container">
+									<input type="password" id="auth-password" required />
+									<a href="#" class="password-hide">
+                                        <svg class="icon icon--password-hide">
+                                            <use href="./img/svgsprite/sprite.symbol.svg#password-hide"></use>
+                                        </svg>
+                                    </a>
+								</div>
+							</div>
+
+							<div class="d-flex justify-end mt-12">
+								<a class="fr-tertiary text-14" href="#">Забыли пароль?</a>
+							</div>
+
+							<p class="fr-tertiary text-14" style="margin-top: 120px;">Нет аккаунта? <a class="accent-primary" href="#">Зарегистрироваться</a></p>
+							<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium mt-12">Войти</button>
+						</form>
+					</div>
+				</div>
+			</dialog>
+			<section class="l-section">
+				<div class="l-wrapper">
+					<button class="c-button" data-fancybox data-src="#auth" style="margin: 0 auto;">
+						<span class="font-medium">Войти</span>
+					</button>
+				</div>
+			</section>
+		</main>
+		@@include('blocks/footer.html')
+
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>
