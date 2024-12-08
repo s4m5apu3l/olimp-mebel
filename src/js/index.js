@@ -60,27 +60,6 @@ new Swiper('.js-order-cart-swiper', {
 	}
 });
 
-var swiperProductGalleryThumb = new Swiper('.js-product-gallery-swiper-thumb', {
-	spaceBetween: 8,
-	slidesPerView: 5.4,
-	freeMode: true,
-	watchSlidesProgress: true,
-	direction: 'vertical',
-	navigation: {
-		nextEl: '.js-product-gallery-swiper__next',
-		prevEl: '.js-product-gallery-swiper__prev'
-	},
-	modules: [Navigation]
-});
-new Swiper('.js-product-gallery-swiper', {
-	spaceBetween: 10,
-	slidesPerView: 1,
-	thumbs: {
-		swiper: swiperProductGalleryThumb
-	},
-	modules: [Thumbs]
-});
-
 import initDropdowns from './modules/dropdowns';
 import CatalogTabs from './modules/catalog-tabs';
 import DrilldownMenu from './modules/drilldown-menu';
@@ -96,6 +75,33 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	new DrilldownMenu('#drilldown-menu', '.menu-toggle');
+
+	// ____SWIPERS_________
+
+	if (document.querySelector('.js-product-gallery-swiper-thumb')) {
+		var swiperProductGalleryThumb = new Swiper('.js-product-gallery-swiper-thumb', {
+			spaceBetween: 8,
+			slidesPerView: 5.4,
+			freeMode: true,
+			watchSlidesProgress: true,
+			direction: 'vertical',
+			navigation: {
+				nextEl: '.js-product-gallery-swiper__next',
+				prevEl: '.js-product-gallery-swiper__prev'
+			},
+			modules: [Navigation]
+		});
+	}
+	new Swiper('.js-product-gallery-swiper', {
+		spaceBetween: 10,
+		slidesPerView: 1,
+		thumbs: {
+			swiper: swiperProductGalleryThumb
+		},
+		modules: [Thumbs]
+	});
+
+	// _____SWIPERS END_______
 
 	initTabs({
 		tabButtonsSelector: '.js-tab-btn',

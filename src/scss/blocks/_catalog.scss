@@ -176,8 +176,8 @@
 	}
 	&__gallery {
 		&-swiper {
-			display: grid;
-			grid-template-columns: 90px 652px;
+			display: flex;
+			// grid-template-columns: 90px 652px;
 			gap: 24px;
 			height: 500px;
 			img {
@@ -188,6 +188,7 @@
 			}
 			&__thumb {
 				position: relative;
+				width: 90px;
 				.swiper-slide {
 					cursor: pointer;
 					opacity: 0.5;
@@ -216,7 +217,7 @@
 				}
 			}
 			&__main {
-				width: 100%;
+				width: 652px;
 			}
 		}
 	}
