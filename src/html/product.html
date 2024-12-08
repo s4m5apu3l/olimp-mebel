@@ -37,7 +37,7 @@
 						</ul>
 					</nav>
 
-					<section class="mt-32">
+					<section class="mt-32 d-flex flex-col gap-24">
 						<div class="l-product__detail-top">
 							<div class="l-product__detail-gallery">
 								<div class="l-product__gallery-swiper">
@@ -284,20 +284,65 @@
 								</ul>
 							</div>
 
-							<section class="l-reviews">
+							<div class="l-reviews mt-24">
 								<div class="l-reviews__section">
 									<div class="l-section__item">
 										<span class="text-24-20 font-semibold">Отзывы</span>
-										<p class="mt-24-16 text-18-16">
-											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat blanditiis architecto ullam explicabo eaque eos consequuntur enim? In
-											fugit sint delectus quibusdam. Magni nemo autem distinctio omnis facilis asperiores id?
-										</p>
+
+										<ul class="l-reviews__list">
+											<li class="l-reviews__list-item">
+												<div class="header">
+													<div class="d-flex items-center gap-12">
+														<img src="https://placehold.co/600x400" alt="" class="l-reviews__user-img" />
+														<div class="fr-primary">
+															<span class="text-16-12 font-semibold ">Иван Иванов</span>
+															<span class="d-flex mt-8 text-12">Цвет: серый</span>
+														</div>
+													</div>
+
+													<div class="d-flex items-center gap-12">
+														<span class="fr-secondary text-14 font-medium">12 ноября 2024</span>
+
+														<ul class="l-rating static">
+															<!-- <?= $i <= $rating ? 'active' : ''; ?> по такой условии можешь сделать -->
+															<li>
+																<svg class="icon icon--rating active">
+																	<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+																</svg>
+															</li>
+															<li>
+																<svg class="icon icon--rating active">
+																	<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+																</svg>
+															</li>
+															<li>
+																<svg class="icon icon--rating active">
+																	<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+																</svg>
+															</li>
+															<li>
+																<svg class="icon icon--rating">
+																	<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+																</svg>
+															</li>
+															<li>
+																<svg class="icon icon--rating">
+																	<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+																</svg>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+										</ul>
 									</div>
 
 									<aside class="l-reviews__aside"></aside>
 								</div>
-							</section>
+							</div>
 						</section>
+
+						@@include('blocks/interested.html')
 					</section>
 				</div>
 			</section>
