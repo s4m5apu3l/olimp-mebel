@@ -14,6 +14,60 @@ Fancybox.bind('[data-fancybox]', {
 	closeButton: false
 });
 
+Fancybox.bind('[data-fancybox="gallery-reviews"]', {
+	mainClass: 'l-reviews__gallery-modal',
+	compact: false,
+	idle: false,
+
+	animated: false,
+	showClass: false,
+	hideClass: false,
+
+	dragToClose: false,
+
+	Images: {
+		// Disable animation from/to thumbnail on start/close
+		zoom: false
+	},
+
+	Toolbar: {
+		items: {
+			titleCustom: {
+				tpl: '<span class="l-reviews__gallery-modal-title">Фото покупателей</span>'
+			}
+		},
+		display: {
+			left: ['titleCustom'],
+			middle: [],
+			right: ['close']
+		}
+	},
+
+	Thumbs: {
+		type: 'classic',
+		Carousel: {
+			axis: 'y'
+			// center: function() {
+			// 	return this.contentDim > this.viewportDim;
+			// }
+			// slidesPerPage: 1,
+			// center: true,
+			// fill: true,
+			// dragFree: true
+			// breakpoints: {
+			// 	'(min-width: 640px)': {
+			// 		axis: 'y'
+			// 	}
+			// }
+		}
+	},
+
+	Carousel: {
+		// Remove the navigation arrows
+		// Navigation: false
+	}
+});
+
 new Swiper('.js-banner-main', {
 	slidesPerView: 1,
 	spaceBetween: 8,
@@ -58,6 +112,10 @@ new Swiper('.js-order-cart-swiper', {
 			slidesPerView: 'auto'
 		}
 	}
+});
+new Swiper('.js-reviews-gallery-swiper', {
+	slidesPerView: 2.2,
+	spaceBetween: 8
 });
 
 import initDropdowns from './modules/dropdowns';
