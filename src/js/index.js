@@ -42,7 +42,7 @@ new Swiper('.js-pay-methods', {
 	breakpoints: {
 		840: {
 			spaceBetween: 16,
-			slidesPerView: 'auto',
+			slidesPerView: 'auto'
 		}
 	}
 });
@@ -85,4 +85,22 @@ document.addEventListener('DOMContentLoaded', () => {
 	const { MaskInput } = Maska;
 
 	new MaskInput('[data-maska]');
+
+	const passwordBtn = document.querySelectorAll('.password-hide');
+
+	//Password showing and hiding
+	passwordBtn.forEach(button => {
+		const inputContainer = button.closest('.input-group__container');
+		const passwordInput = inputContainer.querySelector('.auth-password');
+		const hidePassword = button.querySelector('.icon--password-hide');
+		const showPassword = button.querySelector('.icon--password-show');
+
+		button.addEventListener('click', () => {
+			const isPassword = passwordInput.getAttribute('type') === 'password';
+			passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+
+			hidePassword.style.display = isPassword ? 'none' : 'block';
+			showPassword.style.display = isPassword ? 'block' : 'none';
+		});
+	});
 });

@@ -16,7 +16,7 @@
 	<body>
 		@@include('blocks/header.html')
 		<main class="l-main">
-			<dialog id="auth" style="display: none;">
+			<dialog id="auth-login" style="display: none;">
 				<div class="l-auth d-flex">
 					<div class="l-auth__img">
 						<img src="https://placehold.co/438x540" alt="auth-image" />
@@ -32,21 +32,24 @@
 						</header>
 						<form class="l-auth__form mt-24">
 							<div class="input-group">
-								<label for="auth-mail">Почта</label>
+								<label for="auth-login-mail">Почта</label>
 								<div class="input-group__container">
 									<input type="text" id="auth-mail" required />
 								</div>
 							</div>
 
 							<div class="input-group mt-8">
-								<label for="auth-password">Пароль</label>
+								<label for="auth-login-password">Пароль</label>
 								<div class="input-group__container">
-									<input type="password" id="auth-password" required />
+									<input type="password" class="auth-password" id="auth-login-password" required />
 									<a href="#" class="password-hide">
-                                        <svg class="icon icon--password-hide">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#password-hide"></use>
-                                        </svg>
-                                    </a>
+										<svg class="icon icon--password-hide">
+											<use href="./img/svgsprite/sprite.symbol.svg#password-hide"></use>
+										</svg>
+										<svg class="icon icon--password-show" style="display: none;">
+											<use href="./img/svgsprite/sprite.symbol.svg#password-show"></use>
+										</svg>
+									</a>
 								</div>
 							</div>
 
@@ -60,10 +63,85 @@
 					</div>
 				</div>
 			</dialog>
+
+			<dialog id="auth-reg" style="display: none;">
+				<div class="l-auth d-flex">
+					<div class="l-auth__img">
+						<img src="https://placehold.co/438x540" alt="auth-image" />
+					</div>
+					<div class="l-auth__content">
+						<header class="l-auth__header d-flex justify-between">
+							<h2 class="font-semibold text-20 fr-primary">Регистрация</h2>
+							<button data-fancybox-close class="c-button gray small">
+								<svg class="icon icon--close">
+									<use href="./img/svgsprite/sprite.symbol.svg#close"></use>
+								</svg>
+							</button>
+						</header>
+						<form class="l-auth__form mt-24">
+							<div class="input-group">
+								<label for="auth-mail" class="red-dot">Почта</label>
+								<div class="input-group__container">
+									<input type="text" id="auth-mail" required />
+								</div>
+							</div>
+
+							<div class="d-flex gap-8">
+								<div class="input-group mt-8">
+									<label for="auth-password" class="red-dot">Пароль</label>
+									<div class="input-group__container">
+										<input type="password" class="auth-password" id="auth-reg-password" required />
+										<a href="#" class="password-hide">
+											<svg class="icon icon--password-hide">
+												<use href="./img/svgsprite/sprite.symbol.svg#password-hide"></use>
+											</svg>
+											<svg class="icon icon--password-show" style="display: none;">
+												<use href="./img/svgsprite/sprite.symbol.svg#password-show"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+
+								<div class="input-group mt-8">
+									<label for="auth-password" class="red-dot">Повторите пароль</label>
+									<div class="input-group__container">
+										<input type="password" class="auth-password" id="auth-reg-rewrite-password" required />
+										<a href="#" class="password-hide">
+											<svg class="icon icon--password-hide">
+												<use href="./img/svgsprite/sprite.symbol.svg#password-hide"></use>
+											</svg>
+											<svg class="icon icon--password-show" style="display: none;">
+												<use href="./img/svgsprite/sprite.symbol.svg#password-show"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<p class="fr-tertiary text-14 mt-24">Уже есть аккаунт? <a class="accent-primary" href="#">Войти</a></p>
+
+							<div class="d-flex items-center gap-8" style="margin-top: 68px;">
+								<input type="checkbox" id="checkbox-news" name="checkbox-news" required checked />
+								<label for="consent" class="font-medium text-14 fr-primary">Даю согласие на рассылку новостей и акций</label>
+							</div>
+
+							<div class="d-flex items-center gap-8 mt-12">
+								<input type="checkbox" id="checkbox-personal" name="checkbox-personal" required checked />
+								<label for="consent" class="font-medium text-14 fr-primary">Даю согласие на обработку персональных данных</label>
+							</div>
+
+							<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium mt-12">Продолжить</button>
+						</form>
+					</div>
+				</div>
+			</dialog>
 			<section class="l-section">
 				<div class="l-wrapper">
-					<button class="c-button" data-fancybox data-src="#auth" style="margin: 0 auto;">
+					<button class="c-button" data-fancybox data-src="#auth-login" style="margin: 10px auto;">
 						<span class="font-medium">Войти</span>
+					</button>
+					<button class="c-button" data-fancybox data-src="#auth-reg" style="margin: 10px auto;">
+						<span class="font-medium">Регистрация</span>
 					</button>
 				</div>
 			</section>

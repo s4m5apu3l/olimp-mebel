@@ -3,10 +3,10 @@
 	width: 100dvw;
 	border-radius: var(--radius-16);
 	background-color: white;
-    overflow: hidden;
-	&__content{
-        max-width: 438px;
-        width: 100%;
-        padding: 24px;
-    }
+	overflow: hidden;
+	&__content {
+		max-width: 438px;
+		width: 100%;
+		padding: 24px;
+	}
 }
