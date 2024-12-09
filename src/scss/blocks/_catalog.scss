@@ -274,7 +274,36 @@
 }
 
 .l-reviews {
+	&__images {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+		gap: 8px;
+		img {
+			aspect-ratio: 1.7/1;
+			object-fit: cover;
+			border-radius: 12px;
+			width: 100%;
+		}
+	}
 	&__list {
+		margin-top: 32px;
+		&-item {
+			padding: 24px 0;
+			border-bottom: 1px solid #5e5e5e33;
+			&:first-child {
+				padding-top: 0;
+			}
+			&:last-child {
+				border-bottom: unset;
+				padding-bottom: 0;
+			}
+		}
+		.header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+		}
 	}
 	&__user {
 		&-img {
@@ -284,6 +313,20 @@
 			object-fit: cover;
 			border-radius: 50%;
 		}
+	}
+	&__aside {
+		position: sticky;
+		top: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		height: fit-content;
+	}
+
+	&__section {
+		display: grid;
+		grid-template-columns: 1fr 426px;
+		gap: 24px;
 	}
 }
 
@@ -296,6 +339,29 @@
 			fill: #eceef1 !important;
 			&.active {
 				fill: var(--color-accent) !important;
+			}
+		}
+	}
+	&__progress {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		&-item {
+			display: grid;
+			grid-template-columns: 65px 1fr 48px;
+			gap: 16px;
+			font-weight: 500;
+			font-size: 14px;
+			align-items: center;
+			progress {
+				height: 8px;
+				border-radius: 16px;
+				&::-moz-progress-bar {
+					background: var(--color-accent);
+				}
+				&::-webkit-progress-value {
+					background: var(--color-accent);
+				}
 			}
 		}
 	}
