@@ -19,6 +19,12 @@
 			background-color: #cbcbcb;
 		}
 	}
+	&.white {
+		background-color: #f9fafb;
+		&:hover {
+			background-color: #e3e3e3;
+		}
+	}
 	&.small {
 		padding: 8px;
 		border-radius: var(--radius-8);

@@ -16,10 +16,10 @@
 	<body>
 		@@include('blocks/header.html')
 		<main class="l-main">
-			<dialog id="auth-login" style="display: none;">
+			<dialog id="login" style="display: none;">
 				<div class="l-auth d-flex">
 					<div class="l-auth__img">
-						<img src="https://placehold.co/438x540" alt="auth-image" />
+						<img src="./../img/auth-img.png" alt="auth-image" />
 					</div>
 					<div class="l-auth__content">
 						<header class="l-auth__header d-flex justify-between">
@@ -64,10 +64,10 @@
 				</div>
 			</dialog>
 
-			<dialog id="auth-reg" style="display: none;">
+			<dialog id="reg" style="display: none;">
 				<div class="l-auth d-flex">
 					<div class="l-auth__img">
-						<img src="https://placehold.co/438x540" alt="auth-image" />
+						<img src="./../img/auth-img.png" alt="auth-image" />
 					</div>
 					<div class="l-auth__content">
 						<header class="l-auth__header d-flex justify-between">
@@ -80,15 +80,15 @@
 						</header>
 						<form class="l-auth__form mt-24">
 							<div class="input-group">
-								<label for="auth-mail" class="red-dot">Почта</label>
+								<label for="auth-reg-mail" class="red-dot">Почта</label>
 								<div class="input-group__container">
-									<input type="text" id="auth-mail" required />
+									<input type="text" id="auth-reg-mail" required />
 								</div>
 							</div>
 
 							<div class="d-flex gap-8">
 								<div class="input-group mt-8">
-									<label for="auth-password" class="red-dot">Пароль</label>
+									<label for="auth-reg-password" class="red-dot">Пароль</label>
 									<div class="input-group__container">
 										<input type="password" class="auth-password" id="auth-reg-password" required />
 										<a href="#" class="password-hide">
@@ -103,7 +103,7 @@
 								</div>
 
 								<div class="input-group mt-8">
-									<label for="auth-password" class="red-dot">Повторите пароль</label>
+									<label for="auth-reg-rewrite-password" class="red-dot">Повторите пароль</label>
 									<div class="input-group__container">
 										<input type="password" class="auth-password" id="auth-reg-rewrite-password" required />
 										<a href="#" class="password-hide">
@@ -135,13 +135,146 @@
 					</div>
 				</div>
 			</dialog>
+
+			<dialog id="buyer-data" style="display: none;">
+				<div class="l-auth d-flex">
+					<div class="l-auth__img">
+						<img src="./../img/auth-img.png" alt="auth-image" />
+					</div>
+					<div class="l-auth__content">
+						<header class="l-auth__header d-flex justify-between">
+							<h2 class="font-semibold text-20 fr-primary">Данные покупателя</h2>
+							<button data-fancybox-close class="c-button gray small">
+								<svg class="icon icon--close">
+									<use href="./img/svgsprite/sprite.symbol.svg#close"></use>
+								</svg>
+							</button>
+						</header>
+						<form class="l-auth__form mt-24">
+							<div class="input-group">
+								<label for="auth-buyer-name" class="red-dot">Имя</label>
+								<div class="input-group__container">
+									<input type="text" id="auth-buyer-name" required />
+								</div>
+							</div>
+
+							<div class="input-group mt-8">
+								<label for="auth-buyer-surname" class="red-dot">Фамилия</label>
+								<div class="input-group__container">
+									<input type="text" id="auth-buyer-surname" required />
+								</div>
+							</div>
+
+							<div class="input-group mt-8">
+								<label for="auth-buyer-surname">Адрес</label>
+								<div class="input-group__container">
+									<input type="text" id="auth-buyer-surname" required />
+								</div>
+							</div>
+
+							<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium" style="margin-top: 44px;">Зарегистрироваться</button>
+							<button type="submit" class="c-button white w-full accent-primary text-16-14 font-medium mt-8">Назад</button>
+						</form>
+					</div>
+				</div>
+			</dialog>
+
+			<dialog id="forgot" style="display: none;">
+				<div class="l-auth d-flex">
+					<div class="l-auth__img">
+						<img src="./../img/auth-img.png" alt="auth-image" />
+					</div>
+					<div class="l-auth__content">
+						<header class="l-auth__header d-flex justify-between">
+							<h2 class="font-semibold text-20 fr-primary">Сброс пароля</h2>
+							<button data-fancybox-close class="c-button gray small">
+								<svg class="icon icon--close">
+									<use href="./img/svgsprite/sprite.symbol.svg#close"></use>
+								</svg>
+							</button>
+						</header>
+						<p class="text-14 fr-secondary mt-8">Введите почту, на которую будет отправлена ссылка для восстановления пароля</p>
+						<form class="l-auth__form mt-24">
+							<div class="input-group">
+								<label for="auth-forgot-mail">Почта</label>
+								<div class="input-group__container">
+									<input type="text" id="auth-forgot-mail" required />
+								</div>
+							</div>
+
+							<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium" style="margin-top: 174px;">Продолжить</button>
+							<button type="submit" class="c-button white w-full accent-primary text-16-14 font-medium mt-8">Назад</button>
+						</form>
+					</div>
+				</div>
+			</dialog>
+
+			<dialog id="new-password" style="display: none;">
+				<div class="l-auth d-flex">
+					<div class="l-auth__img">
+						<img src="./../img/auth-img.png" alt="auth-image" />
+					</div>
+					<div class="l-auth__content">
+						<header class="l-auth__header d-flex justify-between">
+							<h2 class="font-semibold text-20 fr-primary">Придумайте новый пароль</h2>
+							<button data-fancybox-close class="c-button gray small">
+								<svg class="icon icon--close">
+									<use href="./img/svgsprite/sprite.symbol.svg#close"></use>
+								</svg>
+							</button>
+						</header>
+						<form class="l-auth__form mt-24">
+							<div class="input-group">
+								<label for="auth-new-password" class="red-dot">Повторите пароль</label>
+								<div class="input-group__container">
+									<input type="password" class="auth-password" id="auth-new-password" required />
+									<a href="#" class="password-hide">
+										<svg class="icon icon--password-hide">
+											<use href="./img/svgsprite/sprite.symbol.svg#password-hide"></use>
+										</svg>
+										<svg class="icon icon--password-show" style="display: none;">
+											<use href="./img/svgsprite/sprite.symbol.svg#password-show"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+
+							<div class="input-group mt-8">
+								<label for="auth-new-password-rewrite" class="red-dot">Повторите пароль</label>
+								<div class="input-group__container">
+									<input type="password" class="auth-password" id="auth-new-password-rewrite" required />
+									<a href="#" class="password-hide">
+										<svg class="icon icon--password-hide">
+											<use href="./img/svgsprite/sprite.symbol.svg#password-hide"></use>
+										</svg>
+										<svg class="icon icon--password-show" style="display: none;">
+											<use href="./img/svgsprite/sprite.symbol.svg#password-show"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+
+							<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium" style="margin-top: 194px;">Изменить пароль</button>
+						</form>
+					</div>
+				</div>
+			</dialog>
 			<section class="l-section">
 				<div class="l-wrapper">
-					<button class="c-button" data-fancybox data-src="#auth-login" style="margin: 10px auto;">
+					<button class="c-button" data-fancybox data-src="#login" style="margin: 10px auto;">
 						<span class="font-medium">Войти</span>
 					</button>
-					<button class="c-button" data-fancybox data-src="#auth-reg" style="margin: 10px auto;">
+					<button class="c-button" data-fancybox data-src="#reg" style="margin: 10px auto;">
 						<span class="font-medium">Регистрация</span>
+					</button>
+					<button class="c-button" data-fancybox data-src="#buyer-data" style="margin: 10px auto;">
+						<span class="font-medium">Данные покупателя</span>
+					</button>
+					<button class="c-button" data-fancybox data-src="#forgot" style="margin: 10px auto;">
+						<span class="font-medium">Сброс пароля</span>
+					</button>
+					<button class="c-button" data-fancybox data-src="#new-password" style="margin: 10px auto;">
+						<span class="font-medium">Новый пароль</span>
 					</button>
 				</div>
 			</section>

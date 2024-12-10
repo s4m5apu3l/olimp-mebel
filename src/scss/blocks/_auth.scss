@@ -4,6 +4,14 @@
 	border-radius: var(--radius-16);
 	background-color: white;
 	overflow: hidden;
+	&__img {
+		height: 100%;
+		img {
+			width: 438px;
+			height: 100%;
+			aspect-ratio: 0.81/1;
+		}
+	}
 	&__content {
 		max-width: 438px;
 		width: 100%;
