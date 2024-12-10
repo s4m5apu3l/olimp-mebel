@@ -46,7 +46,7 @@ Fancybox.bind('[data-fancybox="gallery-reviews"]', {
 	Thumbs: {
 		type: 'classic',
 		Carousel: {
-			axis: 'y'
+			axis: 'x',
 			// center: function() {
 			// 	return this.contentDim > this.viewportDim;
 			// }
@@ -54,11 +54,11 @@ Fancybox.bind('[data-fancybox="gallery-reviews"]', {
 			// center: true,
 			// fill: true,
 			// dragFree: true
-			// breakpoints: {
-			// 	'(min-width: 640px)': {
-			// 		axis: 'y'
-			// 	}
-			// }
+			breakpoints: {
+				'(min-width: 740px)': {
+					axis: 'y'
+				}
+			}
 		}
 	},
 
@@ -139,15 +139,24 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (document.querySelector('.js-product-gallery-swiper-thumb')) {
 		var swiperProductGalleryThumb = new Swiper('.js-product-gallery-swiper-thumb', {
 			spaceBetween: 8,
-			slidesPerView: 5.4,
+			slidesPerView: 2.4,
 			freeMode: true,
 			watchSlidesProgress: true,
-			direction: 'vertical',
+			direction: 'horizontal',
 			navigation: {
 				nextEl: '.js-product-gallery-swiper__next',
 				prevEl: '.js-product-gallery-swiper__prev'
 			},
-			modules: [Navigation]
+			modules: [Navigation],
+			breakpoints: {
+				560: {
+					slidesPerView: 3.5
+				},
+				950: {
+					direction: 'vertical',
+					slidesPerView: 5.4
+				}
+			}
 		});
 	}
 	new Swiper('.js-product-gallery-swiper', {
