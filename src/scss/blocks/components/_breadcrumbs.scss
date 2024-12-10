@@ -4,6 +4,7 @@
 	flex-wrap: nowrap;
 	&__list {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 8px;
 		list-style: none;
 		padding: 0;

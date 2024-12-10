@@ -92,12 +92,22 @@
 		}
 	}
 	&__catalog {
+		&.active {
+			svg.icon {
+				background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.0915 12.1522L7 16.2437L8.06066 17.3043L12.1522 13.2128L16.2436 17.3043L17.3043 16.2437L13.2128 12.1522L17.3043 8.06066L16.2436 7L12.1522 11.0915L8.06067 7L7.00001 8.06066L11.0915 12.1522Z' fill='%23232323'/%3E%3C/svg%3E%0A");
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 100% 100%;
+				use {
+					display: none;
+				}
+			}
+		}
 		@include mediaSize(820px) {
 			display: none;
 		}
 		&-dropdown {
 			@include mediaSize(1000px) {
-				// left: -100%;
 				position: fixed;
 				left: 24px;
 				top: 175px;

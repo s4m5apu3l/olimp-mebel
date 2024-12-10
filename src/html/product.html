@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>title</title>
+
+		<script src="https://cdn.jsdelivr.net/npm/maska@3/dist/cdn/maska.js"></script>
+		<link rel="stylesheet" href="./css/main.css" />
+
+		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		@@include('blocks/header.html')
+		<main class="l-main">
+			<section class="l-section">
+				<div class="l-wrapper">
+					<nav class="breadcrumbs">
+						<ul class="breadcrumbs__list fr-secondary text-14 font-medium">
+							<li class="breadcrumbs__item">
+								<a href="/" class="breadcrumbs__link">Главная</a>
+							</li>
+							<li class="breadcrumbs__separator">·</li>
+							<li class="breadcrumbs__item">
+								<a href="/" class="breadcrumbs__link">Каталог</a>
+							</li>
+							<li class="breadcrumbs__item">
+								<a href="/" class="breadcrumbs__link">Кухни</a>
+							</li>
+							<li class="breadcrumbs__separator">·</li>
+							<li class="breadcrumbs__item">
+								<span class="breadcrumbs__current">Модульная кухня “Перфетта Royal”</span>
+							</li>
+						</ul>
+					</nav>
+
+					<section class="mt-32 l-product__detail">
+						<div class="l-product__detail-top">
+							<div class="l-product__detail-gallery">
+								<div class="l-product__gallery-swiper">
+									<!-- маленькие картинки если их нет то лучше убрать весь див -->
+									<div thumbsSlider="" class="l-product__gallery-swiper__thumb swiper js-product-gallery-swiper-thumb">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<img src="https://placehold.co/600x400" alt="" loading="lazy" />
+											</div>
+											<div class="swiper-slide">
+												<img src="https://placehold.co/600x400" alt="" loading="lazy" />
+											</div>
+											<div class="swiper-slide">
+												<img src="https://placehold.co/600x400" alt="" loading="lazy" />
+											</div>
+											<div class="swiper-slide">
+												<img src="https://placehold.co/600x400" alt="" loading="lazy" />
+											</div>
+											<div class="swiper-slide">
+												<img src="https://placehold.co/600x400" alt="" loading="lazy" />
+											</div>
+											<div class="swiper-slide">
+												<img src="https://placehold.co/600x400" alt="" loading="lazy" />
+											</div>
+										</div>
+
+										<button class="l-nav-btn left js-product-gallery-swiper__next c-button small">
+											<svg class="icon icon--arrow left">
+												<use href="./img/svgsprite/sprite.symbol.svg#arrow"></use>
+											</svg>
+										</button>
+										<button class="l-nav-btn right js-product-gallery-swiper__prev c-button small">
+											<svg class="icon icon--arrow right">
+												<use href="./img/svgsprite/sprite.symbol.svg#arrow"></use>
+											</svg>
+										</button>
+									</div>
+
+									<!-- большая карточка -->
+									<div class="l-product__gallery-swiper__main swiper js-product-gallery-swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<img src="https://placehold.co/600x400" alt="" loading="lazy" />
+											</div>
+											<div class="swiper-slide">
+												<img src="https://placehold.co/600x400" alt="" loading="lazy" />
+											</div>
+											<div class="swiper-slide">
+												<img src="https://placehold.co/600x400" alt="" loading="lazy" />
+											</div>
+											<div class="swiper-slide">
+												<img src="https://placehold.co/600x400" alt="" loading="lazy" />
+											</div>
+											<div class="swiper-slide">
+												<img src="https://placehold.co/600x400" alt="" loading="lazy" />
+											</div>
+											<div class="swiper-slide">
+												<img src="https://placehold.co/600x400" alt="" loading="lazy" />
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="l-product__detail-actions">
+									<div class="input-group ">
+										<label>Покрытие фасада</label>
+										<div class="l-select js-dropdown">
+											<button class="l-select__btn js-dropdown-btn">
+												<span>Выберите покрытие</span>
+												<svg class="icon icon--base-color arrow">
+													<use href="./img/svgsprite/sprite.symbol.svg#arrow"></use>
+												</svg>
+											</button>
+
+											<ul class="l-select__list js-dropdown-content">
+												<li>
+													<a href="javascript:void(0)" class="text-14 active">
+														Итальянская эмаль BLANCO
+													</a>
+												</li>
+												<li>
+													<a href="javascript:void(0)" class="text-14 ">Итальянская эмаль BLANCO</a>
+												</li>
+												<li>
+													<a href="javascript:void(0)" class="text-14 ">Итальянская эмаль BLANCO хуй</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="l-radio-color">
+										<span class="text-12 font-medium fr-tertiary">Цвет корпуса</span>
+										<ul class="l-radio-color__list mt-12">
+											<li class="l-radio-color__item">
+												<input type="radio" name="color" id="color-1" hidden />
+												<label for="color-1">
+													<span class="l-radio-color__item-color" style="background-color: #888888"></span>
+												</label>
+											</li>
+											<li class="l-radio-color__item">
+												<input type="radio" name="color" id="color-2" hidden />
+												<label for="color-2">
+													<span class="l-radio-color__item-color" style="background-color: #000"></span>
+												</label>
+											</li>
+											<li class="l-radio-color__item">
+												<input type="radio" name="color" id="color-3" hidden />
+												<label for="color-3">
+													<span class="l-radio-color__item-color" style="background-color: #F0F0F0"></span>
+												</label>
+											</li>
+										</ul>
+									</div>
+
+									<div class="l-radio-color">
+										<span class="text-12 font-medium fr-tertiary">Цвет корпуса</span>
+										<ul class="l-radio-color__list mt-12">
+											<li class="l-radio-color__item">
+												<input type="radio" name="color" id="color-1" hidden />
+												<label for="color-1">
+													<span class="l-radio-color__item-color" style="background-color: #888888"></span>
+												</label>
+											</li>
+											<li class="l-radio-color__item">
+												<input type="radio" name="color" id="color-2" hidden />
+												<label for="color-2">
+													<span class="l-radio-color__item-color" style="background-color: #000"></span>
+												</label>
+											</li>
+											<li class="l-radio-color__item">
+												<input type="radio" name="color" id="color-3" hidden />
+												<label for="color-3">
+													<span class="l-radio-color__item-color" style="background-color: #F0F0F0"></span>
+												</label>
+											</li>
+										</ul>
+									</div>
+
+									<div class="input-group ">
+										<label>В комплекте</label>
+										<div class="l-select js-dropdown">
+											<button class="l-select__btn js-dropdown-btn">
+												<span>Выберите покрытие</span>
+												<svg class="icon icon--base-color arrow">
+													<use href="./img/svgsprite/sprite.symbol.svg#arrow"></use>
+												</svg>
+											</button>
+
+											<ul class="l-select__list js-dropdown-content">
+												<li>
+													<a href="javascript:void(0)" class="text-14 active">
+														Итальянская эмаль BLANCO
+													</a>
+												</li>
+												<li>
+													<a href="javascript:void(0)" class="text-14 ">Итальянская эмаль BLANCO</a>
+												</li>
+												<li>
+													<a href="javascript:void(0)" class="text-14 ">Итальянская эмаль BLANCO хуй</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<aside class="l-product__detail-aside">
+								<div class="l-section__item">
+									<span class="text-24-20 font-semibold line-clamp-2">Модульная кухня “Перфетта Royal”</span>
+									<div class="mt-16 d-flex items-center gap-12">
+										<div class="d-flex items-center gap-8">
+											<svg class="icon icon--rating">
+												<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+											</svg>
+											<span class="text-16-12 font-medium">4.9</span>
+										</div>
+
+										<!-- не забудь учесть падежное склонение отзыв отзыва отзывов -->
+										<span class="fr-secondary text-16-12 font-medium">16 отзывов</span>
+									</div>
+
+									<hr class="mt-24-16" style=" height: 1px; background-color: #5e5e5e33" />
+
+									<div class="mt-24-16">
+										<span class="l-price"> 31 250 ₽</span>
+									</div>
+
+									<div class="l-buttons">
+										<div class="l-product__card-footer">
+											<!-- <button class="l-product__card-btn added-cart c-button">В корзине</button> сост если уже в корзине класс added-cart -->
+											<button class="c-button w-full">Добавить в корзину</button>
+											<button class="c-button gray ">
+												<!-- тут так же убрать active чтобы сделать лайк неактивным -->
+												<svg class="icon icon--heart active">
+													<use href="./img/svgsprite/sprite.symbol.svg#heart"></use>
+												</svg>
+											</button>
+										</div>
+										<div class="mt-8 ">
+											<a href="#">
+												<button class="c-button transparent text-14 accent-primary w-full">Купить в один клик</button>
+											</a>
+										</div>
+									</div>
+								</div>
+							</aside>
+						</div>
+
+						<section class="l-section">
+							<div class="l-section__item">
+								<span class="text-24-20 font-semibold">Описание</span>
+								<p class="mt-24-16 text-18-16">
+									В кухонный линейке «Перфетта Royal» эмаль идеально подчеркивает безупречно выверенную архитектуру фасада. Деликатный блеск краски делает
+									гарнитур еще более выразительным.Нежный голубой оттенок - кусочек чистого неба в дом. Этот свежий колор отлично подходит для создания хорошего
+									настроения в любом помещении.Белоснежный - визуально раздвигает стены, создавая ощущение большей площади. Благородный глубокий серый оттенок -
+									дизайнеры охотно используют в оформлении кухонных интерьеров, ведь с ним легко персонализировать кухонное пространство.
+								</p>
+							</div>
+
+							<div class="l-section__item mt-24">
+								<span class="text-24-20 font-semibold">Характеристики</span>
+
+								<ul class="l-product__detail-params mt-24">
+									<li>
+										<span>Цвет</span>
+										<hr />
+										<span>Белый (Blanco)</span>
+									</li>
+									<li>
+										<span>Материал</span>
+										<hr />
+										<span>Металл</span>
+									</li>
+									<li>
+										<span>Фурнитура</span>
+										<hr />
+										<span>Петли с доводчиком, направляющие шариковые полного выдвижения</span>
+									</li>
+									<li>
+										<span>Материал</span>
+										<hr />
+										<span>Металл</span>
+									</li>
+								</ul>
+							</div>
+
+							<div class="l-reviews mt-24">
+								<div class="l-reviews__section">
+									<div class="l-section__item">
+										<span class="title-pc text-24-20 font-semibold">Отзывы</span>
+
+										<!-- это состояние когда нет отзывов !!!!!!!!! -->
+										<!-- <div class="l-empty">
+											<img src="./../img/news-empty.png" class="l-empty__img" alt="not-found" />
+											<div class="l-empty__info">
+												<span class="font-semibold text-20">Отзывов не найдено</span>
+												<span class="fr-secondary text-18-16">Напишите отзыв первым</span>
+											</div>
+										</div> -->
+										<ul class="l-reviews__list">
+											<li class="l-reviews__list-item">
+												<div class="header">
+													<div class="d-flex items-center gap-12">
+														<img src="https://placehold.co/600x400" alt="" class="l-reviews__user-img" loading="lazy" />
+														<div class="fr-primary">
+															<span class="text-16-12 font-semibold ">Иван Иванов</span>
+															<span class="d-flex mt-8 text-12">Цвет: серый</span>
+														</div>
+													</div>
+
+													<div class="d-flex items-center gap-12">
+														<span class="fr-secondary text-14 font-medium">12 ноября 2024</span>
+
+														<ul class="l-rating static">
+															<!-- <?= $i <= $rating ? 'active' : ''; ?> по такой условии можешь сделать -->
+															<li>
+																<svg class="icon icon--rating active">
+																	<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+																</svg>
+															</li>
+															<li>
+																<svg class="icon icon--rating active">
+																	<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+																</svg>
+															</li>
+															<li>
+																<svg class="icon icon--rating active">
+																	<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+																</svg>
+															</li>
+															<li>
+																<svg class="icon icon--rating">
+																	<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+																</svg>
+															</li>
+															<li>
+																<svg class="icon icon--rating">
+																	<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+																</svg>
+															</li>
+														</ul>
+													</div>
+												</div>
+
+												<div class="body mt-16">
+													<p class="text-18-16">
+														За 33к кухня вообще без нареканий. В целом, в квартире стояла примерно такая же по качеству, но с мерзкой расцветкой, а тут
+														серые спокойные фасады. Пришлось докупать шкафчики похожего цвета в других мастах, так как здесь нельзя было докупить, или
+														было значительно дороже. Получилось немного убого, но пойдет :) Покупал отдельно: - Шкафчик над вытяжкой (~3000); - Верхний
+														и нижний шкафы справа от мойки (~8000); - Петли с доводчиками (~1000); - Столешница (~10000); - Стеновые панели 2 шт
+														(~12000); - Планки для панелей (~2500); - Мойка и смеситель (~10000); - Варочная панель (~12000); - Сушилки для тарелок
+														(~1000). Собирал сам. Бюджетная Кухня за свою цену норм!
+													</p>
+
+													<div class="mt-16 l-reviews__images">
+														<!-- тут группируешь обязательно data-fancybox="gallery-a" можешь индекс в массиве запихнуть -->
+														<a href="https://placehold.co/600x400/orange/white" data-fancybox="gallery-a">
+															<img src="https://placehold.co/600x400/orange/white" alt="" loading="lazy" />
+														</a>
+														<a href="https://placehold.co/300x600/blue/white" data-fancybox="gallery-a">
+															<img src="https://placehold.co/300x600/blue/white" alt="" loading="lazy" />
+														</a>
+														<a href="https://placehold.co/500x400/red/white" data-fancybox="gallery-a">
+															<img src="https://placehold.co/500x400/red/white" alt="" loading="lazy" />
+														</a>
+													</div>
+												</div>
+											</li>
+
+											<li class="l-reviews__list-item">
+												<div class="header">
+													<div class="d-flex items-center gap-12">
+														<img src="https://placehold.co/600x400" alt="" class="l-reviews__user-img" loading="lazy" />
+														<div class="fr-primary">
+															<span class="text-16-12 font-semibold ">Иван Иванов</span>
+															<span class="d-flex mt-8 text-12">Цвет: серый</span>
+														</div>
+													</div>
+
+													<div class="d-flex items-center gap-12">
+														<span class="fr-secondary text-14 font-medium">12 ноября 2024</span>
+
+														<ul class="l-rating static">
+															<!-- <?= $i <= $rating ? 'active' : ''; ?> по такой условии можешь сделать -->
+															<li>
+																<svg class="icon icon--rating active">
+																	<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+																</svg>
+															</li>
+															<li>
+																<svg class="icon icon--rating active">
+																	<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+																</svg>
+															</li>
+															<li>
+																<svg class="icon icon--rating active">
+																	<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+																</svg>
+															</li>
+															<li>
+																<svg class="icon icon--rating active">
+																	<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+																</svg>
+															</li>
+															<li>
+																<svg class="icon icon--rating">
+																	<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+																</svg>
+															</li>
+														</ul>
+													</div>
+												</div>
+
+												<div class="body mt-16">
+													<p class="text-18-16">
+														дьаабы
+													</p>
+
+													<div class="mt-16 l-reviews__images">
+														<!-- тут группируешь обязательно data-fancybox="gallery-a" можешь индекс в массиве запихнуть -->
+														<a href="https://placehold.co/600x400/orange/white" data-fancybox="gallery-index">
+															<img src="https://placehold.co/600x400/orange/white" alt="" loading="lazy" />
+														</a>
+														<a href="https://placehold.co/1200x400/orange/white" data-fancybox="gallery-index">
+															<img src="https://placehold.co/1200x400/orange/white" alt="" loading="lazy" />
+														</a>
+													</div>
+												</div>
+											</li>
+										</ul>
+
+										<nav class="l-pagination">
+											<ul class="l-pagination__list font-medium text-18-16 fr-secondary">
+												<li class="l-pagination-item disabled">
+													<a href="#" class="l-pagination-link">
+														<svg class="icon icon--arrow pagination left">
+															<use href="./img/svgsprite/sprite.symbol.svg#arrow"></use>
+														</svg>
+													</a>
+												</li>
+												<li class="l-pagination-item active"><a class="l-pagination-link" href="#">1</a></li>
+												<li class="l-pagination-item"><a class="l-pagination-link" href="#">2</a></li>
+												<li class="l-pagination-item"><a class="l-pagination-link" href="#">3</a></li>
+												<li class="l-pagination-item dots"><a class="l-pagination-link" href="#">...</a></li>
+												<li class="l-pagination-item"><a class="l-pagination-link" href="#">10</a></li>
+												<li class="l-pagination-item ">
+													<a class="l-pagination-link" href="#">
+														<svg class="icon icon--arrow pagination right">
+															<use href="./img/svgsprite/sprite.symbol.svg#arrow"></use>
+														</svg>
+													</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+
+									<aside class="l-reviews__aside">
+										<span class="title-mobile text-24-20 font-semibold">Отзывы</span>
+										<div class="l-section__item">
+											<div class="d-flex items-center gap-8">
+												<svg class="icon icon--rating">
+													<use href="./img/svgsprite/sprite.symbol.svg#rating"></use>
+												</svg>
+												<span class="text-24-20 font-semibold">
+													<span>4.9</span>
+													/
+													<span>5</span>
+												</span>
+											</div>
+
+											<hr class="mt-24-16" style=" height: 1px; background-color: #5e5e5e33" />
+
+											<!-- тут тупо value на 0  -->
+											<ul class="l-rating__progress mt-24-16">
+												<li class="l-rating__progress-item">
+													<span>5 звёзд</span>
+													<progress max="100" value="100"></progress>
+													<span>14</span>
+												</li>
+												<li class="l-rating__progress-item">
+													<span>4 звезды</span>
+													<progress max="100" value="50"></progress>
+													<span>4</span>
+												</li>
+												<li class="l-rating__progress-item">
+													<span>3 звезды</span>
+													<progress max="100" value="70"></progress>
+													<span>4</span>
+												</li>
+												<li class="l-rating__progress-item">
+													<span>2 звезды</span>
+													<progress max="100" value="30"></progress>
+													<span>2</span>
+												</li>
+												<li class="l-rating__progress-item">
+													<span>1 звезда</span>
+													<progress max="100" value="10"></progress>
+													<span>1</span>
+												</li>
+											</ul>
+										</div>
+										<div class="l-section__item">
+											<span class="text-24-20 font-semibold">Фото покупателей</span>
+
+											<div class="mt-24-16 l-reviews__gallery-swiper">
+												<div class="js-reviews-gallery-swiper swiper">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">
+															<a href="https://placehold.co/2200x1200/red/black" data-fancybox="gallery-reviews">
+																<img src="https://placehold.co/400x400/red/black" alt="" loading="lazy" />
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<a href="https://placehold.co/1400x400/black/white" data-fancybox="gallery-reviews">
+																<img src="https://placehold.co/300x200/black/white" alt="" loading="lazy" />
+															</a>
+														</div>
+														<div class="swiper-slide">
+															<a href="https://placehold.co/600x400/orange/white" data-fancybox="gallery-reviews">
+																<img src="https://placehold.co/600x400/orange/white" alt="" loading="lazy" />
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</aside>
+								</div>
+							</div>
+						</section>
+
+						@@include('blocks/interested.html')
+					</section>
+				</div>
+			</section>
+		</main>
+		@@include('blocks/footer.html')
+
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>
