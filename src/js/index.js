@@ -3,7 +3,7 @@ import { Fancybox } from '@fancyapps/ui';
 import '@fancyapps/ui/dist/fancybox/fancybox.css';
 
 import Swiper from 'swiper';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay, Thumbs } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -12,6 +12,60 @@ import 'swiper/css/pagination';
 Fancybox.bind('[data-fancybox]', {
 	dragToClose: false,
 	closeButton: false
+});
+
+Fancybox.bind('[data-fancybox="gallery-reviews"]', {
+	mainClass: 'l-reviews__gallery-modal',
+	compact: false,
+	idle: false,
+
+	animated: false,
+	showClass: false,
+	hideClass: false,
+
+	dragToClose: false,
+
+	Images: {
+		// Disable animation from/to thumbnail on start/close
+		zoom: false
+	},
+
+	Toolbar: {
+		items: {
+			titleCustom: {
+				tpl: '<span class="l-reviews__gallery-modal-title">Фото покупателей</span>'
+			}
+		},
+		display: {
+			left: ['titleCustom'],
+			middle: [],
+			right: ['close']
+		}
+	},
+
+	Thumbs: {
+		type: 'classic',
+		Carousel: {
+			axis: 'y'
+			// center: function() {
+			// 	return this.contentDim > this.viewportDim;
+			// }
+			// slidesPerPage: 1,
+			// center: true,
+			// fill: true,
+			// dragFree: true
+			// breakpoints: {
+			// 	'(min-width: 640px)': {
+			// 		axis: 'y'
+			// 	}
+			// }
+		}
+	},
+
+	Carousel: {
+		// Remove the navigation arrows
+		// Navigation: false
+	}
 });
 
 new Swiper('.js-banner-main', {
@@ -59,6 +113,10 @@ new Swiper('.js-order-cart-swiper', {
 		}
 	}
 });
+new Swiper('.js-reviews-gallery-swiper', {
+	slidesPerView: 2.2,
+	spaceBetween: 8
+});
 
 import initDropdowns from './modules/dropdowns';
 import CatalogTabs from './modules/catalog-tabs';
@@ -75,6 +133,33 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	new DrilldownMenu('#drilldown-menu', '.menu-toggle');
+
+	// ____SWIPERS_________
+
+	if (document.querySelector('.js-product-gallery-swiper-thumb')) {
+		var swiperProductGalleryThumb = new Swiper('.js-product-gallery-swiper-thumb', {
+			spaceBetween: 8,
+			slidesPerView: 5.4,
+			freeMode: true,
+			watchSlidesProgress: true,
+			direction: 'vertical',
+			navigation: {
+				nextEl: '.js-product-gallery-swiper__next',
+				prevEl: '.js-product-gallery-swiper__prev'
+			},
+			modules: [Navigation]
+		});
+	}
+	new Swiper('.js-product-gallery-swiper', {
+		spaceBetween: 10,
+		slidesPerView: 1,
+		thumbs: {
+			swiper: swiperProductGalleryThumb
+		},
+		modules: [Thumbs]
+	});
+
+	// _____SWIPERS END_______
 
 	initTabs({
 		tabButtonsSelector: '.js-tab-btn',
