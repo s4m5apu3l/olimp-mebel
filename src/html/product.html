@@ -37,7 +37,7 @@
 						</ul>
 					</nav>
 
-					<section class="mt-32 d-flex flex-col gap-24">
+					<section class="mt-32 l-product__detail">
 						<div class="l-product__detail-top">
 							<div class="l-product__detail-gallery">
 								<div class="l-product__gallery-swiper">
@@ -287,8 +287,16 @@
 							<div class="l-reviews mt-24">
 								<div class="l-reviews__section">
 									<div class="l-section__item">
-										<span class="text-24-20 font-semibold">Отзывы</span>
+										<span class="title-pc text-24-20 font-semibold">Отзывы</span>
 
+										<!-- это состояние когда нет отзывов !!!!!!!!! -->
+										<!-- <div class="l-empty">
+											<img src="./../img/news-empty.png" class="l-empty__img" alt="not-found" />
+											<div class="l-empty__info">
+												<span class="font-semibold text-20">Отзывов не найдено</span>
+												<span class="fr-secondary text-18-16">Напишите отзыв первым</span>
+											</div>
+										</div> -->
 										<ul class="l-reviews__list">
 											<li class="l-reviews__list-item">
 												<div class="header">
@@ -447,6 +455,7 @@
 									</div>
 
 									<aside class="l-reviews__aside">
+										<span class="title-mobile text-24-20 font-semibold">Отзывы</span>
 										<div class="l-section__item">
 											<div class="d-flex items-center gap-8">
 												<svg class="icon icon--rating">
@@ -461,6 +470,7 @@
 
 											<hr class="mt-24-16" style=" height: 1px; background-color: #5e5e5e33" />
 
+											<!-- тут тупо value на 0  -->
 											<ul class="l-rating__progress mt-24-16">
 												<li class="l-rating__progress-item">
 													<span>5 звёзд</span>
@@ -490,7 +500,7 @@
 											</ul>
 										</div>
 										<div class="l-section__item">
-											<span class="text-24-20 font-semibold">Отзывы</span>
+											<span class="text-24-20 font-semibold">Фото покупателей</span>
 
 											<div class="mt-24-16 l-reviews__gallery-swiper">
 												<div class="js-reviews-gallery-swiper swiper">
