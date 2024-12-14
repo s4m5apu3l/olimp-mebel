@@ -25,6 +25,9 @@
 .w-full {
 	width: 100%;
 }
+.h-full {
+	height: 100%;
+}
 .d-flex {
 	display: flex;
 }
@@ -33,6 +36,9 @@
 }
 .gap-24 {
 	gap: 24px;
+}
+.gap-16 {
+	gap: 16px;
 }
 .gap-14 {
 	gap: 14px;
@@ -51,6 +57,12 @@
 }
 .flex-col {
 	flex-direction: column;
+}
+.flex-grow-0 {
+	flex-grow: 0;
+}
+.flex-grow-1 {
+	flex-grow: 1;
 }
 .justify-between {
 	justify-content: space-between;
@@ -146,6 +158,9 @@
 }
 .mt-8 {
 	margin-top: 8px;
+}
+.mt-auto {
+	margin-top: auto;
 }
 
 .line-clamp-1 {

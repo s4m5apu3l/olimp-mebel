@@ -4,17 +4,67 @@
 	border-radius: var(--radius-16);
 	background-color: white;
 	overflow: hidden;
+	@include mediaSize(680px) {
+		max-width: 380px;
+	}
+	@include mediaSize(420px) {
+		max-width: 100%;
+		height: 100vh;
+		border-radius: 0;
+	}
 	&__img {
-		height: 100%;
+		@include mediaSize(680px) {
+			display: none;
+		}
 		img {
-			width: 438px;
+			width: 100%;
 			height: 100%;
 			aspect-ratio: 0.81/1;
+			object-fit: cover;
+		}
+	}
+	&__adaptive-back {
+		display: none;
+		@include mediaSize(420px) {
+			display: flex;
 		}
 	}
 	&__content {
 		max-width: 438px;
 		width: 100%;
 		padding: 24px;
+		header {
+			@include mediaSize(420px) {
+				flex-direction: column;
+			}
+			h2.adaptive-title {
+				@include mediaSize(420px) {
+					margin-top: 24px;
+				}
+			}
+			.adaptive-close {
+				@include mediaSize(420px) {
+					display: none;
+				}
+			}
+		}
+		@include mediaSize(825px) {
+			max-width: 380px;
+			min-height: 550px;
+		}
+		@include mediaSize(420px) {
+			max-width: 100%;
+			padding: 16px;
+		}
+	}
+	&__password-adaptive {
+		@include mediaSize(680px) {
+			flex-direction: column;
+		}
+	}
+	&__span-adaptive {
+		@include mediaSize(420px) {
+			margin-top: 8px;
+		}
 	}
 }

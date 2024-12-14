@@ -19,22 +19,29 @@
 			<dialog id="login" style="display: none;">
 				<div class="l-auth d-flex">
 					<div class="l-auth__img">
-						<img src="./../img/auth-img.png" alt="auth-image" />
+						<img src="https://placehold.co/450x500" alt="auth-image" />
 					</div>
-					<div class="l-auth__content">
+					<div class="l-auth__content d-flex flex-col">
 						<header class="l-auth__header d-flex justify-between">
-							<h2 class="font-semibold text-20 fr-primary">Вход</h2>
-							<button data-fancybox-close class="c-button gray small">
+							<div class="l-auth__adaptive-back">
+								<button class="c-button gray small">
+									<svg class="icon icon--back">
+										<use href="./img/svgsprite/sprite.symbol.svg#back"></use>
+									</svg>
+								</button>
+							</div>
+							<h2 class="font-semibold text-20 fr-primary adaptive-title">Вход</h2>
+							<button data-fancybox-close class="c-button gray small adaptive-close">
 								<svg class="icon icon--close">
 									<use href="./img/svgsprite/sprite.symbol.svg#close"></use>
 								</svg>
 							</button>
 						</header>
-						<form class="l-auth__form mt-24">
+						<form class="l-auth__form mt-24 d-flex flex-col flex-grow-1">
 							<div class="input-group">
 								<label for="auth-login-mail">Почта</label>
 								<div class="input-group__container">
-									<input type="text" id="auth-mail" required />
+									<input type="email" id="auth-mail" required />
 								</div>
 							</div>
 
@@ -57,8 +64,10 @@
 								<a class="fr-tertiary text-14" href="#">Забыли пароль?</a>
 							</div>
 
-							<p class="fr-tertiary text-14" style="margin-top: 120px;">Нет аккаунта? <a class="accent-primary" href="#">Зарегистрироваться</a></p>
-							<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium mt-12">Войти</button>
+							<div class="d-flex flex-col gap-16 mt-auto">
+								<p class="fr-tertiary text-14">Нет аккаунта? <a class="accent-primary" href="#">Зарегистрироваться</a></p>
+								<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium">Войти</button>
+							</div>
 						</form>
 					</div>
 				</div>
@@ -67,26 +76,33 @@
 			<dialog id="reg" style="display: none;">
 				<div class="l-auth d-flex">
 					<div class="l-auth__img">
-						<img src="./../img/auth-img.png" alt="auth-image" />
+						<img src="https://placehold.co/450x500" alt="auth-image" />
 					</div>
-					<div class="l-auth__content">
+					<div class="l-auth__content d-flex flex-col">
 						<header class="l-auth__header d-flex justify-between">
-							<h2 class="font-semibold text-20 fr-primary">Регистрация</h2>
-							<button data-fancybox-close class="c-button gray small">
+							<div class="l-auth__adaptive-back">
+								<button class="c-button gray small">
+									<svg class="icon icon--back">
+										<use href="./img/svgsprite/sprite.symbol.svg#back"></use>
+									</svg>
+								</button>
+							</div>
+							<h2 class="font-semibold text-20 fr-primary adaptive-title">Регистрация</h2>
+							<button data-fancybox-close class="c-button gray small adaptive-close">
 								<svg class="icon icon--close">
 									<use href="./img/svgsprite/sprite.symbol.svg#close"></use>
 								</svg>
 							</button>
 						</header>
-						<form class="l-auth__form mt-24">
+						<form class="l-auth__form mt-24 d-flex flex-col flex-grow-1">
 							<div class="input-group">
 								<label for="auth-reg-mail" class="red-dot">Почта</label>
 								<div class="input-group__container">
-									<input type="text" id="auth-reg-mail" required />
+									<input type="email" id="auth-reg-mail" required />
 								</div>
 							</div>
 
-							<div class="d-flex gap-8">
+							<div class="d-flex gap-8 l-auth__password-adaptive">
 								<div class="input-group mt-8">
 									<label for="auth-reg-password" class="red-dot">Пароль</label>
 									<div class="input-group__container">
@@ -118,19 +134,21 @@
 								</div>
 							</div>
 
-							<p class="fr-tertiary text-14 mt-24">Уже есть аккаунт? <a class="accent-primary" href="#">Войти</a></p>
+							<p class="fr-tertiary text-14 mt-24 l-auth__span-adaptive">Уже есть аккаунт? <a class="accent-primary" href="#">Войти</a></p>
 
-							<div class="d-flex items-center gap-8" style="margin-top: 68px;">
-								<input type="checkbox" id="checkbox-news" name="checkbox-news" required checked />
-								<label for="consent" class="font-medium text-14 fr-primary">Даю согласие на рассылку новостей и акций</label>
+							<div class="d-flex flex-col gap-12 mt-auto">
+								<div class="d-flex items-center gap-8">
+									<input type="checkbox" id="checkbox-news" name="checkbox-news" required checked />
+									<label for="consent" class="font-medium text-14 fr-primary">Даю согласие на рассылку новостей и акций</label>
+								</div>
+
+								<div class="d-flex items-center gap-8">
+									<input type="checkbox" id="checkbox-personal" name="checkbox-personal" required checked />
+									<label for="consent" class="font-medium text-14 fr-primary">Даю согласие на обработку персональных данных</label>
+								</div>
+
+								<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium">Продолжить</button>
 							</div>
-
-							<div class="d-flex items-center gap-8 mt-12">
-								<input type="checkbox" id="checkbox-personal" name="checkbox-personal" required checked />
-								<label for="consent" class="font-medium text-14 fr-primary">Даю согласие на обработку персональных данных</label>
-							</div>
-
-							<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium mt-12">Продолжить</button>
 						</form>
 					</div>
 				</div>
@@ -139,18 +157,18 @@
 			<dialog id="buyer-data" style="display: none;">
 				<div class="l-auth d-flex">
 					<div class="l-auth__img">
-						<img src="./../img/auth-img.png" alt="auth-image" />
+						<img src="https://placehold.co/450x500" alt="auth-image" />
 					</div>
-					<div class="l-auth__content">
+					<div class="l-auth__content d-flex flex-col">
 						<header class="l-auth__header d-flex justify-between">
 							<h2 class="font-semibold text-20 fr-primary">Данные покупателя</h2>
-							<button data-fancybox-close class="c-button gray small">
+							<button data-fancybox-close class="c-button gray small adaptive-close">
 								<svg class="icon icon--close">
 									<use href="./img/svgsprite/sprite.symbol.svg#close"></use>
 								</svg>
 							</button>
 						</header>
-						<form class="l-auth__form mt-24">
+						<form class="l-auth__form mt-24 d-flex flex-col flex-grow-1">
 							<div class="input-group">
 								<label for="auth-buyer-name" class="red-dot">Имя</label>
 								<div class="input-group__container">
@@ -172,8 +190,10 @@
 								</div>
 							</div>
 
-							<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium" style="margin-top: 44px;">Зарегистрироваться</button>
-							<button type="submit" class="c-button white w-full accent-primary text-16-14 font-medium mt-8">Назад</button>
+							<div class="d-flex flex-col gap-8 mt-auto">
+								<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium">Зарегистрироваться</button>
+								<button type="submit" class="c-button white w-full accent-primary text-16-14 font-medium">Назад</button>
+							</div>
 						</form>
 					</div>
 				</div>
@@ -182,28 +202,30 @@
 			<dialog id="forgot" style="display: none;">
 				<div class="l-auth d-flex">
 					<div class="l-auth__img">
-						<img src="./../img/auth-img.png" alt="auth-image" />
+						<img src="https://placehold.co/450x500" alt="auth-image" />
 					</div>
-					<div class="l-auth__content">
+					<div class="l-auth__content d-flex flex-col">
 						<header class="l-auth__header d-flex justify-between">
 							<h2 class="font-semibold text-20 fr-primary">Сброс пароля</h2>
-							<button data-fancybox-close class="c-button gray small">
+							<button data-fancybox-close class="c-button gray small adaptive-close">
 								<svg class="icon icon--close">
 									<use href="./img/svgsprite/sprite.symbol.svg#close"></use>
 								</svg>
 							</button>
 						</header>
 						<p class="text-14 fr-secondary mt-8">Введите почту, на которую будет отправлена ссылка для восстановления пароля</p>
-						<form class="l-auth__form mt-24">
+						<form class="l-auth__form mt-24 d-flex flex-col flex-grow-1">
 							<div class="input-group">
 								<label for="auth-forgot-mail">Почта</label>
 								<div class="input-group__container">
-									<input type="text" id="auth-forgot-mail" required />
+									<input type="email" id="auth-forgot-mail" required />
 								</div>
 							</div>
 
-							<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium" style="margin-top: 174px;">Продолжить</button>
-							<button type="submit" class="c-button white w-full accent-primary text-16-14 font-medium mt-8">Назад</button>
+							<div class="d-flex flex-col gap-8 mt-auto">
+								<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium">Продолжить</button>
+								<button type="submit" class="c-button white w-full accent-primary text-16-14 font-medium">Назад</button>
+							</div>
 						</form>
 					</div>
 				</div>
@@ -212,18 +234,18 @@
 			<dialog id="new-password" style="display: none;">
 				<div class="l-auth d-flex">
 					<div class="l-auth__img">
-						<img src="./../img/auth-img.png" alt="auth-image" />
+						<img src="https://placehold.co/450x500" alt="auth-image" />
 					</div>
-					<div class="l-auth__content">
+					<div class="l-auth__content d-flex flex-col">
 						<header class="l-auth__header d-flex justify-between">
 							<h2 class="font-semibold text-20 fr-primary">Придумайте новый пароль</h2>
-							<button data-fancybox-close class="c-button gray small">
+							<button data-fancybox-close class="c-button gray small adaptive-close">
 								<svg class="icon icon--close">
 									<use href="./img/svgsprite/sprite.symbol.svg#close"></use>
 								</svg>
 							</button>
 						</header>
-						<form class="l-auth__form mt-24">
+						<form class="l-auth__form mt-24 d-flex flex-col flex-grow-1">
 							<div class="input-group">
 								<label for="auth-new-password" class="red-dot">Повторите пароль</label>
 								<div class="input-group__container">
@@ -254,7 +276,9 @@
 								</div>
 							</div>
 
-							<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium" style="margin-top: 194px;">Изменить пароль</button>
+							<div class="d-flex flex-col mt-auto">
+								<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium">Изменить пароль</button>
+							</div>
 						</form>
 					</div>
 				</div>
