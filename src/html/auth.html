@@ -24,9 +24,18 @@
 					<div class="l-auth__content d-flex flex-col">
 						<header class="l-auth__header d-flex justify-between">
 							<div class="l-auth__adaptive-back">
-								<button class="c-button gray small">
-									<svg class="icon icon--back">
-										<use href="./img/svgsprite/sprite.symbol.svg#back"></use>
+								<button data-fancybox-close class="c-button gray small">
+									<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M0 8C0 3.58172 3.58172 0 8 0H28C32.4183 0 36 3.58172 36 8V28C36 32.4183 32.4183 36 28 36H8C3.58172 36 0 32.4183 0 28V8Z"
+											fill="#E3E3E3"
+										/>
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M14.4711 17.4692L19.9711 11.9998L21.0289 13.0634L16.0636 18.001L21.0289 22.9387L19.9711 24.0023L14.4711 18.5328C14.3296 18.392 14.25 18.2007 14.25 18.001C14.25 17.8014 14.3296 17.61 14.4711 17.4692Z"
+											fill="#232323"
+										/>
 									</svg>
 								</button>
 							</div>
@@ -38,11 +47,12 @@
 							</button>
 						</header>
 						<form class="l-auth__form mt-24 d-flex flex-col flex-grow-1">
-							<div class="input-group">
+							<div class="input-group error">
 								<label for="auth-login-mail">Почта</label>
 								<div class="input-group__container">
 									<input type="email" id="auth-mail" required />
 								</div>
+								<span class="hint">Error text</span>
 							</div>
 
 							<div class="input-group mt-8">
@@ -231,6 +241,29 @@
 				</div>
 			</dialog>
 
+			<dialog id="forgot-2" style="display: none;">
+				<div class="l-auth d-flex">
+					<div class="l-auth__img">
+						<img src="https://placehold.co/450x500" alt="auth-image" />
+					</div>
+					<div class="l-auth__content d-flex flex-col">
+						<header class="l-auth__header d-flex justify-between">
+							<h2 class="font-semibold text-20 fr-primary">Сброс пароля</h2>
+							<button data-fancybox-close class="c-button gray small adaptive-close">
+								<svg class="icon icon--close">
+									<use href="./img/svgsprite/sprite.symbol.svg#close"></use>
+								</svg>
+							</button>
+						</header>
+						<p class="text-14 fr-secondary mt-8">На почту johndoe@gmail.com была отправлена ссылка для восстановления пароля</p>
+
+						<div class="d-flex flex-col gap-8 mt-auto">
+							<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium">Вернуться ко входу</button>
+						</div>
+					</div>
+				</div>
+			</dialog>
+
 			<dialog id="new-password" style="display: none;">
 				<div class="l-auth d-flex">
 					<div class="l-auth__img">
@@ -296,6 +329,9 @@
 					</button>
 					<button class="c-button" data-fancybox data-src="#forgot" style="margin: 10px auto;">
 						<span class="font-medium">Сброс пароля</span>
+					</button>
+					<button class="c-button" data-fancybox data-src="#forgot-2" style="margin: 10px auto;">
+						<span class="font-medium">Сброс пароля v.2</span>
 					</button>
 					<button class="c-button" data-fancybox data-src="#new-password" style="margin: 10px auto;">
 						<span class="font-medium">Новый пароль</span>

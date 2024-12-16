@@ -9,6 +9,20 @@
 		color: #4c4c4c;
 		line-height: 16px;
 	}
+	.hint {
+		display: none;
+	}
+	&.error {
+		input {
+			border-color: #d91528;
+		}
+		.hint {
+			display: block;
+			color: #d91528;
+			font-size: 12px;
+			line-height: 16px;
+		}
+	}
 	&__container {
 		position: relative;
 		input {
