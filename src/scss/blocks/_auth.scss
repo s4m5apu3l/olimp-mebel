@@ -13,6 +13,8 @@
 		border-radius: 0;
 	}
 	&__img {
+		max-width: 438px;
+		width: 100%;
 		@include mediaSize(680px) {
 			display: none;
 		}
