@@ -1,5 +1,5 @@
 # Gulp сборка для верстки сайтов OLIMP MEBEL testovuy proekt
-## сборка от webcademy (https://webcademy.ru/)[https://webcademy.ru/]
+## сборка от [webcademy](https://webcademy.ru/)
 
 для проверки работоспособности gulp
 
