@@ -26,7 +26,6 @@ Fancybox.bind('[data-fancybox="gallery-reviews"]', {
 	dragToClose: false,
 
 	Images: {
-		// Disable animation from/to thumbnail on start/close
 		zoom: false
 	},
 
@@ -47,13 +46,6 @@ Fancybox.bind('[data-fancybox="gallery-reviews"]', {
 		type: 'classic',
 		Carousel: {
 			axis: 'x',
-			// center: function() {
-			// 	return this.contentDim > this.viewportDim;
-			// }
-			// slidesPerPage: 1,
-			// center: true,
-			// fill: true,
-			// dragFree: true
 			breakpoints: {
 				'(min-width: 740px)': {
 					axis: 'y'
@@ -61,11 +53,6 @@ Fancybox.bind('[data-fancybox="gallery-reviews"]', {
 			}
 		}
 	},
-
-	Carousel: {
-		// Remove the navigation arrows
-		// Navigation: false
-	}
 });
 
 new Swiper('.js-banner-main', {
