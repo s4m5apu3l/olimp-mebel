@@ -10,22 +10,25 @@
 		</header>
 		<form class="call-form">
 			<div class="input-group">
-				<label for="input1">Имя</label>
+				<label>Имя</label>
 				<div class="input-group__container">
-					<input type="text" id="input1" required />
+					<input type="text" required />
 				</div>
 			</div>
 
 			<div class="input-group mt-8">
-				<label for="input2">Телефон</label>
+				<label>Телефон</label>
 				<div class="input-group__container">
-					<input type="text" id="input2" required data-maska="+7 (###) ###-##-##" />
+					<input type="text" data-maska="+7 (###) ###-##-##"  required />
 				</div>
 			</div>
 
 			<div class="d-flex items-center gap-8 mt-24">
 				<input type="checkbox" id="consent" name="consent" required checked />
-				<label for="consent" class="font-medium text-14 fr-primary">Даю согласие на обработку <br> персональных данных</label>
+				<label for="consent" class="font-medium text-14 fr-primary"
+					>Даю согласие на обработку <br />
+					персональных данных</label
+				>
 			</div>
 
 			<button type="submit" class="c-button w-full fr-primary text-16-14 font-medium mt-12">Запросить звонок</button>

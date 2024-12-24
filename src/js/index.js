@@ -9,6 +9,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+import { MaskInput } from 'maska';
+
+new MaskInput('[data-maska]');
+
 Fancybox.bind('[data-fancybox]', {
 	dragToClose: false,
 	closeButton: false
@@ -52,7 +56,7 @@ Fancybox.bind('[data-fancybox="gallery-reviews"]', {
 				}
 			}
 		}
-	},
+	}
 });
 
 new Swiper('.js-banner-main', {
@@ -162,10 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		tabContentsSelector: '.js-tab-content'
 	});
 
-	initMaska('[data-mask]');
-	const { MaskInput } = Maska;
-
-	new MaskInput('[data-maska]');
+	initMaska('[data-mask]'); // для маски не в инпуте
 
 	const passwordBtn = document.querySelectorAll('.password-hide');
 

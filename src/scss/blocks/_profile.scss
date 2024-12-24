@@ -15,21 +15,37 @@
 			border-radius: 12px;
 			background-color: white;
 		}
+		&-mobile {
+			display: none;
+			@include mediaSize(1300px) {
+				display: block;
+			}
+			.l-select__btn {
+				justify-content: start;
+				gap: 12px;
+				min-width: unset;
+			}
+		}
 	}
 	&__main {
 		max-width: 768px;
 		width: 100%;
+		@include mediaSize(1300px) {
+			max-width: 100%;
+		}
 	}
 	&__title {
 		font-size: 20px;
 		font-weight: 600;
 	}
 	&__nav {
+		@include mediaSize(1300px) {
+			display: none;
+		}
 		&-list {
 			display: flex;
 			flex-direction: column;
 			gap: 4px;
-
 		}
 		&-link {
 			padding: 16px;
@@ -39,12 +55,12 @@
 			gap: 8px;
 			font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
 			font-weight: 500;
-			transition: all .4s ease;
+			transition: all 0.4s ease;
 			&:hover {
-				background-color: #ECEEF1;
+				background-color: #eceef1;
 			}
 			&.active {
-				background-color: #ECEEF1;
+				background-color: #eceef1;
 			}
 		}
 	}
