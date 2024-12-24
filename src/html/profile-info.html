@@ -53,7 +53,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="#" class="text-14">
+										<a href="javascript:void(0)" class="text-14" data-fancybox data-src="#logout-modal">
 											Выйти из аккаунта
 										</a>
 									</li>
@@ -120,7 +120,7 @@
 							</nav>
 
 							<div class="mt-24 l-profile__aside-item">
-								<button class="c-button transparent error-primary">
+								<button class="c-button transparent error-primary" data-fancybox data-src="#logout-modal">
 									<svg class="icon icon--sign-out">
 										<use href="./img/svgsprite/sprite.symbol.svg#sign-out">"></use>
 									</svg>
@@ -194,6 +194,30 @@
 						</div>
 					</main>
 				</section>
+
+				<dialog id="logout-modal" style="display: none;">
+					<section class="base-modal">
+						<header class="d-flex items-center justify-between">
+							<h2 class="font-semibold text-20 fr-primary">Выйти из аккаунта</h2>
+							<button data-fancybox-close class="c-button gray small">
+								<svg class="icon icon--close">
+									<use href="./img/svgsprite/sprite.symbol.svg#close"></use>
+								</svg>
+							</button>
+						</header>
+						<main>
+							<p class="text-14" style="color:#4C4C4C;">Вы уверены, что хотите выйти из аккаунта?</p>
+						</main>
+						<footer class="mt-24 d-flex items-center gap-8">
+							<button data-fancybox-close class="c-button gray w-full">
+								Отмена
+							</button>
+							<button  class="c-button error w-full">
+								Выйти
+							</button>
+						</footer>
+					</section>
+				</dialog>
 			</section>
 		</main>
 		@@include('blocks/footer.html')
