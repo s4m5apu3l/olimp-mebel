@@ -89,7 +89,8 @@
 .icon--rating {
 	fill: var(--color-accent);
 }
-.icon--heart.active {
+.icon--heart.active,
+.icon--sign-out {
 	fill: #d91528;
 }
 .icon--trash {

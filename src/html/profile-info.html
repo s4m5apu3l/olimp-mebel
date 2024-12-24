@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>title</title>
+		<link rel="stylesheet" href="./css/main.css" />
+
+		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		@@include('blocks/header.html')
+		<main class="l-main" style="position: relative;">
+			<section class="l-wrapper">
+				<section class="l-profile__section">
+					<aside class="l-profile__aside">
+						<nav class="l-profile__aside-item l-profile__nav">
+							<ul class="l-profile__nav-list">
+								<li>
+									<!-- не забудь active class -->
+									<a href="#" class="l-profile__nav-link active">
+										<svg class="icon icon--user">
+											<use href="./img/svgsprite/sprite.symbol.svg#user"></use>
+										</svg>
+										<span>
+											Личная информация
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="l-profile__nav-link">
+										<svg class="icon icon--base-color">
+											<use href="./img/svgsprite/sprite.symbol.svg#lock"></use>
+										</svg>
+										<span>
+											Пароль
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="l-profile__nav-link">
+										<svg class="icon icon--base-color">
+											<use href="./img/svgsprite/sprite.symbol.svg#rating-border"></use>
+										</svg>
+
+										<span>
+											Мои отзывы
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="l-profile__nav-link">
+										<svg class="icon icon--basket">
+											<use href="./img/svgsprite/sprite.symbol.svg#basket"></use>
+										</svg>
+										<span>
+											Заказы
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="l-profile__nav-link">
+										<svg class="icon icon--base-color">
+											<use href="./img/svgsprite/sprite.symbol.svg#promocode"></use>
+										</svg>
+										<span>
+											Программа лояльности
+										</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+
+						<div class="mt-24 l-profile__aside-item">
+							<button class="c-button transparent error-primary">
+								<svg class="icon icon--sign-out">
+									<use href="./img/svgsprite/sprite.symbol.svg#sign-out">"></use>
+								</svg>
+								<span>Выйти из аккаунта</span>
+							</button>
+						</div>
+					</aside>
+					<main class="l-profile__main">
+						<div class="l-section__item">
+							<h1 class="l-profile__title">
+								Личная информация
+							</h1>
+
+							<div class="mt-16">
+								<form>
+									<div class="input-group">
+										<label>Имя</label>
+										<div class="input-group__container">
+											<input type="text" required />
+										</div>
+									</div>
+
+									<div class="input-group mt-8">
+										<label>Фамилия</label>
+										<div class="input-group__container">
+											<input type="text" required />
+										</div>
+									</div>
+
+									<div class="input-group mt-8">
+										<label>Дата рождения</label>
+										<div class="input-group__container">
+											<input type="text" required />
+										</div>
+									</div>
+
+									<div class="input-group mt-8">
+										<label>Адрес</label>
+										<div class="input-group__container">
+											<input type="text" required />
+										</div>
+									</div>
+
+									<div class="mt-32">
+										<button type="submit" class="c-button font-medium" style="margin-left: auto;">Сохранить</button>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<div class="l-section__item mt-24">
+							<h3 class="l-profile__title">
+								Контактная информация
+							</h3>
+
+							<div class="mt-16">
+								<form>
+									<div class="input-group mt-8">
+										<label>Телефон</label>
+										<div class="input-group__container">
+											<input type="text" required data-maska="+7 (###) ###-##-##" />
+										</div>
+									</div>
+
+									<div class="mt-32">
+										<button type="submit" class="c-button font-medium" style="margin-left: auto;">Сохранить</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</main>
+					<aside class="l-profile__aside">
+						<nav class="l-profile__aside-item l-profile__nav">
+							<ul class="l-profile__nav-list">
+								<li>
+									<!-- не забудь active class -->
+									<a href="#" class="l-profile__nav-link active">
+										<svg class="icon icon--user">
+											<use href="./img/svgsprite/sprite.symbol.svg#user"></use>
+										</svg>
+										<span>
+											Личная информация
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="l-profile__nav-link">
+										<svg class="icon icon--base-color">
+											<use href="./img/svgsprite/sprite.symbol.svg#lock"></use>
+										</svg>
+										<span>
+											Пароль
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="l-profile__nav-link">
+										<svg class="icon icon--base-color">
+											<use href="./img/svgsprite/sprite.symbol.svg#rating-border"></use>
+										</svg>
+
+										<span>
+											Мои отзывы
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="l-profile__nav-link">
+										<svg class="icon icon--basket">
+											<use href="./img/svgsprite/sprite.symbol.svg#basket"></use>
+										</svg>
+										<span>
+											Заказы
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="l-profile__nav-link">
+										<svg class="icon icon--base-color">
+											<use href="./img/svgsprite/sprite.symbol.svg#promocode"></use>
+										</svg>
+										<span>
+											Программа лояльности
+										</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+
+						<div class="mt-24 l-profile__aside-item">
+							<button class="c-button transparent error-primary w-full">
+								<svg class="icon icon--sign-out">
+									<use href="./img/svgsprite/sprite.symbol.svg#sign-out">"></use>
+								</svg>
+								<span>Выйти из аккаунта</span>
+							</button>
+						</div>
+					</aside>
+				</section>
+			</section>
+		</main>
+		@@include('blocks/footer.html')
+
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>
