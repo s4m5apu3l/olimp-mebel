@@ -11,6 +11,13 @@ import 'swiper/css/pagination';
 
 import { MaskInput } from 'maska';
 
+import initDropdowns from './modules/dropdowns';
+import CatalogTabs from './modules/catalog-tabs';
+import DrilldownMenu from './modules/drilldown-menu';
+import initTabs from './modules/tabs';
+import initMaska from './modules/maska';
+import initPasswordToggle from './modules/toggle-password';
+
 new MaskInput('[data-maska]');
 
 Fancybox.bind('[data-fancybox]', {
@@ -109,12 +116,6 @@ new Swiper('.js-reviews-gallery-swiper', {
 	spaceBetween: 8
 });
 
-import initDropdowns from './modules/dropdowns';
-import CatalogTabs from './modules/catalog-tabs';
-import DrilldownMenu from './modules/drilldown-menu';
-import initTabs from './modules/tabs';
-import initMaska from './modules/maska';
-
 document.addEventListener('DOMContentLoaded', () => {
 	initDropdowns();
 
@@ -124,8 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	new DrilldownMenu('#drilldown-menu', '.menu-toggle');
-
-	// ____SWIPERS_________
 
 	if (document.querySelector('.js-product-gallery-swiper-thumb')) {
 		var swiperProductGalleryThumb = new Swiper('.js-product-gallery-swiper-thumb', {
@@ -159,8 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		modules: [Thumbs]
 	});
 
-	// _____SWIPERS END_______
-
 	initTabs({
 		tabButtonsSelector: '.js-tab-btn',
 		tabContentsSelector: '.js-tab-content'
@@ -168,21 +165,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	initMaska('[data-mask]'); // для маски не в инпуте
 
-	const passwordBtn = document.querySelectorAll('.password-hide');
-
-	//Password showing and hiding
-	passwordBtn.forEach(button => {
-		const inputContainer = button.closest('.input-group__container');
-		const passwordInput = inputContainer.querySelector('.auth-password');
-		const hidePassword = button.querySelector('.icon--password-hide');
-		const showPassword = button.querySelector('.icon--password-show');
-
-		button.addEventListener('click', () => {
-			const isPassword = passwordInput.getAttribute('type') === 'password';
-			passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
-
-			hidePassword.style.display = isPassword ? 'none' : 'block';
-			showPassword.style.display = isPassword ? 'block' : 'none';
-		});
-	});
+	initPasswordToggle('.password-hide'); // показать пароль
 });

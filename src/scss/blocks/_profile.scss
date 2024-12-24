@@ -33,6 +33,11 @@
 		@include mediaSize(1300px) {
 			max-width: 100%;
 		}
+		.will-column {
+			@include mediaSize(768px) {
+				flex-direction: column;
+			}
+		}
 	}
 	&__title {
 		font-size: 20px;
@@ -64,4 +69,5 @@
 			}
 		}
 	}
+
 }
