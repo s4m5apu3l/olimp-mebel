@@ -69,5 +69,30 @@
 			}
 		}
 	}
+	&__orders {
+		&-list {
+			display: grid;
+			gap: 16px;
+			&__item {
+				padding: 24px;
+				border-radius: 12px;
+				background-color: #f9fafb;
+				hr {
+					display: block;
+					margin: 16px 0;
+					height: 1px;
+					background-color: #5E5E5E33;
+				}
+				header {
+					display: flex;
+					justify-content: space-between;
 
+				}
+				footer {
+					display: grid;
+					gap: 20px;
+				}
+			}
+		}
+	}
 }

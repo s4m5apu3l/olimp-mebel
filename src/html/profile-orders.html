@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>title</title>
+		<link rel="stylesheet" href="./css/main.css" />
+
+		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		@@include('blocks/header.html')
+		<main class="l-main" style="position: relative;">
+			<section class="l-wrapper">
+				<section class="l-profile__section">
+					<aside class="l-profile__aside">
+						<div class="l-profile__aside-mobile">
+							<div class="l-select js-dropdown">
+								<button class="l-select__btn js-dropdown-btn">
+									<svg class="icon icon--base-color">
+										<use href="./img/svgsprite/sprite.symbol.svg#menu"></use>
+									</svg>
+									<span>Личная информация</span>
+								</button>
+
+								<ul class="l-select__list js-dropdown-content">
+									<li>
+										<a href="#" class="text-14">
+											Личная информация
+										</a>
+									</li>
+									<li>
+										<a href="#" class="text-14">
+											Пароль
+										</a>
+									</li>
+									<li>
+										<a href="#" class="text-14">
+											Мои отзывы
+										</a>
+									</li>
+									<li>
+										<a href="#" class="text-14">
+											Заказы
+										</a>
+									</li>
+									<li>
+										<a href="#" class="text-14">
+											Программа лояльности
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" class="text-14" data-fancybox data-src="#logout-modal">
+											Выйти из аккаунта
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="l-profile__nav">
+							<nav class="l-profile__aside-item ">
+								<ul class="l-profile__nav-list">
+									<li>
+										<!-- не забудь active class -->
+										<a href="#" class="l-profile__nav-link ">
+											<svg class="icon icon--user">
+												<use href="./img/svgsprite/sprite.symbol.svg#user"></use>
+											</svg>
+											<span>
+												Личная информация
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="l-profile__nav-link">
+											<svg class="icon icon--base-color">
+												<use href="./img/svgsprite/sprite.symbol.svg#lock"></use>
+											</svg>
+											<span>
+												Пароль
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="l-profile__nav-link">
+											<svg class="icon icon--base-color">
+												<use href="./img/svgsprite/sprite.symbol.svg#rating-border"></use>
+											</svg>
+
+											<span>
+												Мои отзывы
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="l-profile__nav-link active">
+											<svg class="icon icon--basket">
+												<use href="./img/svgsprite/sprite.symbol.svg#basket"></use>
+											</svg>
+											<span>
+												Заказы
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="l-profile__nav-link">
+											<svg class="icon icon--base-color">
+												<use href="./img/svgsprite/sprite.symbol.svg#promocode"></use>
+											</svg>
+											<span>
+												Программа лояльности
+											</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+
+							<div class="mt-24 l-profile__aside-item">
+								<button class="c-button transparent error-primary" data-fancybox data-src="#logout-modal">
+									<svg class="icon icon--sign-out">
+										<use href="./img/svgsprite/sprite.symbol.svg#sign-out">"></use>
+									</svg>
+									<span>Выйти из аккаунта</span>
+								</button>
+							</div>
+						</div>
+					</aside>
+					<main class="l-profile__main">
+						<div class="l-section__item">
+							<h1 class="l-profile__title">
+								Заказы
+							</h1>
+
+							<ul class="l-profile__orders-list mt-32">
+								<li>
+									<a href="#">
+										<article class="l-profile__orders-list__item">
+											<header>
+												<div class="d-flex flex-col gap-8">
+													<span class="text-18 font-medium">
+														Заказ от 28 октября
+													</span>
+													<span class="text-14 font-medium accent-primary">№1234567890</span>
+												</div>
+												<span class="l-price">31 200 ₽</span>
+											</header>
+											<hr />
+											<footer>
+												<div class="d-flex justify-between items-center">
+													<span class="text-14 font-medium">Статус</span>
+													<span class="l-badge l-badge--info">
+														На сборке
+													</span>
+												</div>
+											</footer>
+										</article>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<article class="l-profile__orders-list__item">
+											<header>
+												<div class="d-flex flex-col gap-8">
+													<span class="text-18 font-medium">
+														Заказ от 28 октября
+													</span>
+													<span class="text-14 font-medium accent-primary">№1234567890</span>
+												</div>
+												<span class="l-price">31 200 ₽</span>
+											</header>
+											<hr />
+											<footer>
+												<div class="d-flex justify-between items-center">
+													<span class="text-14 font-medium">Статус</span>
+													<span class="l-badge l-badge--green">
+														доставлен
+													</span>
+												</div>
+												<div class="d-flex justify-between items-center">
+													<span class="text-14 font-medium">Дата доставки</span>
+													<span class="text-14 font-medium">
+														17 сентября
+													</span>
+												</div>
+											</footer>
+										</article>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</main>
+				</section>
+
+				<dialog id="logout-modal" style="display: none;">
+					<section class="base-modal">
+						<header class="d-flex items-center justify-between">
+							<h2 class="font-semibold text-20 fr-primary">Выйти из аккаунта</h2>
+							<button data-fancybox-close class="c-button gray small">
+								<svg class="icon icon--close">
+									<use href="./img/svgsprite/sprite.symbol.svg#close"></use>
+								</svg>
+							</button>
+						</header>
+						<main>
+							<p class="text-14" style="color:#4C4C4C;">Вы уверены, что хотите выйти из аккаунта?</p>
+						</main>
+						<footer class="mt-24 d-flex items-center gap-8">
+							<button data-fancybox-close class="c-button gray w-full">
+								Отмена
+							</button>
+							<button class="c-button error w-full">
+								Выйти
+							</button>
+						</footer>
+					</section>
+				</dialog>
+			</section>
+		</main>
+		@@include('blocks/footer.html')
+
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>
