@@ -71,6 +71,11 @@
 .justify-end {
 	justify-content: flex-end;
 }
+.will-flex-wrap {
+	@include mediaSize(768px) {
+		flex-wrap: wrap;
+	}
+}
 
 .js-dropdown {
 	position: relative;
@@ -118,6 +123,7 @@
 	font-weight: 500;
 	color: white;
 	white-space: nowrap;
+	height: fit-content;
 	&--green {
 		background-color: #34b263;
 	}
@@ -145,6 +151,12 @@
 }
 .mt-32 {
 	margin-top: 32px;
+}
+.mt-32-24 {
+	margin-top: 32px;
+	@include mediaSize(540px) {
+		margin-top: 24px;
+	}
 }
 .mt-24-16 {
 	margin-top: 24px;

@@ -131,16 +131,182 @@
 					</aside>
 					<main class="l-profile__main">
 						<div class="l-section__item">
-							<h1 class="l-profile__title">
-								Заказы
-							</h1>
+							<a href="#" class="back-btn d-flex items-center accent-primary" aria-label="Назад">
+								<svg class="icon icon--rating" style="transform: rotate(90deg);">
+									<use href="./img/svgsprite/sprite.symbol.svg#arrow"></use>
+								</svg>
+								<span class="font-medium">
+									К заказам
+								</span>
+							</a>
+
+							<div class=" mt-16 d-flex justify-between w-full">
+								<div class="d-flex flex-col gap-8">
+									<span class="text-18 font-medium">
+										Заказ от 28 октября
+									</span>
+									<span class="text-14 font-medium accent-primary">№1234567890</span>
+								</div>
+								<span class="l-badge l-badge--info">
+									На сборке
+								</span>
+							</div>
+
+							<div class="mt-32-24 l-profile__orders-list__item">
+								<ul class="d-flex flex-col gap-12">
+									<li class="d-flex gap-8">
+										<svg class="icon icon--user">
+											<use href="./img/svgsprite/sprite.symbol.svg#user"></use>
+										</svg>
+										<div class="d-flex items-center justify-between w-full" style="flex-wrap: wrap;">
+											<span class="font-medium text-14 fr-tertiary">
+												Получатель
+											</span>
+											<span class="font-medium text-14">
+												Иванов Иван
+											</span>
+										</div>
+									</li>
+									<li class="d-flex gap-8">
+										<svg class="icon icon--base-color">
+											<use href="./img/svgsprite/sprite.symbol.svg#delivery"></use>
+										</svg>
+										<div class="d-flex items-center justify-between w-full" style="flex-wrap: wrap;">
+											<span class="font-medium text-14 fr-tertiary">
+												Способ доставки
+											</span>
+											<span class="font-medium text-14">
+												Доставка
+											</span>
+										</div>
+									</li>
+									<li class="d-flex gap-8">
+										<svg class="icon icon--nav-pin">
+											<use href="./img/svgsprite/sprite.symbol.svg#nav-pin"></use>
+										</svg>
+										<div class="d-flex items-center justify-between w-full" style="flex-wrap: wrap;">
+											<span class="font-medium text-14 fr-tertiary">
+												Доставка
+											</span>
+											<span class="font-medium text-14">
+												г. Якутск, пр. Ленина 1, 5 этаж, 510 офис
+											</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="mt-32-24 d-flex gap-8 items-center will-flex-wrap">
+								<button class="c-button transparent w-full error-primary">Вернуть товары</button>
+								<button class="c-button w-full">Повторить заказ</button>
+							</div>
+						</div>
+
+						<div class="l-section__item mt-24-16">
+							<div class="d-flex items-center gap-12">
+								<span class="text-24-20 font-semibold">Товары</span>
+								<span class="fr-secondary font-medium text-18-16">2 товара</span>
+							</div>
+
+							<div class="l-order__cart mt-24-16">
+								<div class="l-order__cart-swiper js-order-cart-swiper swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<article class="l-product-second">
+												<img src="https://placehold.co/600x400" alt="" class="l-product-second__img" />
+
+												<div class="l-product-second__main">
+													<header class="d-flex items-center justify-between w-full">
+														<h3 class="font-medium text-18-16  line-clamp-2">Название товара</h3>
+														<span class="l-price"> 31 250 ₽</span>
+													</header>
+													<hr />
+													<main>
+														<ul>
+															<li class="d-flex items-center justify-between w-full">
+																<span class="fr-secondary font-medium text-18-16 line-clamp-1">Фасад</span>
+																<span class="font-medium text-18-16 line-clamp-1">Итальянская эмаль BLANCO</span>
+															</li>
+															<li class="d-flex items-center justify-between w-full">
+																<span class="fr-secondary font-medium text-18-16 line-clamp-1">Фасад</span>
+																<span class="font-medium text-18-16 line-clamp-1">Итальянская эмаль BLANCO</span>
+															</li>
+															<li class="d-flex items-center justify-between w-full">
+																<span class="fr-secondary font-medium text-18-16 line-clamp-1">Фасад</span>
+																<span class="font-medium text-18-16 line-clamp-1">Итальянская эмаль BLANCO</span>
+															</li>
+															<li class="d-flex items-center justify-between w-full">
+																<span class="fr-secondary font-medium text-18-16 line-clamp-1">Фасад</span>
+																<span class="font-medium text-18-16 line-clamp-1">Итальянская эмаль BLANCO</span>
+															</li>
+															<li class="d-flex items-center justify-between w-full">
+																<span class="fr-secondary font-medium text-18-16 line-clamp-1">Фасад</span>
+																<span class="font-medium text-18-16 line-clamp-1">Итальянская эмаль BLANCO</span>
+															</li>
+															<li class="d-flex items-center justify-between w-full">
+																<span class="fr-secondary font-medium text-18-16 line-clamp-1">Фасад</span>
+																<span class="font-medium text-18-16 line-clamp-1">Итальянская эмаль BLANCO</span>
+															</li>
+														</ul>
+													</main>
+												</div>
+											</article>
+										</div>
+
+										<div class="swiper-slide">
+											<article class="l-product-second">
+												<img src="https://placehold.co/600x400" alt="" class="l-product-second__img" />
+
+												<div class="l-product-second__main">
+													<header class="d-flex items-center justify-between w-full">
+														<h3 class="font-medium text-18-16 line-clamp-2">
+															Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptates accusamus sunt neque delectus. Impedit
+															quaerat cupiditate perspiciatis dolorem vero sunt veniam dicta aperiam minima, saepe nesciunt iste placeat architecto.
+														</h3>
+														<span class="l-price"> 31 250 ₽</span>
+													</header>
+													<hr />
+													<main>
+														<ul>
+															<li class="d-flex items-center justify-between w-full">
+																<span class="fr-secondary font-medium text-18-16 line-clamp-1">Фасад</span>
+																<span class="font-medium text-18-16 line-clamp-1">Итальянская эмаль BLANCO</span>
+															</li>
+															<li class="d-flex items-center justify-between w-full">
+																<span class="fr-secondary font-medium text-18-16 line-clamp-1">Фасад</span>
+																<span class="font-medium text-18-16 line-clamp-1">Итальянская эмаль BLANCO</span>
+															</li>
+															<li class="d-flex items-center justify-between w-full">
+																<span class="fr-secondary font-medium text-18-16 line-clamp-1">Фасад</span>
+																<span class="font-medium text-18-16 line-clamp-1">Итальянская эмаль BLANCO</span>
+															</li>
+															<li class="d-flex items-center justify-between w-full">
+																<span class="fr-secondary font-medium text-18-16 line-clamp-1">Фасад</span>
+																<span class="font-medium text-18-16 line-clamp-1">Итальянская эмаль BLANCO</span>
+															</li>
+															<li class="d-flex items-center justify-between w-full">
+																<span class="fr-secondary font-medium text-18-16 line-clamp-1">Фасад</span>
+																<span class="font-medium text-18-16 line-clamp-1">Итальянская эмаль BLANCO</span>
+															</li>
+															<li class="d-flex items-center justify-between w-full">
+																<span class="fr-secondary font-medium text-18-16 line-clamp-1">Фасад</span>
+																<span class="font-medium text-18-16 line-clamp-1">Итальянская эмаль BLANCO</span>
+															</li>
+														</ul>
+													</main>
+												</div>
+											</article>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</main>
 
-					<aside class="l-profile__aside">
+					<aside class="l-order__aside" style="width: auto; min-width: 425px;">
 						<div class="l-order__aside-item">
 							<span class="text-20 font-semibold">Сумма</span>
-							<div class="w-full d-flex items-center justify-between">
+							<div class="w-full d-flex items-center justify-between mt-24-16">
 								<span class="fr-secondary font-medium text-18-16">Товары</span>
 								<span class="font-medium text-18-16">31 200 ₽</span>
 							</div>
