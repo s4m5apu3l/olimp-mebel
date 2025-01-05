@@ -131,6 +131,47 @@
 			}
 		}
 	}
+
+	&__upload {
+		margin-top: 24px;
+		&-list {
+			margin-top: 24px;
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			li {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				i {
+					pointer-events: none;
+				}
+			}
+			.l-content {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+			}
+		}
+		&-item {
+			border: 2px dashed #5e5e5e33;
+			display: flex;
+			padding: 24px;
+			justify-content: center;
+			align-items: center;
+			border-radius: 12px;
+			&.is-full {
+				border-color: #019f3c;
+			}
+			.l-content {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: 12px;
+			}
+		}
+	}
 }
 
 .l-refund-item {
@@ -154,7 +195,7 @@
 		flex: 0 0 auto;
 		&:checked {
 			border-width: 4px;
-			border-color: #f8b711;	
+			border-color: #f8b711;
 		}
 	}
 }

@@ -17,6 +17,7 @@ import DrilldownMenu from './modules/drilldown-menu';
 import initTabs from './modules/tabs';
 import initMaska from './modules/maska';
 import initPasswordToggle from './modules/toggle-password';
+import initUploadPhoto from './modules/upload-photo';
 
 new MaskInput('[data-maska]');
 
@@ -166,4 +167,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	initMaska('[data-mask]'); // для маски не в инпуте
 
 	initPasswordToggle('.password-hide'); // показать пароль
+
+	initUploadPhoto({
+		uploadAreaSelector: '#upload-photo-refund',
+		fileInputSelector: '.l-profile__upload-input',
+		uploadListSelector: '.l-profile__upload-list',
+		maxFiles: 5
+	});
 });
