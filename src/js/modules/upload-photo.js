@@ -44,6 +44,13 @@ export default function initUploadPhoto({ uploadAreaSelector, fileInputSelector,
 	fileInput.addEventListener('change', event => {
 		const newFiles = Array.from(event.target.files);
 
+		// Проверка на формат файлов
+		const validFiles = newFiles.filter(file => ['image/png', 'image/jpeg'].includes(file.type));
+		if (validFiles.length !== newFiles.length) {
+			alert('Можно загружать только файлы формата png, jpg');
+			return;
+		}
+
 		// Проверка на превышение лимита
 		if (files.length + newFiles.length > maxFiles) {
 			alert(`Можно загрузить не более ${maxFiles} файлов`);

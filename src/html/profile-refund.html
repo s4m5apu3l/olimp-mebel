@@ -139,20 +139,18 @@
 							</span>
 						</a>
 
-						<div class="mt-24-16">
-							<h1 class="l-section__title">
-								Возврат товара
-							</h1>
-						</div>
+						<h1 class="l-section__title">
+							Возврат товара
+						</h1>
 
 						<form>
-							<section class="l-profile__refund-block mt-32-24">
+							<section class="l-profile__refund-block">
 								<div class="l-section__item">
 									<span class="text-24-20 font-medium red-dot">
 										Выберите товары для возврата
 									</span>
 
-									<ul class="l-profile__refund-list">
+									<ul class="l-profile__refund-list mt-24-16">
 										<li>
 											<label class="l-refund-item">
 												<div class="l-content">
@@ -185,9 +183,9 @@
 										Прикрепите фотографии
 									</span>
 
-									<section class="l-profile__upload">
+									<section class="l-profile__upload mt-24-16">
 										<label id="upload-photo-refund" class="l-profile__upload-item">
-											<input type="file" class="l-profile__upload-input" accept="image/*" multiple hidden />
+											<input type="file" class="l-profile__upload-input" accept="image/jpeg, image/png" multiple hidden />
 											<div class="l-content">
 												<svg class="icon icon--base-color">
 													<use href="./img/svgsprite/sprite.symbol.svg#photo"></use>
@@ -196,7 +194,7 @@
 											</div>
 										</label>
 
-										<ul class="l-profile__upload-list"></ul>
+										<ul class="l-profile__upload-list mt-24-16"></ul>
 									</section>
 								</div>
 
@@ -204,7 +202,17 @@
 									<span class="text-24-20 font-medium red-dot">
 										Описание
 									</span>
+
+									<div class="mt-24-16">
+										<textarea class="l-textarea__input" name="refund-description" placeholder="Описание брака..."></textarea>
+									</div>
 								</div>
+
+								<footer class="l-profile__refund-footer">
+									<button class="c-button font-medium">
+										Отправить запрос
+									</button>
+								</footer>
 							</section>
 						</form>
 					</main>

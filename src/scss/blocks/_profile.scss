@@ -117,25 +117,36 @@
 		}
 
 		&-list {
-			margin-top: 24px;
 			display: flex;
 			flex-direction: column;
 			gap: 12px;
 
 			.l-content {
-				display: flex;
+				display: grid;
+				grid-template-columns: 150px 1fr;
 				gap: 24px;
-				img {
-					max-width: 150px;
+				@include mediaSize(560px) {
+					grid-template-columns: 1fr;
+					img  {
+						max-width: 100px;
+					}
+					gap: 12px;
+				}
+			}
+		}
+		&-footer {
+			display: flex;
+			justify-content: flex-end;
+			@include mediaSize(560px) {
+				.c-button {
+					width: 100%;
 				}
 			}
 		}
 	}
 
 	&__upload {
-		margin-top: 24px;
 		&-list {
-			margin-top: 24px;
 			display: flex;
 			flex-direction: column;
 			gap: 12px;
@@ -197,5 +208,15 @@
 			border-width: 4px;
 			border-color: #f8b711;
 		}
+	}
+}
+.l-textarea {
+	&__input {
+		border: 1px solid #5e5e5e4d;
+		border-radius: 8px;
+		padding: 16px;
+		width: 100%;
+		min-height: 120px;
+		resize: vertical;
 	}
 }
