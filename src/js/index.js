@@ -174,4 +174,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		uploadListSelector: '.l-profile__upload-list',
 		maxFiles: 5
 	});
+
+	document.addEventListener('click', event => {
+		if (event.target.classList.contains('l-toast__btn-close')) {
+			const activeModal = event.target.closest('.l-toast.active');
+
+			if (activeModal) {
+				activeModal.classList.remove('active');
+			}
+		}
+	});
 });
