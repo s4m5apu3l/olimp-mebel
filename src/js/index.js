@@ -175,13 +175,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		maxFiles: 5
 	});
 
-	document.addEventListener('click', event => {
-		if (event.target.classList.contains('l-toast__btn-close')) {
-			const activeModal = event.target.closest('.l-toast.active');
+	const closeToastBtn = document.querySelectorAll('.l-toast__btn-close');
 
-			if (activeModal) {
-				activeModal.classList.remove('active');
-			}
-		}
-	});
+	if (closeToastBtn.length) {
+		closeToastBtn.forEach(btn => {
+			btn.addEventListener('click', () => {
+				const activeModal = btn.closest('.l-toast.active');
+
+				if (activeModal) {
+					activeModal.classList.remove('active');
+				}
+			});
+		});
+	}
 });
