@@ -23,7 +23,8 @@ new MaskInput('[data-maska]');
 
 Fancybox.bind('[data-fancybox]', {
 	dragToClose: false,
-	closeButton: false
+	closeButton: false,
+	closeExisting: true
 });
 
 Fancybox.bind('[data-fancybox="gallery-reviews"]', {
