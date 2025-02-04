@@ -33,7 +33,7 @@ export default class DrilldownMenu {
 		const submenu = this.menu.querySelector(submenuId);
 
 		if (submenu) {
-			this.activeMenu.classList.add('hidden');
+			// this.activeMenu.classList.add('hidden');
 			this.activeMenu = submenu;
 			submenu.classList.add('active');
 			this.menu.querySelector('.l-drilldown__header').classList.add('level-2'); // Показать кнопку "Назад"
@@ -46,7 +46,7 @@ export default class DrilldownMenu {
 		const parentMenu = this.activeMenu.closest('.js-drilldown-item').parentElement;
 		this.activeMenu.classList.remove('active');
 		this.activeMenu = parentMenu;
-		this.activeMenu.classList.remove('hidden');
+		// this.activeMenu.classList.remove('hidden');
 		this.menu.querySelector('.l-drilldown__header').classList.remove('level-2'); // Убрать кнопку "Назад"
 	}
 
