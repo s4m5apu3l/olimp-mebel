@@ -18,6 +18,7 @@ import initTabs from './modules/tabs';
 import initMaska from './modules/maska';
 import initPasswordToggle from './modules/toggle-password';
 import initUploadPhoto from './modules/upload-photo';
+import { src } from 'gulp';
 
 new MaskInput('[data-maska]');
 
@@ -187,6 +188,35 @@ document.addEventListener('DOMContentLoaded', () => {
 					activeModal.classList.remove('active');
 				}
 			});
+		});
+	}
+
+	function validateEmail(email) {
+		const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		return re.test(String(email).toLowerCase());
+	}
+
+	const form = document.querySelector('#reg-form-l');
+
+	if (form) {
+		form.addEventListener('submit', function(event) {
+			event.preventDefault();
+
+			const password = document.getElementById('auth-reg-password');
+			const confirmPassword = document.getElementById('auth-reg-rewrite-password');
+			let isValid = true;
+
+			if (password.value !== confirmPassword.value) {
+				isValid = false;
+				alert('Пароли не совпадают');
+			}
+
+			if (isValid) {
+				Fancybox.show({
+					src: '#buyer-data',
+					type: 'inline',
+				})
+			}
 		});
 	}
 });
