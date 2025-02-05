@@ -21,8 +21,28 @@
 			}
 		}
 		&__aside {
-			@include mediaSize(1270px) {
+			&.active {
+				display: block;
+			}
+			&-header {
 				display: none;
+			}
+			@include mediaSize(1270px) {
+				&-header {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 18px 0;
+					margin-bottom: 16px;
+				}
+				display: none;
+				position: fixed;
+				inset: 0;
+				background-color: white;
+				width: 100%;
+				height: 100%;
+				z-index: 10000;
+				padding: 0 16px;
 			}
 		}
 		&__sort {

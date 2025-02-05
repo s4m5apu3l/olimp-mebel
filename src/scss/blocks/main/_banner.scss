@@ -1,5 +1,6 @@
 .l-banner-main {
 	&__list {
+		overflow: hidden;
 		@include mediaSize(840px) {
 			overflow: visible !important;
 		}

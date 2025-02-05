@@ -18,7 +18,6 @@ import initTabs from './modules/tabs';
 import initMaska from './modules/maska';
 import initPasswordToggle from './modules/toggle-password';
 import initUploadPhoto from './modules/upload-photo';
-import { src } from 'gulp';
 
 new MaskInput('[data-maska]');
 
@@ -190,33 +189,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		});
 	}
+	const sortBtnMobile = document.querySelector('.l-catalog-page__sort-btn');
 
-	function validateEmail(email) {
-		const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-		return re.test(String(email).toLowerCase());
-	}
+	if (sortBtnMobile) {
+		const sortAside = document.querySelector('.l-catalog-page__aside');
+		const closeBtn = document.querySelector('.l-aside-close-btn');
 
-	const form = document.querySelector('#reg-form-l');
-
-	if (form) {
-		form.addEventListener('submit', function(event) {
-			event.preventDefault();
-
-			const password = document.getElementById('auth-reg-password');
-			const confirmPassword = document.getElementById('auth-reg-rewrite-password');
-			let isValid = true;
-
-			if (password.value !== confirmPassword.value) {
-				isValid = false;
-				alert('Пароли не совпадают');
-			}
-
-			if (isValid) {
-				Fancybox.show({
-					src: '#buyer-data',
-					type: 'inline',
-				})
-			}
+		sortBtnMobile.addEventListener('click', () => {
+			sortAside.classList.add('active');
+		});
+		closeBtn.addEventListener('click', () => {
+			sortAside.classList.remove('active');
 		});
 	}
 });
