@@ -197,9 +197,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		sortBtnMobile.addEventListener('click', () => {
 			sortAside.classList.add('active');
+			window.document.classList.add('no-scroll');
 		});
 		closeBtn.addEventListener('click', () => {
 			sortAside.classList.remove('active');
+			window.document.classList.remove('no-scroll');
 		});
 	}
 });

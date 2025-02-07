@@ -3,7 +3,7 @@ const replace = require('gulp-replace');
 
 // HTML
 const fileInclude = require('gulp-file-include');
-const htmlclean = require('gulp-htmlclean');
+// const htmlclean = require('gulp-htmlclean');
 const webpHTML = require('gulp-webp-retina-html');
 const typograf = require('gulp-typograf');
 
@@ -26,9 +26,9 @@ const babel = require('gulp-babel');
 const changed = require('gulp-changed');
 
 // Images
-const imagemin = require('gulp-imagemin');
-const imageminWebp = require('imagemin-webp');
-const rename = require('gulp-rename');
+// const imagemin = require('gulp-imagemin');
+// const imageminWebp = require('imagemin-webp');
+// const rename = require('gulp-rename');
 
 // SVG
 const svgsprite = require('gulp-svg-sprite');
@@ -122,26 +122,26 @@ gulp.task('sass:docs', function() {
 	);
 });
 
-gulp.task('images:docs', function() {
-	return gulp
-		.src(['./src/img/**/*', '!./src/img/svgicons/**/*'])
-		.pipe(changed('./docs/img/'))
-		.pipe(
-			imagemin([
-				imageminWebp({
-					quality: 85
-				})
-			])
-		)
-		.pipe(rename({ extname: '.webp' }))
-		.pipe(gulp.dest('./docs/img/'))
-		.pipe(gulp.src('./src/img/**/*'))
-		.pipe(changed('./docs/img/'))
-		.pipe(
-			imagemin([imagemin.gifsicle({ interlaced: true }), imagemin.mozjpeg({ quality: 85, progressive: true }), imagemin.optipng({ optimizationLevel: 5 })], { verbose: true })
-		)
-		.pipe(gulp.dest('./docs/img/'));
-});
+// gulp.task('images:docs', function() {
+// 	return gulp
+// 		.src(['./src/img/**/*', '!./src/img/svgicons/**/*'])
+// 		.pipe(changed('./docs/img/'))
+// 		.pipe(
+// 			imagemin([
+// 				imageminWebp({
+// 					quality: 85
+// 				})
+// 			])
+// 		)
+// 		.pipe(rename({ extname: '.webp' }))
+// 		.pipe(gulp.dest('./docs/img/'))
+// 		.pipe(gulp.src('./src/img/**/*'))
+// 		.pipe(changed('./docs/img/'))
+// 		.pipe(
+// 			imagemin([imagemin.gifsicle({ interlaced: true }), imagemin.mozjpeg({ quality: 85, progressive: true }), imagemin.optipng({ optimizationLevel: 5 })], { verbose: true })
+// 		)
+// 		.pipe(gulp.dest('./docs/img/'));
+// });
 
 const svgStack = {
 	mode: {
@@ -209,10 +209,10 @@ gulp.task('js:docs', function() {
 });
 
 const serverOptions = {
-	livereload: true,
-	open: true
+	livereload: false,
+	open: false
 };
 
-gulp.task('server:docs', function() {
-	return gulp.src('./docs/').pipe(server(serverOptions));
-});
+// gulp.task('server:docs', function() {
+// 	return gulp.src('./docs/').pipe(server(serverOptions));
+// });

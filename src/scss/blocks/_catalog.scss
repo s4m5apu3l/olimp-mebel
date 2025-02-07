@@ -1,3 +1,12 @@
+@include mediaSize(1270px) {
+	.l-catalog-page__aside-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 18px 0;
+		margin-bottom: 16px;
+	}
+}
 .l-catalog {
 	&-page {
 		display: grid;
@@ -28,7 +37,7 @@
 				display: none;
 			}
 			@include mediaSize(1270px) {
-				&-header {
+				.l-catalog-page__aside-header {
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
